@@ -134,7 +134,7 @@ header h2 a {
 section {
   display: none; /* oculto por defecto */
   padding: 20px;
-  color: #fff;
+  color: #ce1010;
 }
 
 section.active {
