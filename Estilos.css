@@ -1,29 +1,39 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-}
-header {
-  background: #333;
+  background: #ffffff; /* Fondo negro */
   color: #fff;
+}
+
+header {
+  background: #000;
   display: flex;
   align-items: center;
-  padding: 10px;
+  justify-content: space-between;
+  padding: 15px;
+  position: relative;
 }
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  text-align: center;
+  flex: 1;
+}
+
+/* Botón menú */
 .menu-btn {
   font-size: 24px;
   cursor: pointer;
   background: none;
   border: none;
-  color: #fff;
+  color: #686161;
 }
-nav {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: #444;
-  color: #fff;
-  transition: left 0.3s;
-  padding-top: 60px;
+
+/* Foto circular flotante */
+.perfil {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* círculo */
+  box-shadow: 0 0 10px #fff; /* sombra blanca */
 }
