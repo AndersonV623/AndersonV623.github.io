@@ -4,33 +4,56 @@
   <meta charset="UTF-8">
   <title>CV - Anderson</title>
   <link rel="stylesheet" href="Estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    
-    <!-- Nombre centrado -->
-    <h1>Anderson Jawarlan Vargas Ruiz</h1>
-    
+    <div class="title-block">
+        <h1>Anderson Jawarlan Vargas Ruiz</h1>
+        <h2>| <i class="fa-solid fa-envelope"></i> <a href="mailto:ajawarlanvr@gmail.com" target="_blank">Correo</a> |
+            <i class="fa-solid fa-phone"></i> <a href="https://wa.me/573209083501?text=Hola%20Anderson,%20quiero%20saber%20más%20de%20tu%20CV" target="_blank">+57 3209083501</a> |
+            <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/andersonjawarlanvargasruiz" target="_blank">Linkedin</a> |
+        </h2>
+    </div>      
     <img src="Foto_Perfil.jpg" alt="Foto de Anderson" class="perfil">
   </header>
 
-  <nav id="sideMenu">
+  <nav id="sideMenu" class="side-menu">
     <ul>
-      <li>Inicio</li>
-      <li>Proyectos
-        <ul>
-          <li>SIMCHS-S</li>
-          <li>ElaBoutique</li>
-        </ul>
-      </li>
+        <li><a href="#" onclick="showSection('inicio')">Curriculum</a></li>
+        <li><a href="#" onclick="showSection('proyectos')">Proyectos</a></li>
+        <li><a href="#" onclick="showSection('contacto')">Contacto</a></li>
+        <li>Proyectos
+            <ul>
+                <li><a href="#" onclick="showSection('SIMCH-S')">SIMCHS-S</a></li>
+                <li><a href="#" onclick="showSection('ElaBoutique')">ElaBoutique</a></li>
+            </ul>
+        </li>
     </ul>
   </nav>
 
-  <section>
-    <h2>Perfil</h2>
-    <p>Hoja de vida</p>
-  </section>
+  <main id="content">
+    <section id="inicio" class="active">
+        <h2>Inicio</h2>
+        <p>Bienvenido a mi CV online.</p>
+    </section>
+
+    <section id="SIMCH-S">
+        <h2>Proyecto de SIMCH-S</h2>
+        <p>Aquí van los proyectos SIMCHS-S.</p>
+    </section>
+
+    <section id="ElaBoutique">
+        <h2>Ela Boutique</h2>
+        <p>Aquí van los proyectos Ela Boutique.</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Información de contacto aquí.</p>
+    </section>
+    </main>
 
   <!-- Vincular JS -->
   <script src="Scripts.js"></script>

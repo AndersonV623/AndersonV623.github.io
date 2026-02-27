@@ -1,39 +1,142 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #ffffff; /* Fondo negro */
-  color: #fff;
+  color: #070707;
 }
 
+/*---------------------------------------------------------Header---------------------------------------------------------*/
 header {
   background: #000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  position: relative;
+}
+
+/*Titulo*/
+.title-block {
+  display: flex;
+  flex-direction: column; /* coloca h1 arriba y h2 debajo */
+  align-items: center;    /* centra ambos */
+  flex: 1;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 1.8em;
+    margin: 0;
+    font-size: 1.8em;
+    color: #fff;
+    text-align: center;
+    animation: sombra 5s linear;
+}
+
+@keyframes sombra {
+  0% {
+    text-shadow: 0 0 10px #fff;
+  }
+  25% {
+    text-shadow: 10px 10px 15px #888;
+  }
+  50% {
+    text-shadow: -10px 10px 20px #444;
+  }
+  75% {
+    text-shadow: 10px -10px 15px #aaa;
+  }
+  100% {
+    text-shadow: 5px 5px 10px #fff;
+  }
+}
+
+header h2 {
+  margin: 5px 0 0 0;
+  font-size: 0.8em;
+  color: #fff;
   text-align: center;
-  flex: 1;
+}
+
+header h2 a {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Botón menú */
 .menu-btn {
   font-size: 24px;
   cursor: pointer;
-  background: none;
-  border: none;
+  background: rgb(0, 0, 0);
   color: #686161;
 }
+
+/* Menú lateral suspendido */
+.side-menu {
+    height: 90%;
+    width: 0;
+    position: fixed;
+    top: 10;
+    left: 0;
+    background-color: rgba(10, 10, 10, 0.7);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Submenús ocultos por defecto */
+.side-menu li ul {
+  display: none;
+  padding-left: 10px;
+}
+
+.side-menu li:hover > ul {
+  display: block;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
 
 /* Foto circular flotante */
 .perfil {
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* círculo */
-  box-shadow: 0 0 10px #fff; /* sombra blanca */
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff;
+  transform-style: preserve-3d;
+  animation: girar 5s linear;
+}
+
+@keyframes girar {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/*---------------------------------------------------------Sections---------------------------------------------------------*/
+
+section {
+  display: none; /* oculto por defecto */
+  padding: 20px;
+  color: #fff;
+}
+
+section.active {
+  display: block; /* solo la sección activa se muestra */
 }
