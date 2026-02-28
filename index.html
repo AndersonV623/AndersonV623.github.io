@@ -300,13 +300,130 @@
         </div>
     </section>
 
-    <section id="SIMCH-S">
-        <h2>Proyecto de SIMCH-S</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis nihil voluptates debitis laboriosam perferendis a ea praesentium voluptate. Excepturi distinctio cum tempore laboriosam impedit nemo nobis eaque a corporis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis nihil voluptates debitis laboriosam perferendis a ea praesentium voluptate. Excepturi distinctio cum tempore laboriosam impedit nemo nobis eaque a corporis.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis nihil voluptates debitis laboriosam perferendis a ea praesentium voluptate. Excepturi distinctio cum tempore laboriosam impedit nemo nobis eaque a corporis.</p>
-    </section>
+    <section id="SIMCH-S" class="py-5 bg-light">
+        <div class="container card p-4">
+            <h2 class="text-center mb-4">Proyecto de Sistema Integral Multidimensional de Conciencia Humana en la Sociedad (SIMCH-S)</h2>
+            <form>
+            <div class="table-responsive">
+                <table class="table table-bordered text-center align-middle">
+                    <thead>
+                        <tr class="table-dark">
+                            <th colspan="4">Dato</th>
+                            <th colspan="8">Selección</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Rango de Edad</td>
+                            <td colspan="8">
+                                <select class="form-select" id="genero" name="genero">
+                                    <option selected disabled>Selecciona tu rango de edad</option>
+                                    <option value="Adolescencia temprana">12 – 14 años</option>
+                                    <option value="Adolescencia media">15 – 17 años</option>
+                                    <option value="Adolescencia tardía">18 – 19 años</option>
+                                    <option value="Adulto joven">20 – 39 años</option>
+                                    <option value="Adulto de mediana edad">40 – 59 años</option>
+                                    <option value="Adulto mayor (vejez temprana)">60 – 74 años</option>
+                                    <option value="Adulto mayor (vejez intermedia)">75 – 89 años</option>
+                                    <option value="Adulto mayor (vejez avanzada)">90 años en adelante</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Genero</td>
+                            <td colspan="8">
+                                <select class="form-select" id="genero" name="genero">
+                                    <option selected disabled>Selecciona tu género</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                    <option value="otro">Otro</option>
+                                    <option value="prefiero_no_decir">Prefiero no decir</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Nivel Educativo</td>
+                            <td colspan="8">
+                                <select class="form-select" id="NivelEducativo" name="NivelEducativo">
+                                    <option selected disabled>Selecciona Tu nivel educativo culminado</option>
+                                    <option value="No Tiente">Sin educación formal</option>
+                                    <option value="Primaria">Primaria completa</option>
+                                    <option value="Bachillerato">Secundaria completa / Bachillerato</option>
+                                    <option value="Técnico">Técnico</option>
+                                    <option value="Tecnológo">Tecnológo</option>
+                                    <option value="Universitario">Universitario</option>
+                                    <option value="Especialización">Especialización</option>
+                                    <option value="Maestría">Maestría</option>
+                                    <option value="Doctorado">Doctorado</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td colspan="8">
+                                <select class="form-select" id="" name="">
+                                    <option selected disabled>_______</option>
+                                    <option value=""></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td colspan="8">
+                                <select class="form-select" id="" name="">
+                                    <option selected disabled>_______</option>
+                                    <option value=""></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Selecciona el tipo de salud que tienes en este momento</td>
+                            <td colspan="8">
+                                <select class="form-select" id="TipoSalud" name="TipoSalud">
+                                    <option selected disabled>Selecciona tu tipo de salud</option>
+                                    <option value="Contributivo">Contributivo</option>
+                                    <option value="Contributivo + Prepagada">Contributivo + Prepagada</option>
+                                    <option value="Contributivo + Plan complementario EPS">Contributivo + Plan complementario EPS</option>
+                                    <option value="Subsidiado">Subsidiado</option>
+                                    <option value="Subsidiado + Prepagada">Subsidiado + Prepagada</option>
+                                    <option value="Subsidiado + Plan complementario EPS">Subsidiado + Plan complementario EPS</option>
+                                    <option value="Solo prepagada">Solo prepagada</option>
+                                    <option value="Medicina privada por pago directo">Medicina privada por pago directo</option>
+                                    <option value="Régimen especial">Régimen especial</option>
+                                    <option value="No cuenta con servicio de salud">No cuenta con servicio de salud</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="table-dark">
+                            <th colspan="7">Pregunta</th>
+                            <th colspan="1">Total mente desacuerdo</th>
+                            <th colspan="1">Desacuerdo</th>
+                            <th colspan="1">Indiferente</th>
+                            <th colspan="1">De acuerdo</th>
+                            <th colspan="1">Total mente de acuerdo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila de radios -->
+                        <tr>
+                            <td colspan="7">Analizo diferentes perspectivas antes de tomar una decisión.</td>
+                            <td colspan="1"><input class="form-check-input radio-scale radio-1" type="radio" name="respuesta" id="resp1" value="1"></td>
+                            <td colspan="1"><input class="form-check-input radio-scale radio-2" type="radio" name="respuesta" id="resp2" value="2"></td>
+                            <td colspan="1"><input class="form-check-input radio-scale radio-3" type="radio" name="respuesta" id="resp3" value="3"></td>
+                            <td colspan="1"><input class="form-check-input radio-scale radio-4" type="radio" name="respuesta" id="resp4" value="4"></td>
+                            <td colspan="1"><input class="form-check-input radio-scale radio-5" type="radio" name="respuesta" id="resp5" value="5"></td>
+                        </tr>
 
+                        <!-- Fila del botón -->
+                        <tr>
+                        <td colspan="12">
+                            <button type="submit" class="btn btn-primary">Enviar respuesta</button>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </form>
+        </div>
+    </section>
     <section id="ElaBoutique">
         <h2>Ela Boutique</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis nihil voluptates debitis laboriosam perferendis a ea praesentium voluptate. Excepturi distinctio cum tempore laboriosam impedit nemo nobis eaque a corporis.</p>

@@ -72,7 +72,7 @@ header h2 a {
   font-size: 24px;
   cursor: pointer;
   background: rgb(0, 0, 0);
-  color: #686161;
+  color: #ffffff;
 }
 
 /* Menú lateral suspendido */
@@ -146,7 +146,7 @@ p {
 section {
   display: none; /* oculto por defecto */
   padding: 20px;
-  color: #ce1010;
+  color: #000000;
 }
 
 section.active {
@@ -178,4 +178,55 @@ section.active {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+/*----------------------------------------------------------------------Formularios--------------------------------------*/
+
+/* Radios más grandes */
+.radio-scale {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* Colores personalizados */
+.radio-1 {
+  accent-color: green;
+  box-shadow: 0 0 10px rgba(0,128,0,0.6);
+}
+
+.radio-2 {
+  accent-color: lightgreen;
+  box-shadow: 0 0 10px rgba(144,238,144,0.6);
+}
+
+.radio-3 {
+  accent-color: blue;
+  box-shadow: 0 0 10px rgba(0,0,255,0.6);
+}
+
+.radio-4 {
+  accent-color: gold;
+  box-shadow: 0 0 10px rgba(255,215,0,0.6);
+}
+
+.radio-5 {
+  accent-color: purple;
+  box-shadow: 0 0 10px rgba(128,0,128,0.6);
+}
+
+/* Escala de tamaños: extremos más grandes */
+.radio-1, .radio-5 {
+  width: 35px;
+  height: 35px;
+}
+
+.radio-2, .radio-4 {
+  width: 30px;
+  height: 30px;
+}
+
+.radio-3 {
+  width: 28px;
+  height: 28px;
 }
