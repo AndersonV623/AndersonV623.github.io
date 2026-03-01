@@ -241,3 +241,264 @@ function renderPreguntas(preguntas) {
     referencia = tr;
   });
 }
+
+/*---------------------Obteniendo resultados del Form---------------------------*/
+document.getElementById("formSIMCH").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  if (!encuestaActiva || !tiempoInicio) {
+    alert("La encuesta no ha sido iniciada correctamente.");
+    return;
+  }
+
+  // =============================
+  // TIEMPO
+  // =============================
+  const tiempoFin = Date.now();
+  const duracion = Math.floor((tiempoFin - tiempoInicio) / 1000);
+
+  // =============================
+  // DATOS GENERALES
+  // =============================
+  const datosGenerales = {
+    rangoEdad: document.getElementById("rangoEdad")?.value || null,
+    genero: document.querySelectorAll('#SIMCH-S select[name="genero"]')[1]?.value || null,
+    nivelEducativo: document.getElementById("NivelEducativo")?.value || null,
+    tipoSalud: document.getElementById("TipoSalud")?.value || null,
+    municipio: document.getElementById("municipios")?.value || null,
+    musica: Array.from(
+      document.querySelectorAll('input[name="musica"]:checked')
+    ).map(el => el.value)
+  };
+
+  // =============================
+  // RESPUESTAS ESTRUCTURADAS
+  // =============================
+  const respuestas = [];
+
+  Matriz.Preguntas.forEach(p => {
+    const seleccionada = document.querySelector(`input[name="P${p.Item}"]:checked`);
+
+    respuestas.push({
+      item: p.Item,
+      pregunta: p.Pregunta || p.pregunta,
+      valor: seleccionada ? parseInt(seleccionada.value) : null,
+      nivel: p.Nivel,
+      dimension: p.Conciencia,
+      tipo: p["Tipo de Pegunta"]
+    });
+  });
+
+  // Validación
+  const sinResponder = respuestas.filter(r => r.valor === null).length;
+
+  if (sinResponder > 0) {
+    alert(`Faltan ${sinResponder} preguntas por responder.`);
+    return;
+  }
+
+  // =============================
+  // PROGRESO
+  // =============================
+  const progreso = calcularProgreso();
+
+  // =============================
+  // REGISTRO FINAL
+  // =============================
+  const registro = {
+    id: crypto.randomUUID(),
+    estado: "completada",
+
+    tiempo: {
+      inicio: new Date(tiempoInicio).toISOString(),
+      fin: new Date(tiempoFin).toISOString(),
+      duracionSegundos: duracion
+    },
+
+    progreso: progreso,
+    datosGenerales: datosGenerales,
+    respuestas: respuestas
+  };
+
+  console.log("REGISTRO FINAL:", registro);
+
+  mostrarResultado(registro);
+
+  guardarEnBaseMensual(registro); //Descarga de DB
+
+  localStorage.removeItem("inicioEncuesta");
+  encuestaActiva = false;
+});
+
+/*------ Mostrar estructura [Temporal: solo para mostrar la estrucutra del Json]-----------------*/
+function mostrarResultado(data) {
+
+  const modal = new bootstrap.Modal(document.getElementById("resultadoModal"));
+  const contenido = document.getElementById("resultadoContenido");
+
+  contenido.textContent = JSON.stringify(data, null, 2);
+
+  modal.show();
+}
+
+/*function mostrarResultado(data) {
+
+  console.log("DATA RECIBIDA:", data);
+
+  const modalElement = document.getElementById("resultadoModal");
+  if (!modalElement) {
+    console.error("No existe #resultadoModal");
+    return;
+  }
+
+  const modal = new bootstrap.Modal(modalElement);
+  const contenido = document.getElementById("resultadoContenido");
+
+  let html = "";
+
+  // Estado
+  html += `<h4>Estado: ${data.estado ?? "NO DEFINIDO"}</h4><hr>`;
+
+  // Tiempo
+  if (data.tiempo) {
+    html += `<h5>Tiempo de Respuesta</h5>`;
+    html += `
+      <ul>
+        <li><strong>Inicio:</strong> ${data.tiempo.inicio ?? "-"}</li>
+        <li><strong>Fin:</strong> ${data.tiempo.fin ?? "-"}</li>
+        <li><strong>Duración:</strong> ${data.tiempo.duracionSegundos ?? 0} segundos</li>
+      </ul>
+    `;
+    html += `<hr>`;
+  }
+
+  // Progreso
+  if (data.progreso) {
+    html += `<h5>Progreso</h5>`;
+    html += `
+      <ul>
+        <li><strong>Respondidas:</strong> ${data.progreso.respondidas ?? 0}</li>
+        <li><strong>Total:</strong> ${data.progreso.total ?? 0}</li>
+        <li><strong>Porcentaje:</strong> ${data.progreso.porcentaje ?? 0}%</li>
+      </ul>
+    `;
+    html += `<hr>`;
+  }
+
+  // Datos Generales
+  if (data.datosGenerales) {
+    html += `<h5>Datos Generales</h5>`;
+    html += `<pre>${JSON.stringify(data.datosGenerales, null, 2)}</pre><hr>`;
+  }
+
+  // Respuestas
+  if (data.respuestas) {
+    html += `<h5>Respuestas</h5><ul style="max-height:300px; overflow:auto;">`;
+    Object.entries(data.respuestas).forEach(([pregunta, valor]) => {
+      html += `<li><strong>${pregunta}:</strong> ${valor}</li>`;
+    });
+    html += `</ul>`;
+  }
+
+  contenido.innerHTML = html;
+
+  modal.show();
+}*/
+
+/*-------------------tiempos de respuesta en encuetas----------*/
+let encuestaActiva = false;
+let tiempoInicio = null;
+
+const rangoEdad = document.getElementById("rangoEdad");
+
+rangoEdad.addEventListener("change", () => {
+  if (!encuestaActiva) {
+    encuestaActiva = true;
+    tiempoInicio = Date.now();
+    console.log("Encuesta iniciada");
+  }
+});
+
+window.addEventListener("beforeunload", function (e) {
+  if (encuestaActiva) {
+    const tiempoFin = Date.now();
+    const duracion = Math.floor((tiempoFin - tiempoInicio) / 1000);
+
+    const progreso = calcularProgreso();
+
+    const registroIncompleto = {
+      id: crypto.randomUUID(),
+      estado: "abandonada",
+      inicio: new Date(tiempoInicio).toISOString(),
+      fin: new Date(tiempoFin).toISOString(),
+      duracionSegundos: duracion,
+      progreso: progreso
+    };
+
+    localStorage.setItem("ultimaEncuestaAbandonada", JSON.stringify(registroIncompleto));
+  }
+});
+
+function calcularProgreso() {
+  let respondidas = 0;
+
+  Matriz.Preguntas.forEach(p => {
+    const seleccionada = document.querySelector(`input[name="P${p.Item}"]:checked`);
+    if (seleccionada) respondidas++;
+  });
+
+  return {
+    respondidas: respondidas,
+    total: Matriz.Preguntas.length,
+    porcentaje: Math.round((respondidas / Matriz.Preguntas.length) * 100)
+  };
+}
+
+rangoEdad.addEventListener("change", () => {
+  if (!encuestaActiva) {
+    encuestaActiva = true;
+    tiempoInicio = Date.now();
+
+    localStorage.setItem("inicioEncuesta", tiempoInicio);
+  }
+});
+
+window.addEventListener("load", () => {
+  const inicioGuardado = localStorage.getItem("inicioEncuesta");
+
+  if (inicioGuardado) {
+    const ahora = Date.now();
+    const diferenciaMin = (ahora - inicioGuardado) / 60000;
+
+    if (diferenciaMin > 60) {
+      alert("La encuesta anterior fue abierta hace más de 1 hora. Se reiniciará.");
+      localStorage.removeItem("inicioEncuesta");
+    }
+  }
+});
+
+/* ---- Actualizar DB ----------------------------*/
+
+function guardarEnBaseMensual(registro) {
+  const ahora = new Date();
+  const año = ahora.getFullYear();
+  const mes = String(ahora.getMonth() + 1).padStart(2, "0");
+  const nombreArchivo = `SIMCHS_${año}_${mes}`;
+  let base = JSON.parse(localStorage.getItem(nombreArchivo)) || [];
+  base.push(registro);
+  localStorage.setItem(nombreArchivo, JSON.stringify(base));
+  descargarBaseMensual(nombreArchivo, base);
+}
+
+function descargarBaseMensual(nombre, data) {
+  const jsonString = JSON.stringify(data, null, 2);
+  const blob = new Blob([jsonString], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${nombre}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}

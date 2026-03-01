@@ -304,7 +304,7 @@
     <section id="SIMCH-S" class="py-5 bg-light">
         <div class="container card p-4">
             <h2 class="text-center mb-4">Proyecto de Sistema Integral Multidimensional de Conciencia Humana en la Sociedad (SIMCH-S)</h2>
-            <form>
+            <form id="formSIMCH">
             <div class="table-responsive">
                 <table class="table table-bordered align-middle">
                     <thead class="align-middle">
@@ -315,7 +315,7 @@
                         <tr>
                             <td colspan="4">Rango de Edad</td>
                             <td colspan="8">
-                                <select class="form-select" id="genero" name="genero">
+                                <select class="form-select" id="rangoEdad" name="rangoEdad">
                                     <option selected disabled>Seleccionar Rango</option>
                                     <option value="Adolescencia temprana">12 – 14 años</option>
                                     <option value="Adolescencia media">15 – 17 años</option>
@@ -436,6 +436,29 @@
                                 <button type="submit" class="btn btn-primary">Enviar respuesta</button>
                             </td>
                         </tr>
+                        
+                        <!--Ventana modal para los resultados-->>
+                        <div class="modal fade" id="resultadoModal" tabindex="-1">
+                            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                                <div class="modal-content">
+
+                                    <div class="modal-header bg-dark text-white">
+                                        <h5 class="modal-title">Resultado del Formulario SIMCH-S</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <pre id="resultadoContenido" style="white-space: pre-wrap;"></pre>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        Cerrar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </tbody>
                 </table>
             </div>
