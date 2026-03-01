@@ -201,15 +201,15 @@ window.addEventListener("scroll", () => {
 
 /*----------------Cargando Matriz en Formulario---------------------*/
 
-fetch("Matriz_De_Preguntas.json")
-.then(response => response.json())
-.then(data => {
-  renderPreguntas(data.preguntas);
-})
-.catch(error => console.error("Error cargando JSON:", error));
+document.addEventListener("DOMContentLoaded", () => {
+  renderPreguntas(Matriz.Preguntas);
+});
 
 function renderPreguntas(preguntas) {
-  const tbody = document.querySelector("tbody");
+  const tbody = document.querySelector("#SIMCH-S tbody");
+  const stickyRow = document.getElementById("stickyRow");
+
+  let referencia = stickyRow;
 
   preguntas.forEach(p => {
     const tr = document.createElement("tr");
@@ -217,7 +217,7 @@ function renderPreguntas(preguntas) {
     // Texto de la pregunta
     const tdTexto = document.createElement("td");
     tdTexto.colSpan = 7;
-    tdTexto.textContent = `${p.item}. ${p.pregunta}`;
+    tdTexto.textContent = `${p.Item}. ${p.Pregunta}`;
     tr.appendChild(tdTexto);
 
     // Radios 1–5
@@ -228,15 +228,16 @@ function renderPreguntas(preguntas) {
       const input = document.createElement("input");
       input.type = "radio";
       input.classList.add("form-check-input", "radio-scale", `radio-${v}`);
-      input.name = `P${p.item}`; // grupo único por pregunta
-      input.id = `P${p.item}_V${v}`; // IDs únicos: P1_V1, P1_V2...
+      input.name = `P${p.Item}`;
+      input.id = `P${p.Item}_V${v}`;
       input.value = v;
 
       td.appendChild(input);
       tr.appendChild(td);
     }
 
-    // Insertar justo después del stickyRow
-    tbody.insertBefore(tr, stickyRow.nextSibling);
+    // Insertar debajo del anterior
+    referencia.insertAdjacentElement("afterend", tr);
+    referencia = tr;
   });
 }
