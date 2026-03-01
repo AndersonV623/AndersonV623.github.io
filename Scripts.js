@@ -110,3 +110,92 @@ animateOnScroll("CSS-square", 70, "CSS-percent", "bg-primary");
 animateOnScroll("JavaScript-square", 50, "JavaScript-percent", "bg-warning");
 animateOnScroll("PHP-square", 50, "PHP-percent", "bg-danger");
 animateOnScroll("Git_y_Github-square", 60, "Git_y_Github-percent", "bg-dark");
+
+/*-----Consulta municpios y departamentos del DANE para lista desplegable*/
+const url = "https://ags.esri.co/arcgis/rest/services/DatosAbiertos/SERVICIOS_PUBLICOS_2005_MPIO/MapServer/0/query?where=1%3D1&outFields=DEPTO,DPTO_CCDGO,MPIO_CCDGO,MPIO_CNMBR&outSR=4326&f=json";
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    const select = document.getElementById("municipios");
+
+    // Ordenar por nombre de municipio
+    const municipiosOrdenados = data.features.sort((a, b) => {
+      return a.attributes.MPIO_CNMBR.localeCompare(b.attributes.MPIO_CNMBR);
+    });
+
+    municipiosOrdenados.forEach(item => {
+      const attr = item.attributes;
+      const option = document.createElement("option");
+      option.value = attr.MPIO_CCDGO;
+      option.textContent = `${attr.MPIO_CNMBR} (${attr.DEPTO})`;
+      select.appendChild(option);
+    });
+
+    // Inicializar Select2
+    $('#municipios').select2({
+      placeholder: "Busca tu municipio...",
+      allowClear: true
+    });
+  });
+
+/*-----------------------------Chekboxes----------------------------------------*/
+  
+document.addEventListener(
+  "change", () => {
+    const seleccionados = document.querySelectorAll(
+      'input[name="musica"]:checked'
+    );
+    if (
+      seleccionados.length > 3
+    ) {
+      alert("Solo puedes seleccionar máximo 3 géneros musicales.");
+      seleccionados[seleccionados.length - 1].checked = false;
+    }
+  }
+);
+
+/* ---------------------------------- stickyRow */
+
+const header = document.querySelector("header");
+const stickyRow = document.getElementById("stickyRow");
+
+// Iniciales
+const headerHeight = header.offsetHeight;
+const Encabezado_i = Math.round(stickyRow.getBoundingClientRect().top);
+
+// Clonando encabezado
+const clon = stickyRow.cloneNode(true);
+clon.id = "stickyRowClone";
+clon.style.display = "none";
+stickyRow.parentNode.insertBefore(clon, stickyRow.nextSibling);
+
+window.addEventListener("scroll", () => {
+  const headerHeight = header.offsetHeight;
+  const Encabezado_m = Math.round(stickyRow.getBoundingClientRect().top);
+  const estilos = window.getComputedStyle(stickyRow); // recalculamos
+  const Estado = estilos.position;
+
+  let Encabezado_f;
+
+  if (headerHeight <= Encabezado_m) {
+    // El original sigue visible
+    Encabezado_f = Encabezado_m;
+    clon.style.display = "none"; // ocultamos el clon
+  } else {
+    // El original ya no está en su sitio
+    clon.style.display = "table-row"; // mostramos el clon
+    clon.style.position = "fixed";    // lo fijamos
+    clon.style.top = headerHeight + "px"; // debajo del header
+    Encabezado_f = headerHeight;
+    
+     // 👇 Ajustar cada celda del clon al ancho del original
+    const originalCells = stickyRow.querySelectorAll("th, td");
+    const cloneCells = clon.querySelectorAll("th, td");
+
+    originalCells.forEach((cell, i) => {
+      cloneCells[i].style.width = cell.offsetWidth + "px";
+    });
+    
+  }
+});
+

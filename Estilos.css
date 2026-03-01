@@ -19,6 +19,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    height: 120px;
 }
 
 /*Titulo*/
@@ -230,3 +231,5 @@ section.active {
   width: 28px;
   height: 28px;
 }
+
+/*Fijando partes de la pagina con boostrap*/
