@@ -1,3 +1,7 @@
+window.addEventListener("hashchange", function () {
+  window.scrollTo(0, 0);
+});
+
 function toggleMenu() {
   const menu = document.getElementById("sideMenu");
   if (menu.style.width === "250px") {
@@ -324,13 +328,14 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
 
   mostrarResultado(registro);
 
-  guardarEnBaseMensual(registro); //Descarga de DB
+  enviarAGoogleSheets(registro); //Envia a GoogleSheets
 
   localStorage.removeItem("inicioEncuesta");
   encuestaActiva = false;
 });
 
 /*------ Mostrar estructura [Temporal: solo para mostrar la estrucutra del Json]-----------------*/
+/* ----- Activar en caso de Validacion de los datos cargados a sheets en la ventana modal
 function mostrarResultado(data) {
 
   const modal = new bootstrap.Modal(document.getElementById("resultadoModal"));
@@ -340,8 +345,8 @@ function mostrarResultado(data) {
 
   modal.show();
 }
-
-/*function mostrarResultado(data) {
+*/
+function mostrarResultado(data) {
 
   console.log("DATA RECIBIDA:", data);
 
@@ -403,7 +408,7 @@ function mostrarResultado(data) {
   contenido.innerHTML = html;
 
   modal.show();
-}*/
+}
 
 /*-------------------tiempos de respuesta en encuetas----------*/
 let encuestaActiva = false;
@@ -501,4 +506,61 @@ function descargarBaseMensual(nombre, data) {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+}
+
+/*---------------------------Cargue de datos en googles sheets----------------*/
+const URL_SHEETS = "https://script.google.com/macros/s/AKfycbyu6xrhGO2kvGCdhdGaX_ILa7iG4Hh7jIty75NTJZfV5cH6x5SuFe_Z_HBn841yEbAm/exec";
+
+function enviarAGoogleSheets(registro) {
+  fetch(URL_SHEETS, {
+    method: "POST",
+    mode: "no-cors",
+    body: JSON.stringify(registro)
+  })
+  .then(() => {
+    console.log("Enviado a Google Sheets");
+  })
+  .catch(err => console.error("Error:", err));
+}
+
+/*--------------------------Limpiar Form--------------------------------------------------*/
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const registro = construirRegistro(); // tu función actual
+
+  enviarAGoogleSheets(registro)
+    .then(response => {
+      if (response.result === "ok") {
+        console.log("Guardado correctamente");
+        limpiarFormulario();
+        registroActual = null;
+      }
+    })
+    .catch(error => {
+      console.error("Error enviando:", error);
+    });
+});
+
+function limpiarFormulario() {
+  const form = document.getElementById("miFormulario");
+
+  form.reset();
+
+  // Reiniciar variables globales si tienes
+  inicioEncuesta = null;
+  finEncuesta = null;
+
+  // Si tienes barras de progreso
+  actualizarProgreso(0);
+
+  // Si tienes selects personalizados
+  const selects = form.querySelectorAll("select");
+  selects.forEach(select => select.selectedIndex = 0);
+
+  // Si tienes checkboxes múltiples
+  const checks = form.querySelectorAll("input[type='checkbox']");
+  checks.forEach(check => check.checked = false);
+
+  console.log("Formulario limpio correctamente");
 }
