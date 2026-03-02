@@ -1,3 +1,9 @@
+/*________________________________________________________________________________________________
+|------------------------------------------------------------------------------------------------|
+|----------------------------Eventos iniciales, scroll en 0, menu del header---------------------|
+|------------------------------------------------------------------------------------------------|
+|_______________________________________________________________________________________________*/
+
 window.addEventListener("hashchange", function () {
   window.scrollTo(0, 0);
 });
@@ -5,12 +11,26 @@ window.addEventListener("hashchange", function () {
 function toggleMenu() {
   const menu = document.getElementById("sideMenu");
   if (menu.style.width === "250px") {
-    menu.style.width = "0"; // cerrar
+    menu.style.width = "0";
   } else {
-    menu.style.width = "250px"; // abrir
+    menu.style.width = "250px";
   }
 }
+/*________________________________________________________________________________________________
+|------------------------------------------------------------------------------------------------|
+|----------------------------Eventos iniciales, scroll en 0, menu del header---------------------|
+|------------------------------------------------------------------------------------------------|
+|_______________________________________________________________________________________________*/
+function showSection(id) {
+  document
+    .querySelector("section.active")
+    ?.classList.remove("active");
 
+  document
+    .getElementById(id)
+    ?.classList.add("active");
+}
+/*
 function showSection(id) {
   // Ocultar todas las secciones
   const sections = document.querySelectorAll("main section");
@@ -22,7 +42,7 @@ function showSection(id) {
     target.classList.add("active");
   }
 }
-
+*/
 //--------------------------------------------------------------Funciones para SQUARE
 function createDotSquare(containerId, percent) {
     const container = document.getElementById(containerId);
@@ -325,7 +345,9 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
   };
 
   console.log("REGISTRO FINAL:", registro);
-
+  
+  window.SIMCHS_REGISTRO = registro;
+  
   mostrarResultado(registro);
 
   enviarAGoogleSheets(registro); //Envia a GoogleSheets
@@ -494,7 +516,7 @@ function guardarEnBaseMensual(registro) {
   localStorage.setItem(nombreArchivo, JSON.stringify(base));
   descargarBaseMensual(nombreArchivo, base);
 }
-
+/*
 function descargarBaseMensual(nombre, data) {
   const jsonString = JSON.stringify(data, null, 2);
   const blob = new Blob([jsonString], { type: "application/json" });
@@ -506,7 +528,7 @@ function descargarBaseMensual(nombre, data) {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
-}
+}*/
 
 /*---------------------------Cargue de datos en googles sheets----------------*/
 const URL_SHEETS = "https://script.google.com/macros/s/AKfycbyu6xrhGO2kvGCdhdGaX_ILa7iG4Hh7jIty75NTJZfV5cH6x5SuFe_Z_HBn841yEbAm/exec";
@@ -527,7 +549,7 @@ function enviarAGoogleSheets(registro) {
 form.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const registro = construirRegistro(); // tu función actual
+  const registro = construirRegistro();
 
   enviarAGoogleSheets(registro)
     .then(response => {
@@ -564,3 +586,11 @@ function limpiarFormulario() {
 
   console.log("Formulario limpio correctamente");
 }
+
+/*------ Mostramos la ventana modal con los resultados-------*/
+document.addEventListener("DOMContentLoaded", function () {
+    const boton = document.getElementById("btnMostrarResultado");
+    boton.addEventListener("click", function () {
+        alert("El botón funciona correctamente");
+    });
+}); 

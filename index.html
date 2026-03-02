@@ -302,7 +302,7 @@
         </div>
     </section>
 
-    <section id="SIMCH-S" class="py-5 bg-light">
+    <section id="SIMCH-S" class="py-5 bg-light active">
         <div class="container card p-4">
             <h2 class="text-center mb-4">Proyecto de Sistema Integral Multidimensional de Conciencia Humana en la Sociedad (SIMCH-S)</h2>
             <form id="formSIMCH">
@@ -431,14 +431,14 @@
                             <th colspan="1">Indiferente</th>
                             <th colspan="1">De acuerdo</th>
                             <th colspan="1">Total mente de acuerdo</th>
-                        </tr><!--En esta parte se agrega la matriz de "Matriz_De_Preguntas.js"-->>
+                        </tr><!--En esta parte se agrega la matriz de "Matriz_De_Preguntas.js"-->
                         <tr>
                             <td colspan="12">
                                 <button type="submit" class="btn btn-primary">Enviar respuesta</button>
                             </td>
                         </tr>
                         
-                        <!--Ventana modal para los resultados-->>
+                        <!--Ventana modal para los resultados-->
                         <div class="modal fade" id="resultadoModal" tabindex="-1">
                             <div class="modal-dialog modal-lg modal-dialog-scrollable">
                                 <div class="modal-content">
@@ -449,6 +449,10 @@
                                     </div>
 
                                     <div class="modal-body">
+                                        <div id="perfilHumano"></div>
+                                        <div id="radarChart"></div>
+                                        <div id="fortalezas"></div>
+                                        <div id="crecimiento"></div>
                                         <pre id="resultadoContenido" style="white-space: pre-wrap;"></pre>
                                     </div>
 
@@ -465,11 +469,16 @@
             </div>
             </form>
         </div>
+        
         <div id="infoBox" class="position-fixed top-50 end-0 translate-middle-y bg-light border rounded p-2 shadow">
-            Hola
+            <button id="btnMostrarResultado" class="btn btn-dark btn-sm"
+                onclick="new bootstrap.Modal(document.getElementById('resultadoModal')).show();">
+                Ver Resultado
+            </button>
         </div>
+
     </section>
-    <section id="Resultados SIMCH-S" class="active">
+    <section id="Resultados SIMCH-S"> <!--class="active"-->
         <div class="container card p-4"><!--En este espacio va La tarjeta de las encuestas--></div>
         <div class="container card p-4"><!--Mini Graficas por Niveles-->
             <h2 class="text-center mb-4">
@@ -495,8 +504,10 @@
     </section>
     </main>
 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>    
     <script src="Matriz_De_Preguntas.js"></script>
     <script src="Scripts.js"></script>
+    <script src="SIMCHS-S Dashboard Personal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/js/select2.min.js"></script>
 </body>
