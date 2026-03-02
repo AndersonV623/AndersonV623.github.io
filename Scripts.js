@@ -266,7 +266,7 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
   // =============================
   const datosGenerales = {
     rangoEdad: document.getElementById("rangoEdad")?.value || null,
-    genero: document.querySelectorAll('#SIMCH-S select[name="genero"]')[1]?.value || null,
+    genero: document.getElementById("genero")?.value || null,
     nivelEducativo: document.getElementById("NivelEducativo")?.value || null,
     tipoSalud: document.getElementById("TipoSalud")?.value || null,
     municipio: document.getElementById("municipios")?.value || null,
@@ -514,7 +514,7 @@ const URL_SHEETS = "https://script.google.com/macros/s/AKfycbyu6xrhGO2kvGCdhdGaX
 function enviarAGoogleSheets(registro) {
   fetch(URL_SHEETS, {
     method: "POST",
-    mode: "no-cors",
+    //mode: "no-cors",
     body: JSON.stringify(registro)
   })
   .then(() => {
