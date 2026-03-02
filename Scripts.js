@@ -347,8 +347,8 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
   console.log("REGISTRO FINAL:", registro);
   
   window.SIMCHS_REGISTRO = registro;
-  
-  mostrarResultado(registro);
+
+  //mostrarResultado(registro);
 
   enviarAGoogleSheets(registro); //Envia a GoogleSheets
 
@@ -368,7 +368,7 @@ function mostrarResultado(data) {
   modal.show();
 }
 */
-function mostrarResultado(data) {
+/*function mostrarResultado(data) {
 
   console.log("DATA RECIBIDA:", data);
 
@@ -430,7 +430,7 @@ function mostrarResultado(data) {
   contenido.innerHTML = html;
 
   modal.show();
-}
+}*/
 
 /*-------------------tiempos de respuesta en encuetas----------*/
 let encuestaActiva = false;

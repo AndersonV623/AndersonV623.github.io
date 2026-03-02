@@ -449,11 +449,11 @@
                                     </div>
 
                                     <div class="modal-body">
+                                        <div id="resultadoContenido"></div>
                                         <div id="perfilHumano"></div>
                                         <div id="radarChart"></div>
                                         <div id="fortalezas"></div>
                                         <div id="crecimiento"></div>
-                                        <pre id="resultadoContenido" style="white-space: pre-wrap;"></pre>
                                     </div>
 
                                     <div class="modal-footer">
@@ -471,8 +471,8 @@
         </div>
         
         <div id="infoBox" class="position-fixed top-50 end-0 translate-middle-y bg-light border rounded p-2 shadow">
-            <button id="btnMostrarResultado" class="btn btn-dark btn-sm"
-                onclick="new bootstrap.Modal(document.getElementById('resultadoModal')).show();">
+            
+            <button id="btnMostrarResultado" class="btn btn-dark btn-sm" onclick="new bootstrap.Modal(document.getElementById('resultadoModal')).show();">
                 Ver Resultado
             </button>
         </div>

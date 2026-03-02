@@ -274,10 +274,123 @@ document
     if (!window.SIMCHS_REGISTRO) return;
 
     const resultados = procesarSIMCHS(window.SIMCHS_REGISTRO);
-
+    mostrarResultado(resultados);
     renderPerfilHumano(resultados);
     renderRadarChart(resultados.indicesDimension);
     renderFortalezas(resultados.fortalezas);
     renderCrecimiento(resultados.crecimiento);
 
 });
+
+
+function mostrarResultado(data) {
+
+    const contenido = document.getElementById("resultadoContenido");
+    if (!contenido) return;
+
+    const registro = data.registro;
+    const matriz = Matriz.Preguntas;
+
+    let html = "";
+
+    /* =============================
+       TIEMPO Y PROGRESO
+    ============================== */
+
+    html += `
+    <div class="container-fluid mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="fw-bold">Tiempo de respuesta</h5>
+                <p><strong>Inicio:</strong> ${registro.tiempo?.inicio ?? "-"}</p>
+                <p><strong>Fin:</strong> ${registro.tiempo?.fin ?? "-"}</p>
+                <p><strong>Duración:</strong> ${registro.tiempo?.duracionSegundos ?? 0} segundos</p>
+            </div>
+            <div class="col-md-6">
+                <h5 class="fw-bold">Progreso</h5>
+                <p><strong>Respondidas:</strong> ${registro.progreso?.respondidas ?? 0}</p>
+                <p><strong>Total:</strong> ${registro.progreso?.total ?? 0}</p>
+                <p><strong>Porcentaje:</strong> ${registro.progreso?.porcentaje ?? 0}%</p>
+            </div>
+        </div>
+    </div>
+    `;
+
+    /* =============================
+       DATOS GENERALES
+    ============================== */
+
+    if (registro.datosGenerales) {
+
+        html += `<h5 class="fw-bold mt-3">Datos Generales</h5>`;
+
+        html += `<div class="table-responsive">`;
+        html += `<table class="table table-bordered table-sm">`;
+
+        html += `
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>Rango Edad</th>
+                    <th>Género</th>
+                    <th>Nivel Educativo</th>
+                    <th>Tipo Salud</th>
+                    <th>C/Municipio</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <td>${registro.datosGenerales.rangoEdad ?? "-"}</td>
+                    <td>${registro.datosGenerales.genero ?? "-"}</td>
+                    <td>${registro.datosGenerales.nivelEducativo ?? "-"}</td>
+                    <td>${registro.datosGenerales.tipoSalud ?? "-"}</td>
+                    <td>${registro.datosGenerales.municipio ?? "-"}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        `;
+    }
+
+    /* =============================
+       TABLA DE PREGUNTAS
+    ============================== */
+
+    html += `<h5 class="fw-bold mt-4">Detalle de Respuestas</h5>`;
+    html += `<div class="table-responsive">`;
+    html += `<table class="table table-bordered table-striped table-sm align-middle">`;
+
+    html += `
+        <thead class="table-dark text-white text-center">
+            <tr>
+                <th>Pregunta</th>
+                <th>Conciencia</th>
+                <th>Nivel</th>
+                <th>Ponderación</th>
+                <th>Respuesta</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+    `;
+
+    registro.respuestas.forEach(r => {
+
+        const config = matriz.find(m => m.Item === r.item);
+        if (!config) return;
+
+        html += `
+            <tr>
+                <td>${config.Pregunta}</td>
+                <td class="text-center">${config.Conciencia ?? "-"}</td>
+                <td class="text-center">${r.nivel ?? "-"}</td>
+                <td class="text-center">${config.Ponderacion ?? "-"}</td>
+                <td class="text-center fw-bold">${r.valor ?? "-"}</td>
+                <td class="text-center">${r.tipo ?? "Normal"}</td>
+            </tr>
+        `;
+    });
+
+    html += `</tbody></table></div>`;
+
+    contenido.innerHTML = html;
+}
