@@ -1,70 +1,59 @@
 function procesarSIMCHS(registro) {
-
     const matriz = Matriz.Preguntas;
-
     const dimensiones = {};
     let sumaGlobal = 0;
-    let contadorGlobal = 0;
-
     registro.respuestas.forEach(r => {
-
         if (r.valor === null) return;
 
+        // Configuración de la pregunta
         const preguntaConfig = matriz.find(m => m.Item === r.item);
-
         if (!preguntaConfig) return;
 
         let valor = r.valor;
 
-        // Normalización Likert 1-5 → 0-1
-        let norm = (valor - 1) / 4;
-
-        // Invertidas
-        if (r.tipo && r.tipo.includes("Invertida")) {
-            norm = 1 - norm;
+        // Inversión si la pregunta es espejo
+        if (preguntaConfig.P_Invertida) {
+            valor = 6 - valor;
         }
 
-        // Peso nivel
-        let pesoNivel = 0.5;
+        // Normalización Likert 1–5 → 0–1
+        const norm = (valor - 1) / 4;
 
-        if (r.nivel.includes("N3")) pesoNivel = 1;
-        else if (r.nivel.includes("N2")) pesoNivel = 0.75;
+        // Puntaje ponderado (Ponderación por conciencia y Nivel de acuerdo a afectación)
+        const puntaje = norm * preguntaConfig["PonderaciónP"] * 100;
 
-        const puntaje = norm * pesoNivel * 100;
+        // Acumular por dimensión (Conciencia)
+        const dimension = preguntaConfig.Conciencia;
 
-        if (!dimensiones[r.dimension]) {
-            dimensiones[r.dimension] = {
-                suma: 0,
-                count: 0
+        if (!dimensiones[dimension]) {
+            dimensiones[dimension] = {
+                suma: 0
             };
         }
 
-        dimensiones[r.dimension].suma += puntaje;
-        dimensiones[r.dimension].count++;
+        dimensiones[dimension].suma += puntaje;
 
+        // Acumular global
         sumaGlobal += puntaje;
-        contadorGlobal++;
     });
 
-    // Índices dimensión
+    // Índices por dimensión
     const indicesDimension = {};
 
     Object.keys(dimensiones).forEach(dim => {
-        indicesDimension[dim] =
-            dimensiones[dim].suma / dimensiones[dim].count;
+        indicesDimension[dim] = dimensiones[dim].suma;
     });
 
-    const indiceGlobal = sumaGlobal / contadorGlobal;
+    // Índice global
+    const indiceGlobal = sumaGlobal;
 
-    // Fortalezas y crecimiento
-    const mediaGlobal = indiceGlobal;
-
+    // Clasificación comparativa interna
     const fortalezas = [];
     const crecimiento = [];
 
     Object.keys(indicesDimension).forEach(dim => {
 
-        if (indicesDimension[dim] >= mediaGlobal) {
+        if (indicesDimension[dim] >= indiceGlobal) {
             fortalezas.push(dim);
         } else {
             crecimiento.push(dim);
@@ -88,7 +77,7 @@ function cargarDashboardSIMCHS() {
     if (!datos) return;
 
     renderPerfilHumano(datos);
-    renderRadarChart(datos.indicesDimension);
+    renderRadarChart(datos.indicesDimension*100);
     renderFortalezas(datos.fortalezas);
     renderCrecimiento(datos.crecimiento);
 }
@@ -383,7 +372,7 @@ function mostrarResultado(data) {
                 <td>${config.Pregunta}</td>
                 <td class="text-center">${config.Conciencia ?? "-"}</td>
                 <td class="text-center">${r.nivel ?? "-"}</td>
-                <td class="text-center">${config.Ponderacion ?? "-"}</td>
+                <td class="text-center">${config.PonderaciónP ?? "-"}</td>
                 <td class="text-center fw-bold">${r.valor ?? "-"}</td>
                 <td class="text-center">${r.tipo ?? "Normal"}</td>
             </tr>

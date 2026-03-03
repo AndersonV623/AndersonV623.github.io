@@ -150,7 +150,7 @@ fetch(url)
     municipiosOrdenados.forEach(item => {
       const attr = item.attributes;
       const option = document.createElement("option");
-      option.value = attr.MPIO_CCDGO;
+      option.value = `${attr.MPIO_CCDGO} - ${attr.MPIO_CNMBR} (${attr.DEPTO})`;
       option.textContent = `${attr.MPIO_CNMBR} (${attr.DEPTO})`;
       select.appendChild(option);
     });
@@ -347,8 +347,6 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
   console.log("REGISTRO FINAL:", registro);
   
   window.SIMCHS_REGISTRO = registro;
-
-  //mostrarResultado(registro);
 
   enviarAGoogleSheets(registro); //Envia a GoogleSheets
 
