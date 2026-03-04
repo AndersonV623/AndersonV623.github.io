@@ -77,7 +77,7 @@ function cargarDashboardSIMCHS() {
     if (!datos) return;
 
     renderPerfilHumano(datos);
-    renderRadarChart(datos.indicesDimension*100);
+    renderRadarChart(datos.indicesDimension);
     renderFortalezas(datos.fortalezas);
     renderCrecimiento(datos.crecimiento);
 }
@@ -207,9 +207,9 @@ function renderRadarChart(indices) {
     // Interpretación por eje
     const colores = valores.map(v => {
 
-        if (v < 40) return "red";
-        if (v < 60) return "orange";
-        if (v < 80) return "blue";
+        if (v < 4) return "red";
+        if (v < 6) return "orange";
+        if (v < 8) return "blue";
         return "green";
 
     });
@@ -232,7 +232,7 @@ function renderRadarChart(indices) {
         polar: {
             radialaxis: {
                 visible: true,
-                range: [0, 100]
+                range: [0, 10]
             }
         },
         margin: { t: 30 },
