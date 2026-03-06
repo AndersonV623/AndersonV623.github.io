@@ -348,7 +348,7 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
   
   window.SIMCHS_REGISTRO = registro;
 
-  enviarAGoogleSheets(registro); //Envia a GoogleSheets
+  enviarAGoogleSheets(registro);
 
   localStorage.removeItem("inicioEncuesta");
   encuestaActiva = false;
@@ -529,10 +529,10 @@ function descargarBaseMensual(nombre, data) {
 }*/
 
 /*---------------------------Cargue de datos en googles sheets----------------*/
-/*const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
+const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
 
 function enviarAGoogleSheets(registro) {
-  fetch(URL_SHEETS, {
+  /*fetch(URL_SHEETS, {
     method: "POST",
     //mode: "no-cors",
     body: JSON.stringify(registro),
@@ -541,24 +541,24 @@ function enviarAGoogleSheets(registro) {
   .then(() => {
     console.log("Enviado a Google Sheets");
   })
+  .catch(err => console.error("Error:", err));*/
+
+  fetch('/api/send', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          registro,
+          token: CONFIG.Token_Secret
+      })
+  })
+  .then(() => {
+    console.log("Enviado a Google Sheets");
+  })
   .catch(err => console.error("Error:", err));
 }
-*/
 
-fetch('/api/send', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        registro,
-        token: CONFIG.Token_Secret
-    })
-})
-.then(() => {
-  console.log("Enviado a Google Sheets");
-})
-.catch(err => console.error("Error:", err));
 
 /*--------------------------Limpiar Form--------------------------------------------------*/
 form.addEventListener("submit", function(e) {
