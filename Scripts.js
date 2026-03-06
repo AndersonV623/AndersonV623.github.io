@@ -529,7 +529,7 @@ function descargarBaseMensual(nombre, data) {
 }*/
 
 /*---------------------------Cargue de datos en googles sheets----------------*/
-const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
+//const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
 
 function enviarAGoogleSheets(registro) {
   /*fetch(URL_SHEETS, {
@@ -550,7 +550,7 @@ function enviarAGoogleSheets(registro) {
       },
       body: JSON.stringify({
           registro,
-          token: CONFIG.Token_Secret
+          //token: CONFIG.Token_Secret
       })
   })
   .then(() => {
