@@ -530,9 +530,27 @@ function descargarBaseMensual(nombre, data) {
 
 /*---------------------------Cargue de datos en googles sheets----------------*/
 //const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
-
 function enviarAGoogleSheets(registro) {
-  /*fetch(URL_SHEETS, {
+  fetch('/api/send', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(registro) 
+  })
+  .then(response => {
+    if (response.ok) {
+        console.log("¡Enviado con éxito a través de Vercel!");
+    } else {
+        console.error("Error en la respuesta de la API");
+    }
+  })
+  .catch(err => console.error("Error de conexión:", err));
+}
+
+/*function enviarAGoogleSheets(registro) {
+  
+  fetch(URL_SHEETS, {
     method: "POST",
     //mode: "no-cors",
     body: JSON.stringify(registro),
@@ -541,7 +559,7 @@ function enviarAGoogleSheets(registro) {
   .then(() => {
     console.log("Enviado a Google Sheets");
   })
-  .catch(err => console.error("Error:", err));*/
+  .catch(err => console.error("Error:", err));
 
   fetch('/api/send', {
       method: 'POST',
@@ -557,7 +575,7 @@ function enviarAGoogleSheets(registro) {
     console.log("Enviado a Google Sheets");
   })
   .catch(err => console.error("Error:", err));
-}
+}*/
 
 
 /*--------------------------Limpiar Form--------------------------------------------------*/
