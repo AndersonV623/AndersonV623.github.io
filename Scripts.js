@@ -551,12 +551,14 @@ fetch('/api/send', {
         'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-        ...tus_datos_del_formulario,
+        registro,
         token: CONFIG.Token_Secret
     })
 })
-.then(response => console.log("¡Éxito total!"))
-.catch(error => console.error("Error:", error));
+.then(() => {
+  console.log("Enviado a Google Sheets");
+})
+.catch(err => console.error("Error:", err));
 
 /*--------------------------Limpiar Form--------------------------------------------------*/
 form.addEventListener("submit", function(e) {
