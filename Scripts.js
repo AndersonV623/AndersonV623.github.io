@@ -529,13 +529,14 @@ function descargarBaseMensual(nombre, data) {
 }*/
 
 /*---------------------------Cargue de datos en googles sheets----------------*/
-const URL_SHEETS = "https://script.google.com/macros/s/AKfycbyu6xrhGO2kvGCdhdGaX_ILa7iG4Hh7jIty75NTJZfV5cH6x5SuFe_Z_HBn841yEbAm/exec";
+const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
 
 function enviarAGoogleSheets(registro) {
   fetch(URL_SHEETS, {
     method: "POST",
     //mode: "no-cors",
-    body: JSON.stringify(registro)
+    body: JSON.stringify(registro),
+    token: CONFIG.Token_Secret
   })
   .then(() => {
     console.log("Enviado a Google Sheets");
