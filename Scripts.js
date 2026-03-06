@@ -529,7 +529,7 @@ function descargarBaseMensual(nombre, data) {
 }*/
 
 /*---------------------------Cargue de datos en googles sheets----------------*/
-const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
+/*const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
 
 function enviarAGoogleSheets(registro) {
   fetch(URL_SHEETS, {
@@ -543,6 +543,20 @@ function enviarAGoogleSheets(registro) {
   })
   .catch(err => console.error("Error:", err));
 }
+*/
+
+fetch('/api/send', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        ...tus_datos_del_formulario,
+        token: CONFIG.Token_Secret
+    })
+})
+.then(response => console.log("¡Éxito total!"))
+.catch(error => console.error("Error:", error));
 
 /*--------------------------Limpiar Form--------------------------------------------------*/
 form.addEventListener("submit", function(e) {
