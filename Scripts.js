@@ -622,3 +622,13 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("El botón funciona correctamente");
     });
 }); 
+
+/*------ Mostramos las funciones Analista BI-------*/
+function mostrarMensaje() {
+    let lista = document.getElementById("FuncionesAnalistaBI");
+    if (lista.style.display === "none") {
+        lista.style.display = "block";
+    } else {
+        lista.style.display = "none";
+    }
+}
