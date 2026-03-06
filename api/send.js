@@ -1,19 +1,25 @@
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Método no permitido' });
+  const GOOGLE_URL = process.env.URL_SHEETS;
+
+  // Si no hay URL configurada en Vercel, detenemos todo
+  if (!GOOGLE_URL) {
+    return res.status(500).json({ error: "Falta la variable URL_SHEETS en Vercel" });
   }
 
-  const GOOGLE_URL = process.env.URL_SHEETS;
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: "Método no permitido" });
+  }
 
   try {
     const response = await fetch(GOOGLE_URL, {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body),
     });
 
-    return res.status(200).json({ message: 'Datos enviados a Google' });
+    return res.status(200).json({ status: "Enviado correctamente" });
   } catch (error) {
-    return res.status(500).json({ error: 'Error al conectar con Google' });
+    return res.status(500).json({ error: "Error conectando con Google", detalles: error.message });
   }
 }
 

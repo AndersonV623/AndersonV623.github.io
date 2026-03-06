@@ -532,20 +532,15 @@ function descargarBaseMensual(nombre, data) {
 //const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
 function enviarAGoogleSheets(registro) {
   fetch('/api/send', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(registro) 
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(registro) // Enviamos el registro directo, sin llaves extras
   })
-  .then(response => {
-    if (response.ok) {
-        console.log("¡Enviado con éxito a través de Vercel!");
-    } else {
-        console.error("Error en la respuesta de la API");
-    }
+  .then(res => {
+    if (res.ok) console.log("Logrado");
+    else console.error("Error en servidor");
   })
-  .catch(err => console.error("Error de conexión:", err));
+  .catch(err => console.error("Error de red", err));
 }
 
 /*function enviarAGoogleSheets(registro) {
