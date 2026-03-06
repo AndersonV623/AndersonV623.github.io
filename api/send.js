@@ -1,9 +1,9 @@
 export default async function handler(req, res) {
-  const GOOGLE_URL = process.env.URL_SHEETS;
+  const GOOGLE_URL = process.env.URL_APP_SCRIPTS;
 
   // Si no hay URL configurada en Vercel, detenemos todo
   if (!GOOGLE_URL) {
-    return res.status(500).json({ error: "Falta la variable URL_SHEETS en Vercel" });
+    return res.status(500).json({ error: "Falta la variable URL_APP_SCRIPTS en Vercel" });
   }
 
   if (req.method !== 'POST') {
