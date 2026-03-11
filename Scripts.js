@@ -21,6 +21,7 @@ function toggleMenu() {
 |----------------------------Eventos iniciales, scroll en 0, menu del header---------------------|
 |------------------------------------------------------------------------------------------------|
 |_______________________________________________________________________________________________*/
+
 function showSection(id) {
   document
     .querySelector("section.active")
@@ -30,6 +31,92 @@ function showSection(id) {
     .getElementById(id)
     ?.classList.add("active");
 }
+
+/*------------------------------------ Mostramos las funciones -------------------------------------*/
+function mostrarFunciones(boton) {
+  new bootstrap.Modal(document.getElementById('FuncionesModal')).show();
+  
+  document.getElementById("FuncionesABPS").style.display = "none";
+  document.getElementById("FuncionesIQO").style.display = "none";
+  document.getElementById("FuncionesCAYRE").style.display = "none";
+  document.getElementById("FuncionesSITEL").style.display = "none";
+  
+  switch (boton.id){
+    case "btnFuncionesABPS":
+      document.getElementById("FuncionesABPS").style.display = "block";
+      break;
+    case "btnFuncionesIQO":
+      document.getElementById("FuncionesIQO").style.display = "block";
+      break;
+    case "btnFuncionesCAYRE":
+      document.getElementById("FuncionesCAYRE").style.display = "block";
+      break;
+    case "btnFuncionesSITEL":
+      document.getElementById("FuncionesSITEL").style.display = "block";
+      break;
+  }
+}
+
+/*------------------------------------ Mostramos las Experiencias -------------------------------------*/
+function mostrarExperiencia(boton) {
+  new bootstrap.Modal(document.getElementById('ExperienciasModal')).show();
+  
+  document.getElementById("ExperienciaABPS").style.display = "none";
+  document.getElementById("ExperienciaIQO").style.display = "none";
+  document.getElementById("ExperienciaCAYRE").style.display = "none";
+  document.getElementById("ExperienciaSITEL").style.display = "none";
+  
+  switch (boton.id){
+    case "btnExperiencABPS":
+      document.getElementById("ExperienciaABPS").style.display = "block";
+      break;
+    case "btnExperiencIQO":
+      document.getElementById("ExperienciaIQO").style.display = "block";
+      break;
+    case "btnExperiencCAYRE":
+      document.getElementById("ExperienciaCAYRE").style.display = "block";
+      break;
+    case "btnExperiencSITEL":
+      document.getElementById("ExperienciaSITEL").style.display = "block";
+      break;
+  }
+}
+
+/*------------------------------------ Mostramos Graficas Herramientas -------------------------------------*/
+
+function animaBar(barId, percent, percentId, colorClass){
+
+  const bar = document.getElementById(barId);
+  const label = document.getElementById(percentId);
+
+  let current = 0;
+
+  bar.classList.add(colorClass);
+
+  const interval = setInterval(() => {
+
+    if(current >= percent){
+      clearInterval(interval);
+      return;
+    }
+
+    current++;
+    bar.style.width = current + "%";
+    label.textContent = current + "%";
+
+  },20);
+
+}
+
+window.onload = function() {
+  console.log("window cargado");
+  animaBar("SQL-bar",80,"SQL-percent","bg-sql");
+  animaBar("PowerBI-bar", 90, "PowerBI-percent", "bg-powerbi");
+  animaBar("Python-bar", 70, "Python-percent", "bg-python");
+  animaBar("PowerAutomate-bar", 10, "PowerAutomate-percent", "bg-automate");
+  animaBar("Excel-bar", 80, "Excel-percent", "bg-excel");
+  animaBar("Access-bar", 30, "Access-percent", "bg-access");
+};
 
 //--------------------------------------------------------------Funciones para SQUARE
 function createDotSquare(containerId, percent) {
@@ -184,20 +271,19 @@ stickyRow.parentNode.insertBefore(clon, stickyRow.nextSibling);
 window.addEventListener("scroll", () => {
   const headerHeight = header.offsetHeight;
   const Encabezado_m = Math.round(stickyRow.getBoundingClientRect().top);
-  const estilos = window.getComputedStyle(stickyRow); // recalculamos
+  const estilos = window.getComputedStyle(stickyRow);
   const Estado = estilos.position;
 
   let Encabezado_f;
 
   if (headerHeight <= Encabezado_m) {
-    // El original sigue visible
     Encabezado_f = Encabezado_m;
-    clon.style.display = "none"; // ocultamos el clon
+    clon.style.display = "none";
   } else {
-    // El original ya no está en su sitio
-    clon.style.display = "table-row"; // mostramos el clon
-    clon.style.position = "fixed";    // lo fijamos
-    clon.style.top = headerHeight + "px"; // debajo del header
+    
+    clon.style.display = "table-row"; 
+    clon.style.position = "fixed";
+    clon.style.top = headerHeight + "px";
     Encabezado_f = headerHeight;
     
      // Ajustar cada celda del clon al ancho del original
@@ -491,89 +577,3 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("El botón funciona correctamente");
     });
 }); 
-
-/*------------------------------------ Mostramos las funciones -------------------------------------*/
-function mostrarFunciones(boton) {
-  new bootstrap.Modal(document.getElementById('FuncionesModal')).show();
-  
-  document.getElementById("FuncionesABPS").style.display = "none";
-  document.getElementById("FuncionesIQO").style.display = "none";
-  document.getElementById("FuncionesCAYRE").style.display = "none";
-  document.getElementById("FuncionesSITEL").style.display = "none";
-  
-  switch (boton.id){
-    case "btnFuncionesABPS":
-      document.getElementById("FuncionesABPS").style.display = "block";
-      break;
-    case "btnFuncionesIQO":
-      document.getElementById("FuncionesIQO").style.display = "block";
-      break;
-    case "btnFuncionesCAYRE":
-      document.getElementById("FuncionesCAYRE").style.display = "block";
-      break;
-    case "btnFuncionesSITEL":
-      document.getElementById("FuncionesSITEL").style.display = "block";
-      break;
-  }
-}
-
-/*------------------------------------ Mostramos las Experiencias -------------------------------------*/
-function mostrarExperiencia(boton) {
-  new bootstrap.Modal(document.getElementById('ExperienciasModal')).show();
-  
-  document.getElementById("ExperienciaABPS").style.display = "none";
-  document.getElementById("ExperienciaIQO").style.display = "none";
-  document.getElementById("ExperienciaCAYRE").style.display = "none";
-  document.getElementById("ExperienciaSITEL").style.display = "none";
-  
-  switch (boton.id){
-    case "btnExperiencABPS":
-      document.getElementById("ExperienciaABPS").style.display = "block";
-      break;
-    case "btnExperiencIQO":
-      document.getElementById("ExperienciaIQO").style.display = "block";
-      break;
-    case "btnExperiencCAYRE":
-      document.getElementById("ExperienciaCAYRE").style.display = "block";
-      break;
-    case "btnExperiencSITEL":
-      document.getElementById("ExperienciaSITEL").style.display = "block";
-      break;
-  }
-}
-
-/*------------------------------------ Mostramos Graficas Herramientas -------------------------------------*/
-
-function animaBar(barId, percent, percentId, colorClass){
-
-  const bar = document.getElementById(barId);
-  const label = document.getElementById(percentId);
-
-  let current = 0;
-
-  bar.classList.add(colorClass);
-
-  const interval = setInterval(() => {
-
-    if(current >= percent){
-      clearInterval(interval);
-      return;
-    }
-
-    current++;
-    bar.style.width = current + "%";
-    label.textContent = current + "%";
-
-  },20);
-
-}
-
-window.onload = function() {
-  console.log("window cargado");
-  animaBar("SQL-bar",80,"SQL-percent","bg-sql");
-  animaBar("PowerBI-bar", 90, "PowerBI-percent", "bg-powerbi");
-  animaBar("Python-bar", 70, "Python-percent", "bg-python");
-  animaBar("PowerAutomate-bar", 10, "PowerAutomate-percent", "bg-automate");
-  animaBar("Excel-bar", 80, "Excel-percent", "bg-excel");
-  animaBar("Access-bar", 30, "Access-percent", "bg-access");
-};
