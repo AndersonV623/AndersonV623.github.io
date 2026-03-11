@@ -232,4 +232,53 @@ section.active {
   height: 28px;
 }
 
-/*Fijando partes de la pagina con boostrap*/
+/*----------------------------Ventana Modal de Funciones -------------------------------*/
+#TarFunABPS, #TarFunIQO, #TarFunCAYRE, #TarFunSITEL,
+#TarExpABPS, #TarExpIQO, #TarExpCAYRE, #TarExpSITEL {
+  position: relative;
+  overflow: hidden;
+}
+
+#TarFunABPS::before, #TarExpABPS::before {background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKoV3a8rt9uf6d-nQJsDkUMtOcDxtfkzYNKA&s') no-repeat center;}
+#TarFunIQO::before, #TarExpIQO::before{background: url('https://www.iqoutsourcing.com/wp-content/uploads/Logo-iQ-Outsurcing-redimensionado.png');}
+#TarFunCAYRE::before, #TarExpCAYRE::before{background: url('https://si-inmobiliarios.com.co/wp-content/uploads/2022/12/22.jpg');}
+#TarFunSITEL::before, #TarExpSITEL::before{background: url('https://iconape.com/wp-content/png_logo_vector/sitel-logo.png');}
+
+#TarFunABPS::before, #TarFunIQO::before, #TarFunCAYRE::before, #TarFunSITEL::before,
+#TarExpABPS::before, #TarExpIQO::before, #TarExpCAYRE::before, #TarExpSITEL::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+
+/*-------------------------- Graficas de Herramientas --------------------------*/
+
+.bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #000000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #fdfeff;
+  border-radius: 10px;
+  transition: width 0.2s ease;
+}
+
+
+.bg-sql {background-color: #007bff;}
+.bg-powerbi {background-color: #ffc107;}
+.bg-python {background-color: #28a745;}
+.bg-excel {background-color: #17a2b8;}
+.bg-access {background-color: #6f42c1;}
+.bg-automate {background-color: #dc3545;}

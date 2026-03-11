@@ -30,19 +30,7 @@ function showSection(id) {
     .getElementById(id)
     ?.classList.add("active");
 }
-/*
-function showSection(id) {
-  // Ocultar todas las secciones
-  const sections = document.querySelectorAll("main section");
-  sections.forEach(sec => sec.classList.remove("active"));
 
-  // Mostrar la sección seleccionada
-  const target = document.getElementById(id);
-  if (target) {
-    target.classList.add("active");
-  }
-}
-*/
 //--------------------------------------------------------------Funciones para SQUARE
 function createDotSquare(containerId, percent) {
     const container = document.getElementById(containerId);
@@ -212,7 +200,7 @@ window.addEventListener("scroll", () => {
     clon.style.top = headerHeight + "px"; // debajo del header
     Encabezado_f = headerHeight;
     
-     // 👇 Ajustar cada celda del clon al ancho del original
+     // Ajustar cada celda del clon al ancho del original
     const originalCells = stickyRow.querySelectorAll("th, td");
     const cloneCells = clon.querySelectorAll("th, td");
 
@@ -354,82 +342,6 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
   encuestaActiva = false;
 });
 
-/*------ Mostrar estructura [Temporal: solo para mostrar la estrucutra del Json]-----------------*/
-/* ----- Activar en caso de Validacion de los datos cargados a sheets en la ventana modal
-function mostrarResultado(data) {
-
-  const modal = new bootstrap.Modal(document.getElementById("resultadoModal"));
-  const contenido = document.getElementById("resultadoContenido");
-
-  contenido.textContent = JSON.stringify(data, null, 2);
-
-  modal.show();
-}
-*/
-/*function mostrarResultado(data) {
-
-  console.log("DATA RECIBIDA:", data);
-
-  const modalElement = document.getElementById("resultadoModal");
-  if (!modalElement) {
-    console.error("No existe #resultadoModal");
-    return;
-  }
-
-  const modal = new bootstrap.Modal(modalElement);
-  const contenido = document.getElementById("resultadoContenido");
-
-  let html = "";
-
-  // Estado
-  html += `<h4>Estado: ${data.estado ?? "NO DEFINIDO"}</h4><hr>`;
-
-  // Tiempo
-  if (data.tiempo) {
-    html += `<h5>Tiempo de Respuesta</h5>`;
-    html += `
-      <ul>
-        <li><strong>Inicio:</strong> ${data.tiempo.inicio ?? "-"}</li>
-        <li><strong>Fin:</strong> ${data.tiempo.fin ?? "-"}</li>
-        <li><strong>Duración:</strong> ${data.tiempo.duracionSegundos ?? 0} segundos</li>
-      </ul>
-    `;
-    html += `<hr>`;
-  }
-
-  // Progreso
-  if (data.progreso) {
-    html += `<h5>Progreso</h5>`;
-    html += `
-      <ul>
-        <li><strong>Respondidas:</strong> ${data.progreso.respondidas ?? 0}</li>
-        <li><strong>Total:</strong> ${data.progreso.total ?? 0}</li>
-        <li><strong>Porcentaje:</strong> ${data.progreso.porcentaje ?? 0}%</li>
-      </ul>
-    `;
-    html += `<hr>`;
-  }
-
-  // Datos Generales
-  if (data.datosGenerales) {
-    html += `<h5>Datos Generales</h5>`;
-    html += `<pre>${JSON.stringify(data.datosGenerales, null, 2)}</pre><hr>`;
-  }
-
-  // Respuestas
-  if (data.respuestas) {
-    html += `<h5>Respuestas</h5><ul style="max-height:300px; overflow:auto;">`;
-    Object.entries(data.respuestas).forEach(([pregunta, valor]) => {
-      html += `<li><strong>${pregunta}:</strong> ${valor}</li>`;
-    });
-    html += `</ul>`;
-  }
-
-  contenido.innerHTML = html;
-
-  modal.show();
-}*/
-
 /*-------------------tiempos de respuesta en encuetas----------*/
 let encuestaActiva = false;
 let tiempoInicio = null;
@@ -514,22 +426,9 @@ function guardarEnBaseMensual(registro) {
   localStorage.setItem(nombreArchivo, JSON.stringify(base));
   descargarBaseMensual(nombreArchivo, base);
 }
-/*
-function descargarBaseMensual(nombre, data) {
-  const jsonString = JSON.stringify(data, null, 2);
-  const blob = new Blob([jsonString], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `${nombre}.json`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-}*/
 
 /*---------------------------Cargue de datos en googles sheets----------------*/
-//const URL_SHEETS = CONFIG.URL_APP_SCRIPTS;
+
 function enviarAGoogleSheets(registro) {
   fetch('/api/send', {
     method: 'POST',
@@ -542,36 +441,6 @@ function enviarAGoogleSheets(registro) {
   })
   .catch(err => console.error("Error de red", err));
 }
-
-/*function enviarAGoogleSheets(registro) {
-  
-  fetch(URL_SHEETS, {
-    method: "POST",
-    //mode: "no-cors",
-    body: JSON.stringify(registro),
-    token: CONFIG.Token_Secret
-  })
-  .then(() => {
-    console.log("Enviado a Google Sheets");
-  })
-  .catch(err => console.error("Error:", err));
-
-  fetch('/api/send', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-          registro,
-          //token: CONFIG.Token_Secret
-      })
-  })
-  .then(() => {
-    console.log("Enviado a Google Sheets");
-  })
-  .catch(err => console.error("Error:", err));
-}*/
-
 
 /*--------------------------Limpiar Form--------------------------------------------------*/
 form.addEventListener("submit", function(e) {
@@ -623,12 +492,88 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 }); 
 
-/*------ Mostramos las funciones Analista BI-------*/
-function mostrarMensaje() {
-    let lista = document.getElementById("FuncionesAnalistaBI");
-    if (lista.style.display === "none") {
-        lista.style.display = "block";
-    } else {
-        lista.style.display = "none";
-    }
+/*------------------------------------ Mostramos las funciones -------------------------------------*/
+function mostrarFunciones(boton) {
+  new bootstrap.Modal(document.getElementById('FuncionesModal')).show();
+  
+  document.getElementById("FuncionesABPS").style.display = "none";
+  document.getElementById("FuncionesIQO").style.display = "none";
+  document.getElementById("FuncionesCAYRE").style.display = "none";
+  document.getElementById("FuncionesSITEL").style.display = "none";
+  
+  switch (boton.id){
+    case "btnFuncionesABPS":
+      document.getElementById("FuncionesABPS").style.display = "block";
+      break;
+    case "btnFuncionesIQO":
+      document.getElementById("FuncionesIQO").style.display = "block";
+      break;
+    case "btnFuncionesCAYRE":
+      document.getElementById("FuncionesCAYRE").style.display = "block";
+      break;
+    case "btnFuncionesSITEL":
+      document.getElementById("FuncionesSITEL").style.display = "block";
+      break;
+  }
 }
+
+/*------------------------------------ Mostramos las Experiencias -------------------------------------*/
+function mostrarExperiencia(boton) {
+  new bootstrap.Modal(document.getElementById('ExperienciasModal')).show();
+  
+  document.getElementById("ExperienciaABPS").style.display = "none";
+  document.getElementById("ExperienciaIQO").style.display = "none";
+  document.getElementById("ExperienciaCAYRE").style.display = "none";
+  document.getElementById("ExperienciaSITEL").style.display = "none";
+  
+  switch (boton.id){
+    case "btnExperiencABPS":
+      document.getElementById("ExperienciaABPS").style.display = "block";
+      break;
+    case "btnExperiencIQO":
+      document.getElementById("ExperienciaIQO").style.display = "block";
+      break;
+    case "btnExperiencCAYRE":
+      document.getElementById("ExperienciaCAYRE").style.display = "block";
+      break;
+    case "btnExperiencSITEL":
+      document.getElementById("ExperienciaSITEL").style.display = "block";
+      break;
+  }
+}
+
+/*------------------------------------ Mostramos Graficas Herramientas -------------------------------------*/
+
+function animaBar(barId, percent, percentId, colorClass){
+
+  const bar = document.getElementById(barId);
+  const label = document.getElementById(percentId);
+
+  let current = 0;
+
+  bar.classList.add(colorClass);
+
+  const interval = setInterval(() => {
+
+    if(current >= percent){
+      clearInterval(interval);
+      return;
+    }
+
+    current++;
+    bar.style.width = current + "%";
+    label.textContent = current + "%";
+
+  },20);
+
+}
+
+window.onload = function() {
+  console.log("window cargado");
+  animaBar("SQL-bar",80,"SQL-percent","bg-sql");
+  animaBar("PowerBI-bar", 90, "PowerBI-percent", "bg-powerbi");
+  animaBar("Python-bar", 70, "Python-percent", "bg-python");
+  animaBar("PowerAutomate-bar", 10, "PowerAutomate-percent", "bg-automate");
+  animaBar("Excel-bar", 80, "Excel-percent", "bg-excel");
+  animaBar("Access-bar", 30, "Access-percent", "bg-access");
+};
