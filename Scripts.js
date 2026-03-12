@@ -110,12 +110,19 @@ function animaBar(barId, percent, percentId, colorClass){
 
 window.onload = function() {
   console.log("window cargado");
-  animaBar("SQL-bar",80,"SQL-percent","bg-sql");
-  animaBar("PowerBI-bar", 90, "PowerBI-percent", "bg-powerbi");
-  animaBar("Python-bar", 70, "Python-percent", "bg-python");
-  animaBar("PowerAutomate-bar", 10, "PowerAutomate-percent", "bg-automate");
-  animaBar("Excel-bar", 80, "Excel-percent", "bg-excel");
-  animaBar("Access-bar", 30, "Access-percent", "bg-access");
+  animaBar("SQL-bar-ABPS",80,"SQL-percent-ABPS","bg-sql");
+  animaBar("PowerBI-bar-ABPS", 90, "PowerBI-percent-ABPS", "bg-powerbi");
+  animaBar("Python-bar-ABPS", 70, "Python-percent-ABPS", "bg-python");
+  animaBar("PowerAutomate-bar-ABPS", 10, "PowerAutomate-percent-ABPS", "bg-automate");
+  animaBar("Excel-bar-ABPS", 80, "Excel-percent-ABPS", "bg-excel");
+  animaBar("Access-bar-ABPS", 30, "Access-percent-ABPS", "bg-access");
+  animaBar("Excel-bar-IQO", 95, "Excel-percent-IQO", "bg-excel");
+  animaBar("Access-bar-IQO", 60, "Access-percent-IQO", "bg-access");
+  animaBar("VBA-bar-IQO", 80, "VBA-percent-IQO", "bg-VBA");
+  animaBar("Excel-bar-Kayre", 80, "Excel-percent-Kayre", "bg-excel");
+  animaBar("VBA-bar-Kayre", 50, "VBA-percent-Kayre", "bg-VBA");
+  animaBar("Excel-bar-Sitel", 60, "Excel-percent-Sitel", "bg-excel");
+  animaBar("Access-bar-Sitel", 40, "Access-percent-Sitel", "bg-access");
 };
 
 //--------------------------------------------------------------Funciones para SQUARE
