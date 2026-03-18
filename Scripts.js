@@ -308,6 +308,12 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderPreguntas(Matriz.Preguntas);
+
+  // Detectar hash en el URL (para QR o enlaces directos)
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    showSection(hash);
+  }
 });
 
 function renderPreguntas(preguntas) {
