@@ -4,6 +4,10 @@ export default async function handler(req, res) {
   const ciudad = req.headers['x-vercel-ip-city'] || 'Desconocido';
   const region = req.headers['x-vercel-ip-country-region'] || '';
   const userAgent = req.headers['user-agent'];
+  const latitud = req.headers['x-vercel-ip-latitude'] || '0';
+  const longitud = req.headers['x-vercel-ip-longitude'] || '0';
+
+  const geoInfo = `${pais} - ${decodeURIComponent(ciudad)} - ${region} - [Lat: ${latitud}, Lon: ${longitud}]`;
 
   try {
     const response = await fetch(`${process.env.SUPABASE_URL}/rest/v1/visitas_web`, {
@@ -16,7 +20,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         seccion: seccion,
         navegador: userAgent,
-        pais: `${pais} - ${decodeURIComponent(ciudad)} - ${region}`,
+        pais: geoInfo,
         session_id: sessionId
       }),
     });
