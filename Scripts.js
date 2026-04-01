@@ -526,7 +526,7 @@ window.addEventListener("load", () => {
 });
 
 /*---------------------------Cargue de datos en googles sheets----------------*/
-async function enviarFormulario(datos) {
+async function enviarASupabase(datos) {
     try {
         const respuesta = await fetch('/api/send', { // La ruta de tu archivo send.js
             method: 'POST',
