@@ -535,11 +535,9 @@ async function enviarASupabase(registro) {
 
     if (error) {
       console.error("Error en Supabase:", error.message);
-      // Opcional: Guardar en localStorage si falla el internet
       localStorage.setItem("pendiente_envio", JSON.stringify(registro));
     } else {
       console.log("¡Datos guardados en Supabase exitosamente!");
-      // Aquí puedes redirigir al usuario o mostrar mensaje de éxito
     }
   } catch (err) {
     console.error("Error de conexión:", err);
