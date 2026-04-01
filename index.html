@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>CV - Anderson</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link rel="stylesheet" href="flashcard.css">
     <link rel="stylesheet" href="Estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +29,7 @@
     <nav id="sideMenu" class="side-menu">
         <ul>
             <li><a href="#Curriculum" onclick="showSection('inicio')">Curriculum</a></li>
-            <li><a href="#Contacto" onclick="showSection('contacto')">Contacto</a></li>
+            <li><a href="#MemoryCard" onclick="showSection('MemoryCard')">Tarjetas de memoria</a></li>
             <li>Proyectos
                 <ul>
                     <li><a href="#SIMCH-S" onclick="showSection('SIMCH-S')">SIMCHS-S</a></li>
@@ -948,20 +950,23 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis nihil voluptates debitis laboriosam perferendis a ea praesentium voluptate. Excepturi distinctio cum tempore laboriosam impedit nemo nobis eaque a corporis.</p>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis nihil voluptates debitis laboriosam perferendis a ea praesentium voluptate. Excepturi distinctio cum tempore laboriosam impedit nemo nobis eaque a corporis.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis nihil voluptates debitis laboriosam perferendis a ea praesentium voluptate. Excepturi distinctio cum tempore laboriosam impedit nemo nobis eaque a corporis.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis nihil voluptates debitis laboriosam perferendis a ea praesentium voluptate. Excepturi distinctio cum tempore laboriosam impedit nemo nobis eaque a corporis.</p>
+        <section id="MemoryCard">
+            <div class="container py-5">
+                <h2 class="text-center mb-4">📌 Tarjetas de memoria</h2>
+                <div id="flashcard-container" class="row g-4"></div>
+            </div>
         </section>
     </main>
     
+
     <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     
     <script src="Matriz_De_Preguntas.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="flashcard_Detalles.js"></script>
+    <script src="flashcard.js"></script>
     <!--<script src="config.js"></script>
     <script>
         const _supabase = supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_KEY);
