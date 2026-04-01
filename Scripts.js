@@ -218,11 +218,14 @@ animateOnScroll("PHP-square", 50, "PHP-percent", "bg-danger");
 animateOnScroll("Git_y_Github-square", 60, "Git_y_Github-percent", "bg-dark");
 
 /*-----Consulta municpios y departamentos del DANE para lista desplegable*/
+/*-----Consulta municipios y departamentos del DANE -----*/
 const url = "https://ags.esri.co/arcgis/rest/services/DatosAbiertos/SERVICIOS_PUBLICOS_2005_MPIO/MapServer/0/query?where=1%3D1&outFields=DEPTO,DPTO_CCDGO,MPIO_CCDGO,MPIO_CNMBR&outSR=4326&f=json";
+
 fetch(url)
   .then(response => response.json())
   .then(data => {
     const select = document.getElementById("municipios");
+    if (!select) return; // Si el select no existe en el HTML aún, detenemos aquí.
 
     // Ordenar por nombre de municipio
     const municipiosOrdenados = data.features.sort((a, b) => {
@@ -232,17 +235,25 @@ fetch(url)
     municipiosOrdenados.forEach(item => {
       const attr = item.attributes;
       const option = document.createElement("option");
+      // Guardamos el código DANE y el nombre para que Supabase lo reciba clarito
       option.value = `${attr.MPIO_CCDGO} - ${attr.MPIO_CNMBR} (${attr.DEPTO})`;
       option.textContent = `${attr.MPIO_CNMBR} (${attr.DEPTO})`;
       select.appendChild(option);
     });
 
-    // Inicializar Select2
-    $('#municipios').select2({
-      placeholder: "Busca tu municipio...",
-      allowClear: true
-    });
-  });
+    // --- PROTECCIÓN PARA SELECT2 ---
+    // Verificamos que jQuery ($) y el plugin (.select2) existan
+    if (window.$ && $.fn.select2) {
+      $('#municipios').select2({
+        placeholder: "Busca tu municipio...",
+        allowClear: true,
+        width: '100%' // Recomendado para que no se "encoja" en formularios ocultos
+      });
+    } else {
+      console.warn("Select2 no cargó a tiempo. El buscador será un select normal.");
+    }
+  })
+  .catch(err => console.error("Error cargando municipios DANE:", err));
 
 /*-----------------------------Chekboxes----------------------------------------*/
   
@@ -519,7 +530,7 @@ window.addEventListener("load", () => {
 async function enviarASupabase(registro) {
   try {
     const { data, error } = await _supabase
-      .from('encuestas_simch') // Asegúrate que este sea el nombre exacto de tu tabla
+      .from('Encuestas_SIMCH-S')
       .insert([registro]);
 
     if (error) {
@@ -536,34 +547,25 @@ async function enviarASupabase(registro) {
 }
 
 /*--------------------------Limpiar Form--------------------------------------------------*/
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
+/*const form = document.getElementById("formSIMCH");
 
-  const registro = construirRegistro();
-
-  enviarAGoogleSheets(registro)
-    .then(response => {
-      if (response.result === "ok") {
-        console.log("Guardado correctamente");
-        limpiarFormulario();
-        registroActual = null;
-      }
-    })
-    .catch(error => {
-      console.error("Error enviando:", error);
+if (form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const registro = construirRegistro();
+        enviarASupabase(registro); 
     });
-});
+} else {
+    console.warn("Aún no se encuentra el formulario en el DOM.");
+}*/
 
 function limpiarFormulario() {
   const form = document.getElementById("miFormulario");
 
   form.reset();
-
-  // Reiniciar variables globales si tienes
   inicioEncuesta = null;
   finEncuesta = null;
 
-  // Si tienes barras de progreso
   actualizarProgreso(0);
 
   // Si tienes selects personalizados
@@ -580,7 +582,7 @@ function limpiarFormulario() {
 /*------ Mostramos la ventana modal con los resultados-------*/
 document.addEventListener("DOMContentLoaded", function () {
     const boton = document.getElementById("btnMostrarResultado");
-    boton.addEventListener("click", function () {
+    /*boton.addEventListener("click", function () {
         alert("El botón funciona correctamente");
-    });
+    });*/
 }); 
