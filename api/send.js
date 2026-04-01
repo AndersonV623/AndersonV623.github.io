@@ -1,9 +1,9 @@
 export default async function handler(req, res) {
-  const GOOGLE_URL = process.env.URL_APP_SCRIPTS;
+  const SUPABASE_URL = process.env.SUPABASE_URL;
+  const SUPABASE_KEY = process.env.SUPABASE_KEY;
 
-  // Si no hay URL configurada en Vercel, detenemos todo
-  if (!GOOGLE_URL) {
-    return res.status(500).json({ error: "Falta la variable URL_APP_SCRIPTS en Vercel" });
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    return res.status(500).json({ error: "Faltan las variables de Supabase en Vercel" });
   }
 
   if (req.method !== 'POST') {
@@ -11,38 +11,25 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch(GOOGLE_URL, {
+    // Enviamos los datos directamente a la API de Supabase desde el servidor
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/Encuestas_SIMCH-S`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Prefer': 'return=minimal'
+      },
       body: JSON.stringify(req.body),
     });
 
-    return res.status(200).json({ status: "Enviado correctamente" });
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Error en Supabase");
+    }
+
+    return res.status(200).json({ status: "Enviado a Supabase correctamente" });
   } catch (error) {
-    return res.status(500).json({ error: "Error conectando con Google", detalles: error.message });
+    return res.status(500).json({ error: "Error de conexión", detalles: error.message });
   }
 }
-
-/*
-export default async function handler(req, res) {
-  // 1. Sacamos la URL de la caja fuerte de Vercel
-  const GOOGLE_URL = process.env.URL_SHEETS;
-
-  if (req.method !== 'POST') return res.status(405).send('Solo POST');
-
-  try {
-    // 2. Enviamos los datos a Google
-    const response = await fetch(GOOGLE_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(req.body),
-    });
-
-    const data = await response.text();
-    return res.status(200).json({ status: 'Exito', data });
-  } catch (e) {
-    // Si llegamos aquí, es que la URL_SHEETS está mal o Google rechazó la conexión
-    return res.status(500).json({ error: e.message });
-  }
-}
-*/

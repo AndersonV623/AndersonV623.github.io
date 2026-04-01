@@ -1,8 +1,3 @@
-const supabaseUrl = typeof process !== 'undefined' ? process.env.SUPABASE_URL : CONFIG.SUPABASE_URL;
-const supabaseKey = typeof process !== 'undefined' ? process.env.SUPABASE_KEY : CONFIG.SUPABASE_KEY;
-
-const { createClient } = supabase;
-const _supabase = createClient(supabaseUrl, supabaseKey);
 /*________________________________________________________________________________________________
 |------------------------------------------------------------------------------------------------|
 |----------------------------Eventos iniciales, scroll en 0, menu del header---------------------|
