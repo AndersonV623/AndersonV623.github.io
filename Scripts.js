@@ -526,37 +526,28 @@ window.addEventListener("load", () => {
 });
 
 /*---------------------------Cargue de datos en googles sheets----------------*/
+async function enviarFormulario(datos) {
+    try {
+        const respuesta = await fetch('/api/send', { // La ruta de tu archivo send.js
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(datos)
+        });
 
-async function enviarASupabase(registro) {
-  try {
-    const { data, error } = await _supabase
-      .from('Encuestas_SIMCH-S')
-      .insert([registro]);
+        const resultado = await respuesta.json();
 
-    if (error) {
-      console.error("Error en Supabase:", error.message);
-      localStorage.setItem("pendiente_envio", JSON.stringify(registro));
-    } else {
-      console.log("¡Datos guardados en Supabase exitosamente!");
+        if (respuesta.ok) {
+            alert("¡Encuesta enviada con éxito!");
+        } else {
+            throw new Error(resultado.error);
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Hubo un fallo: " + error.message);
     }
-  } catch (err) {
-    console.error("Error de conexión:", err);
-  }
 }
 
 /*--------------------------Limpiar Form--------------------------------------------------*/
-/*const form = document.getElementById("formSIMCH");
-
-if (form) {
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const registro = construirRegistro();
-        enviarASupabase(registro); 
-    });
-} else {
-    console.warn("Aún no se encuentra el formulario en el DOM.");
-}*/
-
 function limpiarFormulario() {
   const form = document.getElementById("miFormulario");
 
