@@ -371,7 +371,7 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
   // =============================
   // DATOS GENERALES
   // =============================
-  const datosGenerales = {
+  const datos_generales = {
     rangoEdad: document.getElementById("rangoEdad")?.value || null,
     genero: document.getElementById("genero")?.value || null,
     nivelEducativo: document.getElementById("NivelEducativo")?.value || null,
@@ -419,23 +419,24 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
   const registro = {
     id: crypto.randomUUID(),
     estado: "completada",
+    inicio: new Date(tiempoInicio).toISOString(),
+    fin: new Date().toISOString(),
+    duracion: Math.floor((Date.now() - tiempoInicio) / 1000),
 
-    tiempo: {
-      inicio: new Date(tiempoInicio).toISOString(),
-      fin: new Date(tiempoFin).toISOString(),
-      duracionSegundos: duracion
-    },
-
-    progreso: progreso,
-    datosGenerales: datosGenerales,
-    respuestas: respuestas
+    // ENVOLVEMOS EN CORCHETES para que coincida con el tipo jsonb[]
+    progreso: [ progreso ], 
+    datos_generales: [ datos_generales ], 
+    
+    // Respuestas ya es un array, así que se deja igual
+    respuestas: respuestas 
   };
+
 
   console.log("REGISTRO FINAL:", registro);
   
   window.SIMCHS_REGISTRO = registro;
 
-  enviarAGoogleSheets(registro);
+  enviarASupabase(registro);
 
   localStorage.removeItem("inicioEncuesta");
   encuestaActiva = false;
@@ -467,8 +468,8 @@ window.addEventListener("beforeunload", function (e) {
       estado: "abandonada",
       inicio: new Date(tiempoInicio).toISOString(),
       fin: new Date(tiempoFin).toISOString(),
-      duracionSegundos: duracion,
-      progreso: progreso
+      duracion: duracion,
+      progreso: [ progreso ] 
     };
 
     localStorage.setItem("ultimaEncuestaAbandonada", JSON.stringify(registroIncompleto));
@@ -513,32 +514,25 @@ window.addEventListener("load", () => {
   }
 });
 
-/* ---- Actualizar DB ----------------------------*/
-
-function guardarEnBaseMensual(registro) {
-  const ahora = new Date();
-  const año = ahora.getFullYear();
-  const mes = String(ahora.getMonth() + 1).padStart(2, "0");
-  const nombreArchivo = `SIMCHS_${año}_${mes}`;
-  let base = JSON.parse(localStorage.getItem(nombreArchivo)) || [];
-  base.push(registro);
-  localStorage.setItem(nombreArchivo, JSON.stringify(base));
-  descargarBaseMensual(nombreArchivo, base);
-}
-
 /*---------------------------Cargue de datos en googles sheets----------------*/
 
-function enviarAGoogleSheets(registro) {
-  fetch('/api/send', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(registro) // Enviamos el registro directo, sin llaves extras
-  })
-  .then(res => {
-    if (res.ok) console.log("Logrado");
-    else console.error("Error en servidor");
-  })
-  .catch(err => console.error("Error de red", err));
+async function enviarASupabase(registro) {
+  try {
+    const { data, error } = await _supabase
+      .from('encuestas_simch') // Asegúrate que este sea el nombre exacto de tu tabla
+      .insert([registro]);
+
+    if (error) {
+      console.error("Error en Supabase:", error.message);
+      // Opcional: Guardar en localStorage si falla el internet
+      localStorage.setItem("pendiente_envio", JSON.stringify(registro));
+    } else {
+      console.log("¡Datos guardados en Supabase exitosamente!");
+      // Aquí puedes redirigir al usuario o mostrar mensaje de éxito
+    }
+  } catch (err) {
+    console.error("Error de conexión:", err);
+  }
 }
 
 /*--------------------------Limpiar Form--------------------------------------------------*/
