@@ -2,6 +2,7 @@ export default async function handler(req, res) {
   const { seccion, sessionId } = req.body;
   const pais = req.headers['x-vercel-ip-country'] || 'Desconocido';
   const ciudad = req.headers['x-vercel-ip-city'] || 'Desconocido';
+  const region = req.headers['x-vercel-ip-country-region'] || '';
   const userAgent = req.headers['user-agent'];
 
   try {
@@ -15,7 +16,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         seccion: seccion,
         navegador: userAgent,
-        pais: `${pais} - ${ciudad}`,
+        pais: `${pais} - ${decodeURIComponent(ciudad)} - ${region}`,
         session_id: sessionId
       }),
     });
