@@ -253,9 +253,9 @@ const Matriz = {
             "Nivel":"N3",
             "CriterioN":"Manifestación externa observable en la sociedad.",
             "P_Invertida":true,
-            "Conciencia":"Conciencia",
-            "CriterioC":"Percepción y responsabilidad frente al entorno.",
-            "Impacto":"Alto",
+            "Conciencia":"Emocional",
+            "CriterioC":"Sensibilidad hacia los demás.",
+            "Impacto":"Medio",
             "PonderacionN":0.306666666666667,
             "PonderacionC":0.1,
             "PonderaciónP":0.00625416517147691
