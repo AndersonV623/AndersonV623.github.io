@@ -143,7 +143,7 @@ function VariablesSIMCHS(datosRegistro) {
 
         return {
             conciencia: nombre,
-            peso: PonderacionC,
+            peso: datos.peso,
             valor: valorPorcentaje.toFixed(2),
             valorTexto: valorPorcentaje.toFixed(2) + "%"
         };
