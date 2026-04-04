@@ -159,16 +159,35 @@ function VariablesSIMCHS(datosRegistro) {
         };
     });
 
-    //1.7 Calculamos Render y ejecutamos resultados para mostrar.
-    const render = RenderSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_Preguntas, Matriz_General);
-    ResultadosSIMCHS(render);
+    // 1.7 MATRIZ CONCIENCIA = Objetivo: Crear la Matriz de conciencias, para validar el aporte de cada conciencia en la sociedad.
+    const nombreConciencia = [...new Set(Matriz_General.map(m => m.Conciencia))];
+    const Matriz_Conciencia = nombreConciencia.map(nombre => {
+        const filas = Matriz_General.filter(m => m.Conciencia === nombre);
+        const cantContestado = filas.filter(f => f.Respuesta > 0).length; //Cantidad de respuestas obteniddas
+        const sumaNorm = filas.reduce((acc, curr) => acc + (curr.Normalizacion || 0), 0);
+        const sumaPerfil = filas.reduce((acc, curr) => acc + (curr.Puntaje_Perfil || 0), 0);
+        return {
+            Conciencia: nombre,
+            PorcentajeC: cantContestado > 0 ? ((sumaNorm / 10) - sumaPerfil) * 100: 0,
+            PorcentajeI: cantContestado > 0 ? sumaPerfil * 100: 0
+        };
+    });
+
+    //1.8 Calculamos Render y ejecutamos resultados para mostrar.
+    const render = RenderSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_Preguntas, Matriz_General, Matriz_Conciencia);
+    const renderGraficos = () => {
+        GraficarRadarSIMCHS(Matriz_Conciencia);
+        // Aquí podremos agregar en el futuro: GraficarBarras(Matriz_Nivel);
+    };
+    ResultadosSIMCHS(render,renderGraficos);
 }
 
 //========================================================
 // 2. FUNCIÓN PARA CALCULAR RESULTADOS POR PREGUNTA
 //========================================================
-function CalculadoraSIMCHS(Matriz_General) {
-
+function CalculadoraSIMCHS() {
+    
+    
 }
 
 //----------------------------------------------------------------------------------
@@ -178,14 +197,187 @@ function CalculadoraSIMCHS(Matriz_General) {
 //=====================================================
 // 3.1. CONSTRUCTOR DE VISTA PARA INFORME PERSONAL
 //=====================================================
-function ConsInfPersonalSIMCHS() {
+function ConsInfPersonalSIMCHS(Matriz_General, Matriz_Conciencia) {
+    // Variables de lestudio
+    const CatnCont = Matriz_General.reduce((acc, curr) => acc + (curr.Respuesta || 0), 0);
+    let indiceGlobal = 0;
+    let estado = "";
+    let clase = "";
+    let interprete = "";
 
+    if (CatnCont !== 0) {
+        indiceGlobal = Matriz_General.reduce((acc, curr) => acc + (curr.Puntaje_Perfil || 0), 0);
+    }
+    if ((indiceGlobal * 100) < 40) {
+        estado = "Perfil crítico";
+        clase = "bg-danger bg-gradient text-white";
+        interprete = "Se recomienda fortalecer procesos de autorregulación y conciencia personal."
+    }
+    else if ((indiceGlobal * 100) < 60) {
+        estado = "Perfil en desarrollo";
+        clase = "bg-warning bg-gradient text-dark";
+        interprete ="El perfil muestra desarrollo medio con oportunidades de mejora.";
+    }
+    else if ((indiceGlobal * 100) < 80) {
+        estado = "Perfil adecuado";
+        clase = "bg-info bg-gradient text-white";
+        interprete = "Existe un nivel funcional adecuado de desarrollo humano.";
+    }
+    else {
+        estado = "Perfil óptimo";
+        clase = "bg-success bg-gradient text-white";
+        interprete = "El perfil evidencia alto nivel de integración personal y conciencia.";
+    }
+
+    const html_Tarjeta_Perfil = `
+        <div class="card shadow-sm p-4 text-center animate__animated animate__fadeIn">
+            <h3 class="mb-3">Perfil Humano SIMCH-S</h3>
+            <div class="display-4 fw-bold mb-3">
+                ${(indiceGlobal * 100).toFixed(1)}%
+            </div>
+            <div class="badge rounded-pill ${clase} p-2 fs-6">
+                ${estado}
+            </div>
+            <p class="mt-3 text-muted">
+                ${interprete}
+            </p>
+        </div>
+    `;
+
+    const html_Tarjeta_Conciencias = `
+        <div class="card mb-3">
+            <div id="radarChart" style="width: 100%; height: 400px;"></div>
+            <div class="card-body">
+                <h5 class="card-title">Grafico de Radar</h5>
+                <p class="card-text">Interpretación.</p>
+                <p class="card-text"><small class="text-muted">Descripción breve</small></p>
+            </div>
+        </div>
+    `;
+
+    // 3.2.4. TABLA MATRIZ DE CONCIENCIA
+    const filasConciencia = Matriz_Conciencia.map(row => `
+        <tr>
+            <td class="fw-bold">${row.Conciencia}</td>
+            <td class="text-center">${row.PorcentajeC.toFixed(4)}%</td>
+            <td class="text-center">${row.PorcentajeI.toFixed(4)}%</td>
+        </tr>
+    `).join("");
+
+    const html_TablaConciencias = `
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered table-ligth table-striped table-hover bg-white" style="font-size: 0.75rem;">
+                <thead class="align-middle table-dark">
+                    <tr>
+                        <th class="text-center">Conciencia</th>
+                        <th class="text-center">Porcentaje Impacto por Conciencia</th>
+                        <th class="text-center">Porcentaje Impacto General</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${filasConciencia}
+                </tbody>
+            </table>
+        </div>
+    `;
+    
+    // 3.1.6. HEADER DE INFORME PERSONAL
+    const html_Header = `
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">🫂 Índice de Sincronía Social</h5>
+        </div>
+    `;
+    // 3.1.7. SECCION PARA TARJETA DE PERFIL GLOBAL
+    const html_SeccionPerfil = `
+        <div class="mb-4">
+            ${html_Tarjeta_Perfil}
+        </div>
+    `;
+    
+    const html_SeccionTarjetaConciencia = `
+        <div class="mb-4">
+            ${html_Tarjeta_Conciencias}
+        </div>
+    `;
+
+    const html_SeccionMConciencia = `
+        <div class="mb-4">
+            <h6 class="text-uppercase fw-bold text-primary small mb-2">
+                📌 Matriz de conciencias
+            </h6>
+            ${html_TablaConciencias}
+        </div>
+    `;
+
+    // 3.1.8. BODY FINAL
+    if (CatnCont !== 0) {
+        html_Body = `
+            <div class="card-body bg-light">
+                ${html_SeccionPerfil}
+                <hr>
+                ${html_SeccionTarjetaConciencia}
+                <hr>
+                ${html_SeccionMConciencia}
+            </div>
+        `;
+    } else {
+        html_Body = `
+            <div class="card bg-dark text-white rounded overflow-hidden animate__animated animate__fadeIn" 
+                style="max-height: 400px; border-radius: 15px;"> 
+                
+                <img src="https://img.freepik.com/foto-gratis/interior-sala-grunge-3d_1048-7935.jpg?semt=ais_incoming&w=740&q=80" 
+                    class="card-img" 
+                    alt="Sincronía en espera" 
+                    style="opacity: 0.4; object-fit: cover; height: 300px; width: 100%;">
+                
+                <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                    <div class="p-4" style="
+                        background: rgba(0, 0, 0, 0.6); 
+                        border-radius: 20px; 
+                        backdrop-filter: blur(8px); 
+                        border: 1px solid rgba(0, 212, 255, 0.5); 
+                        box-shadow: 0 0 15px rgba(0, 212, 255, 0.4), 0 0 30px rgba(0, 212, 255, 0.2);
+                        opacity:0.5;
+                    ">
+                        <h4 class="card-title fw-bold text-uppercase mb-2" style="letter-spacing: 3px; color: #00d4ff; text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);">
+                            <i class="bi bi-activity me-2"></i>Sincronía en espera
+                        </h4>
+                        <p class="card-text mb-1 fw-light">Tu mapa de conciencia aún no ha sido trazado.</p>
+                        <p class="card-text small opacity-75">Por favor, responde las preguntas para iniciar el escaneo SIMCH-S.</p>
+                        <hr class="my-3" style="width: 50%; margin: 0 auto; border-color: rgba(0, 212, 255, 0.3);">
+                        <p class="card-text">
+                            <small style="color: #00d4ff; font-weight: bold; opacity: 0.8;">
+                                Última actualización: ${new Date().toLocaleTimeString()}
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    // 3.9. FOOTER
+    const html_Footer = `
+        <div class="card-footer text-muted small d-flex justify-content-between">
+            <span>Estado: Vigilando...</span>
+            <span>Actualizado: ${new Date().toLocaleTimeString()}</span>
+        </div>
+    `;
+
+    // 3.10. RETORNO FINAL
+    return `
+        <div class="card shadow-sm border-0 mb-4">
+            ${html_Header}
+            ${html_Body}
+            ${html_Footer}
+        </div>
+    `;
 }
 
 //======================================================
 // 3.2. CONSTRUCTOR DE VISTA PARA INFORME AUDITORÍA
 //======================================================
-function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_Preguntas, Matriz_General) {
+function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_Preguntas, Matriz_General, Matriz_Conciencia) {
     // 3.2.1. TABLA MATRIZ IMPACTO
     const filasImpacto = Matriz_Impacto.map(row => `
         <tr>
@@ -200,8 +392,8 @@ function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_P
 
     const html_TablaImpacto = `
         <div class="table-responsive">
-            <table class="table table-sm table-bordered table-hover bg-white" style="font-size: 0.75rem;">
-                <thead class="table-primary align-middle">
+            <table class="table table-sm table-bordered table-ligth table-striped table-hover bg-white" style="font-size: 0.75rem;">
+                <thead class="align-middle table-dark">
                     <tr>
                         <th>Impacto</th>
                         <th class="text-center">Peso</th>
@@ -229,8 +421,8 @@ function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_P
 
     const html_TablaNivel = `
         <div class="table-responsive">
-            <table class="table table-sm table-bordered table-hover bg-white" style="font-size: 0.75rem;">
-                <thead class="table-primary align-middle">
+            <table class="table table-sm table-bordered table-ligth table-striped table-hover bg-white" style="font-size: 0.75rem;">
+                <thead class="align-middle table-dark">
                     <tr>
                         <th>Nivel Dimensión</th>
                         <th class="text-center">Nivel</th>
@@ -260,8 +452,8 @@ function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_P
 
     const html_TablaPonderacionPreguntas = `
         <div class="table-responsive">
-            <table class="table table-sm table-bordered table-hover bg-white" style="font-size: 0.75rem;">
-                <thead class="table-primary align-middle">
+            <table class="table table-sm table-bordered table-ligth table-striped table-hover bg-white" style="font-size: 0.75rem;">
+                <thead class="align-middle table-dark">
                     <tr>
                         <th>Nivel</th>
                         <th>Impacto</th>
@@ -280,7 +472,33 @@ function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_P
         </div>
     `;
     
-    // 3.2.4. TARJETAS DETALLADAS (PREGUNTA POR PREGUNTA)
+    // 3.2.4. TABLA MATRIZ DE CONCIENCIA
+    const filasConciencia = Matriz_Conciencia.map(row => `
+        <tr>
+            <td class="fw-bold">${row.Conciencia}</td>
+            <td class="text-center">${row.PorcentajeC.toFixed(4)}%</td>
+            <td class="text-center">${row.PorcentajeI.toFixed(4)}%</td>
+        </tr>
+    `).join("");
+
+    const html_TablaConciencias = `
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered table-ligth table-striped table-hover bg-white" style="font-size: 0.75rem;">
+                <thead class="align-middle table-dark">
+                    <tr>
+                        <th class="text-center">Conciencia</th>
+                        <th class="text-center">Porcentaje Impacto por Conciencia</th>
+                        <th class="text-center">Porcentaje Impacto General</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${filasConciencia}
+                </tbody>
+            </table>
+        </div>
+    `;
+
+    // 3.2.5. TARJETAS DETALLADAS (PREGUNTA POR PREGUNTA)
     const html_TarjetasDetalle = Matriz_General.map(item => {
         const invertida = Number(item.P_Invertida) === 1;
         const colorPunto = invertida ? "#dc3545" : "#28a745";
@@ -348,14 +566,14 @@ function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_P
         </div>
     `;
 
-    // 3.2.5. HEADER DE AUDITORÍA
+    // 3.2.6. HEADER DE AUDITORÍA
     const html_Header = `
         <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
             <h5 class="mb-0">🕵️ Auditoría SIMCH-S</h5>
             <span class="badge bg-success">Activo</span>
         </div>
     `;
-    // 3.2.6. SECCIONES YA CON TABLAS INCRUSTADAS
+    // 3.2.7. SECCIONES YA CON TABLAS INCRUSTADAS
     const html_SeccionImpacto = `
         <div class="mb-4">
             <h6 class="text-uppercase fw-bold text-primary small mb-2">
@@ -383,7 +601,16 @@ function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_P
         </div>
     `;
 
-    // 3.7. BODY FINAL
+    const html_SeccionConciencia = `
+        <div class="mb-4">
+            <h6 class="text-uppercase fw-bold text-primary small mb-2">
+                📌 Matriz de Conciencia
+            </h6>
+            ${html_TablaConciencias}
+        </div>
+    `;
+
+    // 3.8. BODY FINAL
     const html_Body = `
         <div class="card-body bg-light">
             ${html_SeccionImpacto}
@@ -392,11 +619,13 @@ function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_P
             <hr>
             ${html_SeccionPonderacionPreguntas}
             <hr>
+            ${html_SeccionConciencia}
+            <hr>
             ${html_SeccionDetalle}
         </div>
     `;
 
-    // 3.8. FOOTER
+    // 3.9. FOOTER
     const html_Footer = `
         <div class="card-footer text-muted small d-flex justify-content-between">
             <span>Estado: Vigilando...</span>
@@ -404,7 +633,7 @@ function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_P
         </div>
     `;
 
-    // 3.9. RETORNO FINAL
+    // 3.10. RETORNO FINAL
     return `
         <div class="card shadow-sm border-0 mb-4">
             ${html_Header}
@@ -418,16 +647,20 @@ function ConstAuditoriaSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_P
 //======================================================
 // 4. FUNCIÓN RENDER (ARMA EL PAQUETE FINAL PARA DOM)
 //======================================================
-function RenderSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_Preguntas, Matriz_General) {
+function RenderSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_Preguntas, Matriz_General, Matriz_Conciencia) {
 
     const htmlAuditoria = ConstAuditoriaSIMCHS(
         Matriz_Impacto,
         Matriz_Nivel,
         Matriz_Ponderacion_Preguntas,
-        Matriz_General
+        Matriz_General,
+        Matriz_Conciencia
     );
 
-    const htmlInforme = ""; // por ahora vacío (hasta que lo construyamos)
+    const htmlInforme = ConsInfPersonalSIMCHS(
+        Matriz_General,
+        Matriz_Conciencia
+    ); 
 
     return {
         htmlAuditoria,
@@ -438,25 +671,85 @@ function RenderSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_Preguntas
 //======================================================
 // 5. FUNCIÓN RESULTADOS (RENDERIZA DOM Y GRÁFICAS)
 //======================================================
-function ResultadosSIMCHS(render) {
+function ResultadosSIMCHS(render, renderGraficos) {
 
     const contInforme = document.getElementById("Informe_SIMCHS_Personal");
     const contAuditoria = document.getElementById("Auditoria_SIMCHS_Personal");
 
     if (contInforme) {
         contInforme.innerHTML = render.htmlInforme || "";
+        if (renderGraficos && typeof renderGraficos === "function") {
+            renderGraficos(); 
+        }
     }
 
     if (contAuditoria) {
         contAuditoria.innerHTML = render.htmlAuditoria || "";
     }
+    
+
 }
 
 //======================================================
 // 6. FUNCIÓN PARA GRAFICAR RADAR (PLOTLY)
 //======================================================
-function GraficarRadarSIMCHS() {
-    
+function GraficarRadarSIMCHS(Matriz_Conciencia) {
+    const container = document.getElementById("radarChart");
+    if (!container || !Matriz_Conciencia.length) return;
+
+    // 1. Extraemos los nombres y los valores (Porcentaje de Conciencia)
+    // Usamos PorcentajeC que es el nivel de desarrollo de esa dimensión
+    let dimensiones = Matriz_Conciencia.map(row => row.Conciencia);
+    let valores = Matriz_Conciencia.map(row => row.PorcentajeC);
+
+    // 2. TRUCO DE RADAR: Para cerrar la forma, repetimos el primer dato al final
+    dimensiones.push(dimensiones[0]);
+    valores.push(valores[0]);
+
+    const colores = valores.map(v => {
+        if (v < 40) return "red";
+        if (v < 60) return "orange";
+        if (v < 80) return "blue";
+        return "green";
+    });
+
+    const trace = {
+        type: "scatterpolar",
+        r: valores,
+        theta: dimensiones,
+        fill: "toself",
+        fillcolor: "rgba(0, 212, 255, 0.3)",
+        line: {
+            color: colores,
+            width: 3
+        },
+        marker: {
+            size: 8,
+            color: colores
+        }
+    };
+
+    const layout = {
+        polar: {
+            bgcolor: "rgba(0,0,0,0)",
+            radialaxis: {
+                visible: true,
+                range: [0, 100],
+                tickfont: { size: 10, color: "#6c757d" },
+                gridcolor: "rgba(0,0,0,0.1)"
+            },
+            angularaxis: {
+                tickfont: { size: 11, color: "#495057", fontWeight: "bold" },
+                gridcolor: "rgba(0,0,0,0.1)"
+            }
+        },
+        margin: { t: 40, b: 40, l: 60, r: 60 },
+        showlegend: false,
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)"
+    };
+
+    Plotly.newPlot("radarChart", [trace], layout, {responsive: true});
 }
 
 /*--------------------------------------Inspector--------------------------------------*/
