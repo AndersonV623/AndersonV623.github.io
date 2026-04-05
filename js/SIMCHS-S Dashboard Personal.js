@@ -698,11 +698,9 @@ function GraficarRadarSIMCHS(Matriz_Conciencia) {
     if (!container || !Matriz_Conciencia.length) return;
 
     // 1. Extraemos los nombres y los valores (Porcentaje de Conciencia)
-    // Usamos PorcentajeC que es el nivel de desarrollo de esa dimensión
     let dimensiones = Matriz_Conciencia.map(row => row.Conciencia);
     let valores = Matriz_Conciencia.map(row => row.PorcentajeC);
-
-    // 2. TRUCO DE RADAR: Para cerrar la forma, repetimos el primer dato al final
+    
     dimensiones.push(dimensiones[0]);
     valores.push(valores[0]);
 
@@ -719,14 +717,8 @@ function GraficarRadarSIMCHS(Matriz_Conciencia) {
         theta: dimensiones,
         fill: "toself",
         fillcolor: "rgba(0, 212, 255, 0.3)",
-        line: {
-            color: colores,
-            width: 3
-        },
-        marker: {
-            size: 8,
-            color: colores
-        }
+        line: {color: colores, width: 3}, //Linea
+        marker: {size: 8,color: colores} //Marcadr
     };
 
     const layout = {
@@ -751,6 +743,7 @@ function GraficarRadarSIMCHS(Matriz_Conciencia) {
 
     Plotly.newPlot("radarChart", [trace], layout, {responsive: true});
 }
+
 
 /*--------------------------------------Inspector--------------------------------------*/
 let cacheDatos = "";
