@@ -4,6 +4,7 @@
 function VariablesSIMCHS(datosRegistro) {
     // 1.1. MATRIZ BASE DEL SISTEMA (PREGUNTAS SIMCH-S)
     const Matriz_Preguntas = (typeof Matriz !== 'undefined') ? Matriz.Preguntas : [];
+    const Matriz_Recomendaciones = (typeof Matriz_R !== 'undefined') ? Matriz_R.Recomendaciones : [];
     const Total_Preguntas = Matriz_Preguntas.length;
 
     // 1.2. MATRIZ BASE DEL FORMULARIO (RESPUESTAS USUARIO)
@@ -166,12 +167,30 @@ function VariablesSIMCHS(datosRegistro) {
         const cantContestado = filas.filter(f => f.Respuesta > 0).length; //Cantidad de respuestas obteniddas
         const sumaNorm = filas.reduce((acc, curr) => acc + (curr.Normalizacion || 0), 0);
         const sumaPerfil = filas.reduce((acc, curr) => acc + (curr.Puntaje_Perfil || 0), 0);
+        
+        const PorcentajeC = cantContestado > 0 ? ((sumaNorm / 10) - sumaPerfil) * 100: 0;
+        const PorcentajeI = cantContestado > 0 ? sumaPerfil * 100: 0;
+
+        const recomendacionesDimension = Matriz_Recomendaciones.filter(r => r.Dimension === nombre);
+
+        let recomendacionFinal = null;
+
+        if (recomendacionesDimension.length > 0) {
+            recomendacionFinal = recomendacionesDimension.reduce((mejor,actual) => {
+                const distMejor = Math.abs(PorcentajeC - mejor.Porc_Rang);
+                const distActual = Math.abs(PorcentajeC - actual.Porc_Rang);
+                return distActual < distMejor ? actual : mejor;
+            });
+        }
+
         return {
             Conciencia: nombre,
-            PorcentajeC: cantContestado > 0 ? ((sumaNorm / 10) - sumaPerfil) * 100: 0,
-            PorcentajeI: cantContestado > 0 ? sumaPerfil * 100: 0
+            PorcentajeC: PorcentajeC,
+            PorcentajeI: PorcentajeI,
+            Recomendaciones: recomendacionFinal
         };
     });
+
 
     //1.8 Calculamos Render y ejecutamos resultados para mostrar.
     const render = RenderSIMCHS(Matriz_Impacto, Matriz_Nivel, Matriz_Ponderacion_Preguntas, Matriz_General, Matriz_Conciencia);
@@ -255,6 +274,34 @@ function ConsInfPersonalSIMCHS(Matriz_General, Matriz_Conciencia) {
         </div>
     `;
 
+    const html_Tarjetas_Recomendaciones = Matriz_Conciencia.map(row => {
+        if (!row.Recomendaciones) return "";
+        return `
+            <div class="card shadow-sm mb-3 animate__animated animate__fadeIn">
+                <div class="card-header bg-dark text-white">
+                    <strong>${row.Conciencia}</strong> 
+                    <span class="${clase} ms-2">${row.PorcentajeC.toFixed(1)}%</span>
+                </div>
+                <div class="card-body">
+                    <p><b>📚 Libro:</b> ${row.Recomendaciones.Herramienta_Literaria}</p>
+                    <p><b>💡 Idea:</b> ${row.Recomendaciones.Frase_Literaria}</p>
+                    <p><b>🎥 Visual:</b> ${row.Recomendaciones.Herramientas_Visuales}</p>
+                    <p><b>🎧 Auditivo:</b> ${row.Recomendaciones.Herramientas_Auditivas}</p>
+                    <p><b>🧩 Acción:</b> ${row.Recomendaciones.Herramientas_Accion}</p>
+                </div>
+            </div>
+        `;
+    }).join("");
+
+    const html_Tarjeta_Recomendaciones = `
+        <div class="mb-4">
+            <h6 class="text-uppercase fw-bold text-primary small mb-2">
+                🎯 Recomendaciones por Conciencia
+            </h6>
+            ${html_Tarjetas_Recomendaciones}
+        </div>
+    `;
+
     // 3.2.4. TABLA MATRIZ DE CONCIENCIA
     const filasConciencia = Matriz_Conciencia.map(row => `
         <tr>
@@ -280,7 +327,7 @@ function ConsInfPersonalSIMCHS(Matriz_General, Matriz_Conciencia) {
             </table>
         </div>
     `;
-    
+
     // 3.1.6. HEADER DE INFORME PERSONAL
     const html_Header = `
         <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
@@ -309,6 +356,12 @@ function ConsInfPersonalSIMCHS(Matriz_General, Matriz_Conciencia) {
         </div>
     `;
 
+    const html_SeccionTarjetaRecomendacion = `
+        <div class="mb-4">
+            ${html_Tarjeta_Recomendaciones}
+        </div>
+    `;
+
     // 3.1.8. BODY FINAL
     if (CatnCont !== 0) {
         html_Body = `
@@ -318,6 +371,8 @@ function ConsInfPersonalSIMCHS(Matriz_General, Matriz_Conciencia) {
                 ${html_SeccionTarjetaConciencia}
                 <hr>
                 ${html_SeccionMConciencia}
+                <hr>
+                ${html_SeccionTarjetaRecomendacion}
             </div>
         `;
     } else {

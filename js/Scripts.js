@@ -247,7 +247,7 @@ fetch(url)
       $('#municipios').select2({
         placeholder: "Busca tu municipio...",
         allowClear: true,
-        width: '100%' // Recomendado para que no se "encoja" en formularios ocultos
+        width: '100%'
       });
     } else {
       console.warn("Select2 no cargó a tiempo. El buscador será un select normal.");
@@ -256,7 +256,6 @@ fetch(url)
   .catch(err => console.error("Error cargando municipios DANE:", err));
 
 /*-----------------------------Chekboxes----------------------------------------*/
-  
 document.addEventListener(
   "change", () => {
     const seleccionados = document.querySelectorAll(
