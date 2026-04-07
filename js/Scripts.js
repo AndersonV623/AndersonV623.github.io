@@ -343,46 +343,25 @@ function renderPreguntas(preguntas) {
     tr.appendChild(tdTexto);
 
     // Radios 1–5
-    /*for (let v = 1; v <= 5; v++) {
+    for (let v = 1; v <= 5; v++) {
       const td = document.createElement("td");
-      td.classList.add("text-center");
-
+      td.classList.add("p-0", "text-center", "align-middle", "td-simchs");
+      td.style.height = "55px"; // ajusta el alto del td
       const input = document.createElement("input");
       input.type = "radio";
-      input.classList.add("form-check-input", "radio-scale", `radio-${v}`);
+      input.classList.add("btn-check");
       input.name = `P${p.Item}`;
       input.id = `P${p.Item}_V${v}`;
       input.value = v;
-
+      const label = document.createElement("label");
+      label.classList.add("btn", "btn-simchs", "w-100", "h-100");
+      label.setAttribute("for", input.id);
+      const nombres = ["Uno", "Dos", "Tres", "Cuatro", "Cinco"];
+      label.innerHTML = `<div class="simchs-num">${v}</div><div class="simchs-text">${nombres[v-1]}</div>`;
       td.appendChild(input);
+      td.appendChild(label);
       tr.appendChild(td);
-    }*/
-    // Radios 1–5 como botones
-for (let v = 1; v <= 5; v++) {
-
-  const td = document.createElement("td");
-  td.classList.add("p-0", "text-center", "align-middle", "td-simchs");
-
-  td.style.height = "55px"; // ajusta el alto del td
-
-  const input = document.createElement("input");
-  input.type = "radio";
-  input.classList.add("btn-check");
-  input.name = `P${p.Item}`;
-  input.id = `P${p.Item}_V${v}`;
-  input.value = v;
-
-  const label = document.createElement("label");
-  label.classList.add("btn", "btn-simchs", "w-100", "h-100");
-  label.setAttribute("for", input.id);
-
-  const nombres = ["Uno", "Dos", "Tres", "Cuatro", "Cinco"];
-  label.innerHTML = `<div class="simchs-num">${v}</div><div class="simchs-text">${nombres[v-1]}</div>`;
-
-  td.appendChild(input);
-  td.appendChild(label);
-  tr.appendChild(td);
-}
+    }
 
     // Insertar debajo del anterior
     referencia.insertAdjacentElement("afterend", tr);
@@ -437,34 +416,23 @@ document.getElementById("formSIMCH").addEventListener("submit", function (e) {
     });
   });
 
-  // Validación
-/*
+  // Validación 
+  document.querySelectorAll(".fila-error").forEach(f => f.classList.remove("fila-error"));
+
+  // Marcar filas sin responder
+  respuestas.forEach(r => {
+    if (r.valor === null) {
+      const fila = document.getElementById(`fila_P${r.item}`);
+      if (fila) fila.classList.add("fila-error");
+    }
+  });
+
   const sinResponder = respuestas.filter(r => r.valor === null).length;
 
   if (sinResponder > 0) {
     alert(`Faltan ${sinResponder} preguntas por responder.`);
     return;
   }
-*/
-
-
-// Limpiar marcas anteriores
-document.querySelectorAll(".fila-error").forEach(f => f.classList.remove("fila-error"));
-
-// Marcar filas sin responder
-respuestas.forEach(r => {
-  if (r.valor === null) {
-    const fila = document.getElementById(`fila_P${r.item}`);
-    if (fila) fila.classList.add("fila-error");
-  }
-});
-
-const sinResponder = respuestas.filter(r => r.valor === null).length;
-
-if (sinResponder > 0) {
-  alert(`Faltan ${sinResponder} preguntas por responder.`);
-  return;
-}
 
 
   // =============================
