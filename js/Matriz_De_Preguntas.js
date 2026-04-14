@@ -61,12 +61,12 @@ const Matriz = {
             "R3":"A veces me detengo a pensar, pero no siempre.",
             "R4":"Generalmente pienso antes de responder.",
             "R5":"Siempre reflexiono con calma antes de responder o actuar.",
-            "Tipo de Respuesta":"Capacidad",
-            "T1":"Muy difícil",
-            "T2":"Dificil",
-            "T3":"Neutro",
-            "T4":"Facil",
-            "T5":"Muy fácil",
+            "Tipo de Respuesta":"Conducta",
+            "T1":"Nunca",
+            "T2":"Casi nunca",
+            "T3":"A veces",
+            "T4":"Casi siempre",
+            "T5":"Siempre",
             "Explicación":"Esta formulación sitúa la reflexión interna dentro de un conflicto interpersonal, permitiendo medir la capacidad de autocontrol cognitivo antes de responder socialmente. Se evalúa qué tan fácil es para el individuo detenerse, analizar y responder con conciencia en interacción con otros."
             
         },{
