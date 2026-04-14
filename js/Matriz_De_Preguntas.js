@@ -2,7 +2,7 @@ const Matriz = {
     "Preguntas":[
         {
             "Item":1,
-            "Pregunta_I":" Analizo diferentes perspectivas antes de tomar una decisión",
+            "Pregunta_I":"Analizo diferentes perspectivas antes de tomar una decisión",
             "Nivel":"N1",
             "CriterioN":"Fundamento interno que sostiene la conducta social.",
             "P_Invertida":false,
@@ -56,10 +56,10 @@ const Matriz = {
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
             "Pregunta":"Cuando ocurre un problema o malentendido con otras personas, suelo pensar antes de reaccionar o responder.",
-            "R1":"Cuando ocurre un problema o malentendido con otras personas, suelo pensar antes de reaccionar o responder.",
-            "R2":"Reacciono de inmediato sin pensar.",
-            "R3":"Casi siempre respondo impulsivamente.",
-            "R4":"A veces me detengo a pensar, pero no siempre.",
+            "R1":"Reacciono de inmediato sin pensar.",
+            "R2":"Casi siempre respondo impulsivamente.",
+            "R3":"A veces me detengo a pensar, pero no siempre.",
+            "R4":"Generalmente pienso antes de responder.",
             "R5":"Siempre reflexiono con calma antes de responder o actuar.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
@@ -94,7 +94,7 @@ const Matriz = {
             
         },{
             "Item":5,
-            "Pregunta_I":" Busco coherencia lógica en lo que pienso",
+            "Pregunta_I":"Busco coherencia lógica en lo que pienso",
             "Nivel":"N1",
             "CriterioN":"Fundamento interno que sostiene la conducta social.",
             "P_Invertida":false,
@@ -102,11 +102,11 @@ const Matriz = {
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
             "Pregunta":"Cuando hablo o doy mi opinión frente a otras personas, trato de que mis ideas tengan sentido y sean claras.",
-            "R1":"Cuando hablo o doy mi opinión frente a otras personas, trato de que mis ideas tengan sentido y sean claras.",
-            "R2":"Digo lo que pienso sin preocuparme si tiene coherencia.",
-            "R3":"A veces logro ordenar mis ideas, pero otras veces me confundo.",
-            "R4":"Intento ser coherente, pero no siempre lo logro.",
-            "R5":"Siempre procuro que lo que digo sea lógico y consistente.",
+            "R1":"Digo lo que pienso sin preocuparme si tiene coherencia.",
+            "R2":"Intento ser claro, pero casi siempre me contradigo o me enredo.",
+            "R3":"A veces logro explicar mis ideas con sentido, pero otras veces no.",
+            "R4":"Generalmente expreso mis ideas de forma lógica y clara.",
+            "R5":"Siempre procuro que lo que digo sea coherente y fácil de entender.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -114,8 +114,7 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Esta reformulación mide la capacidad de mantener coherencia lógica al comunicarse con otros, lo cual impacta directamente en la claridad del pensamiento y la interacción social. Permite evaluar si el individuo organiza sus argumentos antes de expresarse dentro de un entorno colectivo."
-            
-        },{
+        },,{
             "Item":6,
             "Pregunta_I":" Cambio de opinión cuando la evidencia lo justifica",
             "Nivel":"N1",

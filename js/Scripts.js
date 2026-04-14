@@ -373,11 +373,12 @@ function renderPreguntas(preguntas) {
       tr.appendChild(td);
     }
 
-    // 
+    
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'));
     tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl);
     });
+    
 
     // Insertar debajo del anterior
     referencia.insertAdjacentElement("afterend", tr);
