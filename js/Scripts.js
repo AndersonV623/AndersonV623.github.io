@@ -357,9 +357,9 @@ function renderPreguntas(preguntas) {
       label.classList.add("btn", "btn-simchs", "w-100", "h-100");
       label.setAttribute("for", input.id);
       // Texto visible en el botón (Respuesta completa)
-      const respuestaCompleta = p[`R${v}`] || "";
+      const respuestaCompleta = p[`T${v}`] || "";
       // Texto del tooltip (Tipo de respuesta)
-      const tipoRespuesta = p[`T${v}`] || "";
+      const tipoRespuesta = p[`R${v}`] || "";
       // Tooltip Bootstrap
       label.setAttribute("data-bs-toggle", "tooltip");
       label.setAttribute("data-bs-placement", "top");
