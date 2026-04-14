@@ -346,7 +346,7 @@ function renderPreguntas(preguntas) {
     for (let v = 1; v <= 5; v++) {
       const td = document.createElement("td");
       td.classList.add("p-0", "text-center", "align-middle", "td-simchs");
-      td.style.height = "55px"; // ajusta el alto del td
+      td.style.height = "90px";
       const input = document.createElement("input");
       input.type = "radio";
       input.classList.add("btn-check");
@@ -356,12 +356,28 @@ function renderPreguntas(preguntas) {
       const label = document.createElement("label");
       label.classList.add("btn", "btn-simchs", "w-100", "h-100");
       label.setAttribute("for", input.id);
-      const nombres = ["Uno", "Dos", "Tres", "Cuatro", "Cinco"];
-      label.innerHTML = `<div class="simchs-num">${v}</div><div class="simchs-text">${nombres[v-1]}</div>`;
+      // Texto visible en el botón (Respuesta completa)
+      const respuestaCompleta = p[`R${v}`] || "";
+      // Texto del tooltip (Tipo de respuesta)
+      const tipoRespuesta = p[`T${v}`] || "";
+      // Tooltip Bootstrap
+      label.setAttribute("data-bs-toggle", "tooltip");
+      label.setAttribute("data-bs-placement", "top");
+      label.setAttribute("title", tipoRespuesta);
+      // Contenido visible del botón
+      label.innerHTML = `
+        <div class="simchs-desc">${respuestaCompleta}</div>
+      `;
       td.appendChild(input);
       td.appendChild(label);
       tr.appendChild(td);
     }
+
+    // 
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
 
     // Insertar debajo del anterior
     referencia.insertAdjacentElement("afterend", tr);
