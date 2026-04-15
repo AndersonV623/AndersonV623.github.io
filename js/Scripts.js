@@ -236,7 +236,7 @@ fetch(url)
       const attr = item.attributes;
       const option = document.createElement("option");
       // Guardamos el código DANE y el nombre para que Supabase lo reciba clarito
-      option.value = `${attr.MPIO_CCDGO} - ${attr.MPIO_CNMBR} (${attr.DEPTO})`;
+      option.value = `${attr.DEPTO_CCDGO}${attr.MPIO_CCDGO} - ${attr.MPIO_CNMBR} (${attr.DEPTO})`;
       option.textContent = `${attr.MPIO_CNMBR} (${attr.DEPTO})`;
       select.appendChild(option);
     });
