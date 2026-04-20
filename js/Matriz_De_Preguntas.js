@@ -2,19 +2,19 @@ const Matriz = {
     "Preguntas":[
         {
             "Item":1,
-            "Pregunta_I":"Analizo diferentes perspectivas antes de tomar una decisión",
+            "Pregunta_I":" Analizo diferentes perspectivas antes de tomar una decisión",
             "Nivel":"N1",
             "CriterioN":"Fundamento interno que sostiene la conducta social.",
             "P_Invertida":false,
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Antes de tomar una decisión importante, trato de escuchar o considerar diferentes puntos de vista.",
-            "R1":"Tomo decisiones sin escuchar a nadie más.",
-            "R2":"Rara vez considero lo que otras personas piensan.",
-            "R3":"A veces escucho opiniones, pero no siempre las tengo en cuenta.",
-            "R4":"Generalmente considero otros puntos de vista antes de decidir.",
-            "R5":"Siempre analizo distintas perspectivas antes de tomar una decisión.",
+            "Pregunta":"¿Con qué frecuencia realizas un análisis consciente de las diversas perspectivas de un problema social antes de definir tu conducta frente a los demás?",
+            "R1":"Actúo por impulso o inercia social.",
+            "R2":"Reflexiono solo si el tema me afecta.",
+            "R3":"Evalúo posturas de forma superficial.",
+            "R4":"Investigo y contrasto opiniones habitualmente.",
+            "R5":"Mi conducta se basa en un análisis profundo.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -22,7 +22,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Esta reformulación traslada el análisis de perspectivas a un contexto social y cotidiano, evaluando el hábito de considerar opiniones externas antes de actuar. Esto permite medir apertura cognitiva y disposición a tomar decisiones más conscientes dentro de un entorno colectivo."
-            
         },{
             "Item":2,
             "Pregunta_I":" Cuestiono la información antes de aceptarla como verdadera",
@@ -32,12 +31,12 @@ const Matriz = {
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando escucho o leo algo nuevo, suelo verificar si es cierto antes de creerlo o compartirlo.",
-            "R1":"Creo lo que escucho y lo comparto sin verificarlo.",
-            "R2":"Casi nunca verifico la información antes de aceptarla.",
-            "R3":"A veces verifico, dependiendo del tema o la fuente.",
-            "R4":"Generalmente confirmo si la información es verdadera antes de creerla.",
-            "R5":"Siempre confirmo que la información sea verdadera",
+            "Pregunta":"¿Con qué frecuencia cuestionas y verificas la veracidad de la información sobre problemas sociales antes de aceptarla como una verdad que guíe tu opinión o conducta?",
+            "R1":"Acepto la información de forma automática.",
+            "R2":"Solo dudo si la fuente me parece sospechosa.",
+            "R3":"Comparo datos de vez en cuando antes de decidir.",
+            "R4":"Suelo verificar la información en distintas fuentes.",
+            "R5":"Evalúo críticamente toda información antes de creerla.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -45,7 +44,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"La pregunta mide el hábito de pensamiento crítico aplicado al entorno social, especialmente frente a información compartida por otros. Evaluar este comportamiento es relevante porque influye en la forma en que el individuo procesa rumores, noticias o creencias sociales antes de reproducirlas."
-            
         },{
             "Item":3,
             "Pregunta_I":" Reflexiono sobre mis propios pensamientos",
@@ -55,12 +53,12 @@ const Matriz = {
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando ocurre un problema o malentendido con otras personas, suelo pensar antes de reaccionar o responder.",
-            "R1":"Reacciono de inmediato sin pensar.",
-            "R2":"Casi siempre respondo impulsivamente.",
-            "R3":"A veces me detengo a pensar, pero no siempre.",
-            "R4":"Generalmente pienso antes de responder.",
-            "R5":"Siempre reflexiono con calma antes de responder o actuar.",
+            "Pregunta":"¿Con qué frecuencia monitoreas y reflexionas sobre tus propios pensamientos y prejuicios para asegurarte de que tu conducta hacia los demás sea justa y coherente?",
+            "R1":"Actúo sin cuestionar el origen de mis pensamientos.",
+            "R2":"Solo reflexiono si alguien señala un error en mi trato.",
+            "R3":"Intento identificar mis sesgos de manera ocasional.",
+            "R4":"Suelo revisar mis intenciones antes de actuar.",
+            "R5":"Evalúo constantemente mis pensamientos para guiar mi conducta.",
             "Tipo de Respuesta":"Conducta",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -68,7 +66,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Esta formulación sitúa la reflexión interna dentro de un conflicto interpersonal, permitiendo medir la capacidad de autocontrol cognitivo antes de responder socialmente. Se evalúa qué tan fácil es para el individuo detenerse, analizar y responder con conciencia en interacción con otros."
-            
         },{
             "Item":4,
             "Pregunta_I":" Identifico errores en mi razonamiento",
@@ -78,12 +75,12 @@ const Matriz = {
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando discuto o intercambio ideas con otras personas, soy capaz de reconocer si estoy equivocado.",
-            "R1":"Defiendo mi punto de vista sin importar lo que digan los demás.",
-            "R2":"Me cuesta aceptar que estoy equivocado.",
-            "R3":"A veces lo reconozco, pero depende de la situación.",
-            "R4":"Escucho a los demás y en ocasiones reconozco mis errores.",
-            "R5":"Siempre reconozco mis errores y ajusto mi forma de pensar.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta detectar una falla o contradicción en tu propia forma de pensar cuando analizas un problema social complejo?",
+            "R1":"No logro ver errores en mi lógica.",
+            "R2":"Me cuesta mucho aceptar que mi razonamiento puede estar equivocado.",
+            "R3":"A veces noto mis errores, pero solo después de que alguien me los señala.",
+            "R4":"Suelo identificar mis propias contradicciones mientras estoy reflexionando.",
+            "R5":"Detecto y corrijo mis fallos de razonamiento de manera natural y constante.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -91,22 +88,21 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Esta formulación sitúa la reflexión interna dentro de un conflicto interpersonal, permitiendo medir la capacidad de autocontrol cognitivo antes de responder socialmente. Se evalúa qué tan fácil es para el individuo detenerse, analizar y responder con conciencia en interacción con otros."
-            
         },{
             "Item":5,
-            "Pregunta_I":"Busco coherencia lógica en lo que pienso",
+            "Pregunta_I":" Busco coherencia lógica en lo que pienso",
             "Nivel":"N1",
             "CriterioN":"Fundamento interno que sostiene la conducta social.",
             "P_Invertida":false,
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando hablo o doy mi opinión frente a otras personas, trato de que mis ideas tengan sentido y sean claras.",
-            "R1":"Digo lo que pienso sin preocuparme si tiene coherencia.",
-            "R2":"Intento ser claro, pero casi siempre me contradigo o me enredo.",
-            "R3":"A veces logro explicar mis ideas con sentido, pero otras veces no.",
-            "R4":"Generalmente expreso mis ideas de forma lógica y clara.",
-            "R5":"Siempre procuro que lo que digo sea coherente y fácil de entender.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta asegurar que tus opiniones sobre problemas sociales tengan una base lógica y no se contradigan entre sí?",
+            "R1":"No suelo revisar si mis ideas tienen lógica o se contradicen.",
+            "R2":"Me cuesta conectar mis pensamientos de forma coherente.",
+            "R3":"A veces detecto contradicciones, pero no siempre las corrijo.",
+            "R4":"Normalmente logro que mis argumentos sociales sean lógicos.",
+            "R5":"Mantengo una coherencia total en mis ideas de forma natural.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -114,7 +110,7 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Esta reformulación mide la capacidad de mantener coherencia lógica al comunicarse con otros, lo cual impacta directamente en la claridad del pensamiento y la interacción social. Permite evaluar si el individuo organiza sus argumentos antes de expresarse dentro de un entorno colectivo."
-        },,{
+        },{
             "Item":6,
             "Pregunta_I":" Cambio de opinión cuando la evidencia lo justifica",
             "Nivel":"N1",
@@ -123,12 +119,12 @@ const Matriz = {
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Si alguien me demuestra con argumentos o hechos que estoy equivocado, puedo cambiar mi opinión sin problema.",
-            "R1":"Mantengo mi opinión aunque me demuestren lo contrario.",
-            "R2":"Me cuesta mucho cambiar de opinión, incluso con pruebas.",
-            "R3":"A veces cambio de opinión, pero depende de quién lo diga.",
-            "R4":"Casi siempre acepto argumentos y ajusto mi opinión.",
-            "R5":"Siempre cambio mi opinión cuando la evidencia lo demuestra.",
+            "Pregunta":"¿Qué tan de acuerdo estás con la práctica de modificar tu postura sobre un problema social cuando se te presenta evidencia lógica que demuestra que tu opinión inicial era incorrecta?",
+            "R1":"Mantengo mi posición inicial aunque me presenten pruebas en contra.",
+            "R2":"Me cuesta mucho aceptar que estoy equivocado y cambiar mi discurso.",
+            "R3":"Solo cambio de opinión si la evidencia es abrumadora o me afecta.",
+            "R4":"Estoy dispuesto a ajustar mis ideas si me demuestran que hay datos más válidos.",
+            "R5":"Priorizo la verdad y la lógica sobre el hecho de tener la razón.",
             "Tipo de Respuesta":"Acuerdo",
             "T1":"Totalmente en desacuerdo",
             "T2":"En desacuerdo",
@@ -136,7 +132,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"La pregunta evalúa el nivel de acuerdo con la capacidad de ajustar creencias cuando existen argumentos sólidos. Esto permite medir apertura cognitiva y disposición al cambio racional, habilidades esenciales para la toma de decisiones responsables dentro de dinámicas sociales."
-            
         },{
             "Item":7,
             "Pregunta_I":" Me dejo llevar por ideas sin analizarlas",
@@ -146,12 +141,12 @@ const Matriz = {
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Sigo opiniones o tendencias solo porque muchas personas las apoyan, sin analizar si realmente tienen sentido.",
-            "R1":"Casi siempre acepto lo que la mayoría dice sin cuestionarlo.",
-            "R2":"Muchas veces me dejo llevar por lo que otros piensan.",
-            "R3":"Depende del tema: a veces lo cuestiono y a veces no.",
-            "R4":"Generalmente analizo antes de aceptar una idea.",
-            "R5":"Siempre cuestiono y analizo antes de aceptar una idea.",
+            "Pregunta":"¿Con qué frecuencia adoptas ideas sociales solo porque todos las comparten, sin analizarlas tú mismo?",
+            "R1":"Siempre analizo antes de aceptar.",
+            "R2":"Trato de reflexionar.",
+            "R3":"Me dejo llevar en temas comunes.",
+            "R4":"Sigo la corriente habitualmente.",
+            "R5":"Acepto lo que dicen sin cuestionarlo.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -159,7 +154,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Esta pregunta analiza el hábito de aceptar tendencias sociales sin reflexión crítica, midiendo influencia social y autonomía cognitiva. Es útil para identificar qué tan frecuentemente el individuo adopta ideas colectivas sin cuestionar su coherencia o impacto."
-            
         },{
             "Item":8,
             "Pregunta_I":" Evalúo consecuencias antes de actuar",
@@ -169,12 +163,12 @@ const Matriz = {
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Antes de actuar o decir algo frente a otras personas, pienso en cómo podría afectar la situación o a los demás.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta prever el impacto social de tus acciones antes de decidir cómo actuar?",
             "R1":"Actúo sin pensar en las consecuencias.",
-            "R2":"Rara vez considero cómo puede afectar a otros.",
-            "R3":"A veces lo pienso, pero no siempre.",
-            "R4":"Casi siempre analizo las consecuencias antes de actuar.",
-            "R5":"Siempre evalúo cómo mis acciones pueden impactar a los demás.",
+            "R2":"Me cuesta imaginar cómo afectarán mis actos a otros.",
+            "R3":"Solo evalúo consecuencias en situaciones graves.",
+            "R4":"Suelo anticipar el efecto social de lo que hago.",
+            "R5":"Proyecto siempre el impacto de mis actos con claridad.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -182,7 +176,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"La pregunta mide la capacidad de anticipar consecuencias sociales antes de actuar o hablar, evaluando pensamiento preventivo y responsabilidad cognitiva. Las respuestas permiten identificar si la persona regula su conducta considerando el efecto que genera en otros."
-            
         },{
             "Item":9,
             "Pregunta_I":" Organizo mentalmente la información compleja",
@@ -192,12 +185,12 @@ const Matriz = {
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando escucho varios puntos de vista o información diferente en una conversación, logro organizar mis ideas para entender la situación.",
-            "R1":"Me confundo fácilmente y no logro entender lo que pasa.",
-            "R2":"Me cuesta mucho organizar la información cuando hay muchas opiniones.",
-            "R3":"A veces lo logro, pero depende del tema.",
-            "R4":"Generalmente puedo ordenar mis ideas y comprender la situación.",
-            "R5":"Siempre organizo bien la información y entiendo con claridad lo que ocurre.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta ordenar mentalmente los diferentes datos y factores que componen un problema social complejo?",
+            "R1":"La información me abruma y no logro estructurarla.",
+            "R2":"Me cuesta conectar los puntos para entender el problema.",
+            "R3":"Organizo la información si es sencilla o conocida.",
+            "R4":"Suelo esquematizar mentalmente las partes del problema.",
+            "R5":"Clarifico y estructuro datos complejos con naturalidad.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -205,7 +198,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Esta formulación evalúa la capacidad de procesar múltiples perspectivas en una conversación, midiendo organización mental y comprensión situacional. Es importante porque refleja cómo el individuo estructura información social compleja para actuar con claridad y criterio."
-            
         },{
             "Item":10,
             "Pregunta_I":" Me cuesta estructurar mis pensamientos",
@@ -215,12 +207,12 @@ const Matriz = {
             "Conciencia":"Cognitiva",
             "CriterioC":"Comprensión de problemas sociales.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando debo explicar una idea o dar mi opinión frente a otras personas, me cuesta ordenar lo que quiero decir.",
-            "R1":"Siempre expreso mis ideas de forma clara y ordenada.",
-            "R2":"Generalmente logro organizar mis ideas al hablar.",
-            "R3":"A veces me cuesta, dependiendo de la situación.",
-            "R4":"Casi siempre me enredo al hablar o explicar algo.",
-            "R5":"Siempre me cuesta expresarme y termino confundiendo a los demás.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta sentir que tus pensamientos sobre un tema social están desordenados o te cuesta darles una estructura clara?",
+            "R1":"Mis pensamientos siempre están ordenados y claros.",
+            "R2":"Logro estructurar bien mis ideas.",
+            "R3":"A veces me confundo con tanta información.",
+            "R4":"Frecuentemente me cuesta organizar lo que pienso.",
+            "R5":"Mis ideas suelen ser un caos y no logro ordenarlas.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -228,7 +220,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"La pregunta evalúa la dificultad para estructurar pensamientos al comunicarse socialmente, enfocándose en la claridad mental aplicada a la interacción con otros. Al ser una pregunta invertida, permite detectar limitaciones cognitivas en expresión y coherencia verbal en contextos colectivos."
-            
         },{
             "Item":11,
             "Pregunta_I":" Identifico con claridad lo que siento",
@@ -238,12 +229,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"En situaciones sociales, puedo identificar con claridad lo que estoy sintiendo.",
-            "R1":"No logro identificar lo que siento y actúo sin entenderlo.",
-            "R2":"Me cuesta reconocer lo que siento en el momento.",
-            "R3":"A veces lo identifico, pero no siempre.",
-            "R4":"Casi siempre sé qué emoción estoy sintiendo.",
-            "R5":"Siempre identifico claramente lo que siento, incluso en situaciones difíciles.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta identificar con claridad tus emociones cuando te enfrentas a una situación social que te genera sensibilidad o conflicto?",
+            "R1":"No distingo lo que siento; mis emociones me confunden.",
+            "R2":"Sé que algo me afecta, pero me cuesta ponerle nombre.",
+            "R3":"Identifico mis emociones básicas tras un tiempo de reflexión.",
+            "R4":"Suelo reconocer mis sentimientos con rapidez y claridad.",
+            "R5":"Noto y comprendo mis emociones al instante en cualquier situación.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -251,7 +242,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Se adapta la pregunta al contexto social, manteniendo el objetivo de evaluar conciencia emocional interna. Las respuestas representan niveles de reconocimiento emocional que influyen en la forma en que el individuo responde ante otras personas."
-            
         },{
             "Item":12,
             "Pregunta_I":" Comprendo por qué me siento como me siento",
@@ -261,12 +251,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando me siento mal o incómodo en un entorno social, ¿suelo entender la razón de esa emoción?.",
-            "R1":"No entiendo por qué me siento así, solo lo experimento.",
-            "R2":"Me cuesta identificar la causa de lo que siento.",
-            "R3":"A veces logro entenderlo, pero no siempre.",
-            "R4":"Generalmente entiendo por qué me siento de cierta manera.",
-            "R5":"Siempre comprendo el motivo de mis emociones y puedo explicarlo.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta entender la razón exacta de tu malestar o incomodidad cuando te encuentras en un entorno social?",
+            "R1":"Siento la incomodidad pero no logro entender por qué me ocurre.",
+            "R2":"Me cuesta mucho descifrar qué detonó mi malestar en ese momento.",
+            "R3":"A veces comprendo el origen de mi incomodidad tras pensarlo mucho.",
+            "R4":"Suelo identificar rápido qué situación o comentario me hizo sentir mal.",
+            "R5":"Reconozco de inmediato la causa exacta de mi emoción social.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -274,7 +264,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Se enfoca en la comprensión emocional y su origen, clave para regulación social. Las respuestas miden el nivel de interpretación emocional y autoconocimiento, necesario para actuar con mayor equilibrio en la convivencia."
-            
         },{
             "Item":13,
             "Pregunta_I":" Expreso mis emociones de forma adecuada",
@@ -284,12 +273,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando estoy molesto, triste o frustrado, puedo expresar mis emociones sin afectar negativamente a los demás.",
-            "R1":"Expreso mis emociones de forma impulsiva y termino afectando a otros.",
-            "R2":"A veces me cuesta controlarme y reacciono mal.",
-            "R3":"Depende de la situación: a veces me expreso bien y otras no.",
-            "R4":"Generalmente expreso mis emociones de forma adecuada.",
-            "R5":"Siempre expreso mis emociones con respeto y de manera equilibrada.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta expresar tus emociones de manera tranquila y clara ante los demás, incluso cuando te sientes molesto o incómodo?",
+            "R1":"No logro expresarlas; o exploto o me guardo todo.",
+            "R2":"Me cuesta mucho encontrar las palabras o el tono adecuado.",
+            "R3":"A veces me expreso bien, pero pierdo el control si hay presión.",
+            "R4":"Suelo comunicar lo que siento sin herir a los demás.",
+            "R5":"Expreso mis sentimientos con total asertividad y calma siempre.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -297,7 +286,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Se reformula para medir expresión emocional observable en sociedad. Las respuestas representan niveles de control y comunicación emocional, reflejando cómo el individuo maneja sus emociones en interacción con otros."
-            
         },{
             "Item":14,
             "Pregunta_I":" Reconozco cuando una emoción influye en mi juicio",
@@ -307,12 +295,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando estoy emocionalmente afectado, soy consciente de que eso puede influir en mis decisiones o en cómo trato a los demás.",
-            "R1":"No me doy cuenta cuando mis emociones afectan mis decisiones.",
-            "R2":"Me cuesta reconocer cuándo una emoción influye en mi forma de actuar.",
-            "R3":"A veces lo noto, pero no siempre.",
-            "R4":"Casi siempre soy consciente del impacto de mis emociones.",
-            "R5":"Siempre reconozco cuando una emoción influye en mi juicio o comportamiento.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta notar que una emoción intensa (como el enojo o el entusiasmo) está afectando tu objetividad al juzgar una situación social?",
+            "R1":"No me doy cuenta; creo que mi juicio es siempre objetivo.",
+            "R2":"Noto que mis emociones me cegaron solo después de que pasó todo.",
+            "R3":"A veces percibo la influencia emocional, pero me cuesta separarla.",
+            "R4":"Suelo identificar cuándo mi estado de ánimo está sesgando mi opinión.",
+            "R5":"Reconozco de inmediato cómo influyen mis emociones en mi juicio.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -320,7 +308,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Se contextualiza en decisiones sociales, manteniendo el objetivo de detectar conciencia emocional y autocontrol. Las respuestas miden el grado de autovigilancia emocional antes de actuar en sociedad."
-            
         },{
             "Item":15,
             "Pregunta_I":" Me desbordo fácilmente emocionalmente",
@@ -330,12 +317,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"En situaciones sociales difíciles, me desbordo emocionalmente y pierdo el control con facilidad.",
-            "R1":"Generalmente puedo expresar lo que siento sin perder el control.",
-            "R2":"Me afecta, pero casi siempre logro mantener la calma.",
-            "R3":"Depende de la situación: a veces lo manejo bien y otras no tanto.",
-            "R4":"Con frecuencia mis emociones me sobrepasan y reacciono de forma impulsiva.",
-            "R5":"Casi siempre pierdo el control emocional y me cuesta manejar mis reacciones.",
+            "Pregunta":"¿Con qué frecuencia sientes que tus emociones te sobrepasan o te desbordan, impidiéndote reaccionar de forma equilibrada ante los demás?",
+            "R1":"Mantengo siempre el equilibrio, sin importar la intensidad emocional.",
+            "R2":"Logro modular mis emociones antes de que me superen.",
+            "R3":"En situaciones de mucha presión, pierdo mi centro emocional.",
+            "R4":"Suelo sentirme desbordado y me cuesta recuperar la calma.",
+            "R5":"Mis emociones me dominan totalmente y pierdo el control con facilidad.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -343,7 +330,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"La pregunta se mantiene como conducta emocional desbordada en contexto social. Es invertida porque representa dificultad de regulación emocional. Las respuestas reflejan niveles de control emocional frente a presión social."
-            
         },{
             "Item":16,
             "Pregunta_I":" Mantengo estabilidad emocional ante presión",
@@ -353,12 +339,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando estoy bajo presión o en un momento tenso con otras personas, logro mantener la calma.",
-            "R1":"Pierdo la calma fácilmente cuando siento presión.",
-            "R2":"Me cuesta mucho mantener estabilidad emocional bajo presión.",
-            "R3":"A veces lo logro, depende de la situación.",
-            "R4":"Generalmente mantengo la calma aunque haya presión.",
-            "R5":"Siempre mantengo estabilidad emocional incluso en situaciones tensas.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta mantener la calma y el equilibrio emocional cuando te encuentras bajo presión en una situación social?",
+            "R1":"Pierdo el control emocional rápidamente ante la presión.",
+            "R2":"Me cuesta mucho no dejarme llevar por el estrés o el nerviosismo.",
+            "R3":"Mantengo la calma solo si la situación no es demasiado grave.",
+            "R4":"Suelo gestionar bien mis emociones incluso bajo presión.",
+            "R5":"Permanezco estable y sereno sin importar lo tensa que sea la situación.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -366,7 +352,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Se formula en escenarios de presión social, evaluando regulación emocional práctica. Las respuestas miden la capacidad de estabilidad emocional que impacta directamente la convivencia y resolución de conflictos."
-            
         },{
             "Item":17,
             "Pregunta_I":" Puedo calmarme cuando estoy alterado",
@@ -376,12 +361,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"Si me altero o me enojo frente a otras personas, puedo calmarme sin generar conflicto.",
-            "R1":"No logro calmarme y termino empeorando la situación.",
-            "R2":"Me cuesta calmarme cuando estoy alterado.",
-            "R3":"A veces logro calmarme, pero no siempre.",
-            "R4":"Casi siempre puedo controlarme y tranquilizarme.",
-            "R5":"Siempre logro calmarme rápidamente y actuar con respeto.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta recuperar la calma y controlar tus reacciones externas cuando te sientes profundamente alterado por un problema social?",
+            "R1":"Una vez alterado, no puedo calmarme y mis reacciones son visibles.",
+            "R2":"Me toma mucho tiempo y esfuerzo volver a un estado de serenidad.",
+            "R3":"Me calmo eventualmente, pero solo si me alejo de los demás.",
+            "R4":"Suelo recuperar el control de mis actos y mi tono de voz rápidamente.",
+            "R5":"Tengo la habilidad de calmarme casi de inmediato para seguir actuando bien.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -389,7 +374,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Se enfoca en una conducta observable en sociedad: capacidad de autorregulación después de alterarse. Las respuestas muestran niveles de control emocional visible y manejo de convivencia."
-            
         },{
             "Item":18,
             "Pregunta_I":" Evito reconocer emociones negativas",
@@ -399,12 +383,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"Prefiero ocultar o ignorar mis emociones negativas para que los demás no lo noten.",
-            "R1":"Suelo reconocer lo que siento y lo manejo sin necesidad de esconderlo.",
-            "R2":"A veces lo oculto, pero normalmente puedo aceptarlo y expresarlo de forma adecuada.",
-            "R3":"Depende del momento, en ocasiones lo oculto y en otras lo reconozco.",
-            "R4":"Casi siempre lo oculto para evitar que otros noten que me siento mal.",
-            "R5":"Siempre oculto lo que siento, aunque por dentro me afecte.",
+            "Pregunta":"¿Con qué frecuencia ignoras o reprimes tus emociones negativas (como la envidia, el enojo o la frustración) en lugar de reconocerlas para entender por qué las sientes?",
+            "R1":"Siempre acepto y analizo mis emociones, aunque sean incómodas.",
+            "R2":"Trato de enfrentar lo que siento en lugar de ocultarlo.",
+            "R3":"En ocasiones prefiero ignorar lo que me molesta para no pensar en ello.",
+            "R4":"Suelo evitar reconocer mis sentimientos negativos ante mí mismo.",
+            "R5":"Reprimo mis emociones negativas por completo y actúo como si no existieran.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -412,7 +396,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Se adapta al entorno social (ocultar emociones frente a otros). Es invertida porque evitar emociones negativas reduce conciencia emocional. Las respuestas reflejan niveles de aceptación emocional y reconocimiento interno."
-            
         },{
             "Item":19,
             "Pregunta_I":" Comprendo emociones complejas en mí",
@@ -422,12 +405,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"Puedo entender emociones mezcladas o confusas que aparecen en mí cuando interactúo con otras personas.",
-            "R1":"Me cuesta demasiado entender emociones complejas y me confundo.",
-            "R2":"A veces entiendo lo que siento, pero no con claridad.",
-            "R3":"Depende de la situación: algunas emociones sí las comprendo.",
-            "R4":"Generalmente comprendo emociones complejas en mí.",
-            "R5":"Siempre logro identificar y entender emociones complejas con claridad.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta desenredar y comprender tus sentimientos cuando experimentas varias emociones complejas o contradictorias al mismo tiempo?",
+            "R1":"Me siento confundido y no logro entender qué me pasa realmente.",
+            "R2":"Me cuesta mucho distinguir una emoción de otra cuando se mezclan.",
+            "R3":"Entiendo mis emociones mixtas solo después de mucho análisis.",
+            "R4":"Suelo identificar con claridad los diferentes sentimientos que tengo.",
+            "R5":"Descifro mis emociones complejas con total precisión y rapidez.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -435,7 +418,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Se mantiene la esencia de comprender emociones complejas, llevándola a situaciones sociales. Las respuestas miden profundidad emocional y claridad interna, clave para responder adecuadamente en sociedad."
-            
         },{
             "Item":20,
             "Pregunta_I":" Actúo impulsivamente por emoción",
@@ -445,12 +427,12 @@ const Matriz = {
             "Conciencia":"Emocional",
             "CriterioC":"Sensibilidad hacia los demás.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando estoy emocionalmente afectado, suelo reaccionar impulsivamente con los demás.",
-            "R1":"Siempre controlo mis impulsos emocionales antes de actuar con otros.",
-            "R2":"Generalmente pienso antes de reaccionar.",
-            "R3":"A veces reacciono impulsivamente, depende del momento.",
-            "R4":"Muchas veces reacciono sin pensar cuando algo me afecta.",
-            "R5":"Casi siempre actúo impulsivamente por emoción.",
+            "Pregunta":"¿Con qué frecuencia reaccionas de forma impulsiva o brusca ante los demás debido a una emoción del momento, sin pensar en las consecuencias de tus actos?",
+            "R1":"Modulo mi conducta, sin importar lo que esté sintiendo.",
+            "R2":"Logro detenerme antes de reaccionar por impulso.",
+            "R3":"Dejo que la emoción dicte cómo respondo a los otros.",
+            "R4":"Actuo sin pensar cuando mis emociones son intensas.",
+            "R5":"Mis impulsos emocionales dominan mis acciones.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -458,7 +440,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Se formula como conducta observable (reacción impulsiva social). Es invertida porque representa falta de control emocional. Las respuestas permiten medir el grado de impulsividad y regulación emocional en convivencia."
-            
         },{
             "Item":21,
             "Pregunta_I":" Soy consciente del impacto de mis acciones",
@@ -468,12 +449,12 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"Antes de actuar, pienso en cómo mis decisiones pueden afectar a otras personas.",
-            "R1":"Casi nunca pienso en cómo mis acciones afectan a los demás.",
-            "R2":"Algunas veces lo considero, pero no siempre.",
-            "R3":"Depende de la situación, a veces sí lo tengo presente.",
-            "R4":"Casi siempre considero el impacto antes de actuar.",
-            "R5":"Siempre reflexiono en las consecuencias que mis acciones pueden tener en otros.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta reconocer de qué manera tus decisiones y acciones individuales terminan afectando el bienestar de tu comunidad o entorno social?",
+            "R1":"No logro ver cómo mis actos personales podrían afectar a la sociedad.",
+            "R2":"Me cuesta mucho conectar mis acciones diarias con consecuencias sociales.",
+            "R3":"Solo reconozco el impacto de mis actos si el daño es evidente.",
+            "R4":"Suelo identificar con claridad cómo mi comportamiento influye en los demás.",
+            "R5":"Soy plenamente consciente del impacto social de cada una de mis acciones.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -481,7 +462,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa responsabilidad social interna y anticipación del impacto en la convivencia."
-            
         },{
             "Item":22,
             "Pregunta_I":" Reflexiono sobre mis decisiones diarias",
@@ -491,12 +471,12 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"Al final del día, suelo pensar si mis decisiones fueron correctas o pudieron afectar a alguien.",
-            "R1":"Nunca reflexiono sobre lo que hice durante el día.",
-            "R2":"Casi nunca me detengo a pensar en mis decisiones.",
-            "R3":"A veces reflexiono, pero no es algo constante.",
-            "R4":"Con frecuencia reviso mentalmente mis decisiones del día.",
-            "R5":"Siempre reflexiono sobre mis decisiones y lo que generaron en mi entorno.",
+            "Pregunta":"¿Con qué frecuencia te detienes a reflexionar si tus decisiones diarias son coherentes con el bienestar de la sociedad?",
+            "R1":"Tomo mis decisiones diarias sin pensar en su impacto social.",
+            "R2":"Solo reflexiono sobre mis actos si alguien me cuestiona.",
+            "R3":"Ocasionalmente pienso en la responsabilidad de mis acciones.",
+            "R4":"Habitualmente evalúo si mis decisiones ayudan a mi entorno.",
+            "R5":"Mi estilo de vida se basa en una reflexión constante sobre mi impacto.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -504,7 +484,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Mide introspección cotidiana y revisión interna de decisiones con efecto social."
-            
         },{
             "Item":23,
             "Pregunta_I":" Actúo de manera automática sin pensar",
@@ -514,12 +493,12 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"Muchas veces actúo por costumbre o impulso, sin pensar en lo que estoy haciendo.",
-            "R1":"Generalmente actúo con intención y pienso antes de hacer algo.",
-            "R2":"Casi siempre soy consciente de lo que hago, aunque a veces me dejo llevar.",
-            "R3":"Depende del momento, a veces actúo sin pensar.",
-            "R4":"Con frecuencia actúo en automático sin reflexionar.",
-            "R5":"Casi siempre hago cosas sin pensar y luego noto las consecuencias.",
+            "Pregunta":"¿Con qué frecuencia realizas acciones en tu día a día de manera automática, sin pensar en cómo afectan a tu entorno social?",
+            "R1":"Soy consciente de mis actos y evito conductas irresponsables.",
+            "R2":"Trato de cuidar mi comportamiento frente al entorno.",
+            "R3":"En ocasiones actúo por descuido sin medir las consecuencias sociales.",
+            "R4":"Suelo realizar acciones automáticas sin considerar a los demás.",
+            "R5":"Mi conducta diaria es mecánica y no me detengo a pensar en el entorno.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -527,7 +506,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa automatización conductual y presencia consciente en acciones visibles socialmente."
-            
         },{
             "Item":24,
             "Pregunta_I":" Identifico cómo influyo en mi entorno",
@@ -537,12 +515,12 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"Reconozco que mi forma de actuar influye en el ambiente y en las personas que me rodean.",
-            "R1":"No creo que mi comportamiento influya en otras personas.",
-            "R2":"A veces pienso que influyo, pero no lo tengo muy claro.",
-            "R3":"En algunas situaciones noto que sí puedo influir en otros.",
-            "R4":"Casi siempre soy consciente de que mi actitud impacta a los demás.",
-            "R5":"Siempre tengo presente que mis acciones pueden influir positiva o negativamente en mi entorno.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta identificar de manera clara las consecuencias positivas o negativas que tu presencia y comportamiento generan en tu entorno social?",
+            "R1":"No percibo ninguna relación entre lo que hago y lo que sucede a mi alrededor.",
+            "R2":"Me cuesta notar si mi comportamiento realmente influye en el bienestar de otros.",
+            "R3":"Solo reconozco mi influencia si el impacto es muy directo o evidente.",
+            "R4":"Suelo distinguir con claridad cómo mis actitudes afectan el clima de mi entorno.",
+            "R5":"Identifico con precisión el impacto que causo en la sociedad.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -550,7 +528,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide percepción del rol social del individuo y su influencia en la convivencia."
-            
         },{
             "Item":25,
             "Pregunta_I":" Me cuestiono sobre mi forma de vivir",
@@ -560,7 +537,7 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"A veces me cuestiono si la forma en que vivo está aportando algo positivo a mi entorno.",
+            "Pregunta":"¿Qué tan de acuerdo estás con que cada persona debe cuestionar si su forma de vivir afecta negativamente al bienestar de la sociedad?",
             "R1":"Nunca me cuestiono cómo estoy viviendo o qué impacto tengo.",
             "R2":"Casi nunca pienso en eso.",
             "R3":"A veces lo pienso, pero no lo hago constantemente.",
@@ -573,7 +550,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Evalúa reflexión personal orientada a responsabilidad social y sentido de vida comunitario."
-            
         },{
             "Item":26,
             "Pregunta_I":" Reconozco mis fortalezas y debilidades",
@@ -583,12 +559,12 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"Reconozco cuáles son mis fortalezas y también en qué cosas debo mejorar para convivir mejor con los demás.",
-            "R1":"No identifico mis fortalezas ni mis debilidades.",
-            "R2":"Me cuesta reconocer mis debilidades, aunque algunas veces lo intento.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta identificar cuáles son tus fortalezas y aspectos a mejorar al momento de intentar resolver un problema en tu entorno social?",
+            "R1":"No identifico mis fortalezas ni mis aspectos a mejorar.",
+            "R2":"Me cuesta reconocer mis aspectos a mejorar, aunque algunas veces lo intento.",
             "R3":"A veces lo reconozco, pero depende del contexto.",
             "R4":"Casi siempre puedo reconocer mis puntos fuertes y mis fallas.",
-            "R5":"Siempre tengo claro en qué soy bueno y en qué debo mejorar para relacionarme mejor.",
+            "R5":"Tengo claro en qué soy bueno y en qué debo mejorar para relacionarme mejor.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -596,7 +572,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide autoconocimiento aplicado a la convivencia social y mejora del comportamiento."
-            
         },{
             "Item":27,
             "Pregunta_I":" Ajusto mi comportamiento cuando es necesario",
@@ -606,7 +581,7 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando noto que mi comportamiento afecta a otros, intento cambiarlo o corregirlo.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta ajustar tu comportamiento cuando notas que tus acciones afectan negativamente a los demás o al entorno?",
             "R1":"Nunca cambio mi comportamiento, aunque afecte a otros.",
             "R2":"Casi nunca lo cambio, incluso si me lo dicen.",
             "R3":"A veces lo ajusto, pero no siempre.",
@@ -619,7 +594,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa adaptación social observable y capacidad de corregir conductas que afectan el entorno."
-            
         },{
             "Item":28,
             "Pregunta_I":" Vivo sin analizar mis experiencias",
@@ -629,8 +603,8 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"Muchas veces paso por experiencias sin detenerme a pensar qué aprendí o qué significaron.",
-            "R1":"Casi siempre analizo mis experiencias y trato de aprender algo de ellas.",
+            "Pregunta":"¿Con qué frecuencia permites que tus experiencias diarias simplemente ocurran, sin detenerte a analizarlas o buscar un aprendizaje que guíe tu responsabilidad social?",
+            "R1":"Analizo mis experiencias y trato de aprender algo de ellas.",
             "R2":"Generalmente reflexiono sobre lo que me pasa, aunque no siempre.",
             "R3":"A veces reflexiono, pero otras simplemente sigo adelante.",
             "R4":"Con frecuencia no analizo mis experiencias ni saco aprendizajes.",
@@ -642,7 +616,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Mide reflexión sobre experiencias y capacidad de aprendizaje consciente con impacto social."
-            
         },{
             "Item":29,
             "Pregunta_I":" Aprendo de mis errores",
@@ -652,7 +625,7 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando cometo un error que afecta a alguien, intento aprender para no repetirlo.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta convertir un error cometido en tu entorno social en un aprendizaje real que modifique tu comportamiento futuro?",
             "R1":"No suelo aprender de mis errores y los repito.",
             "R2":"A veces lo intento, pero no cambio realmente.",
             "R3":"Depende del error, en algunos casos aprendo y en otros no.",
@@ -665,7 +638,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa aprendizaje conductual visible y responsabilidad social frente a consecuencias."
-            
         },{
             "Item":30,
             "Pregunta_I":" Me observo internamente con frecuencia",
@@ -675,7 +647,7 @@ const Matriz = {
             "Conciencia":"Conciencia",
             "CriterioC":"Percepción y responsabilidad frente al entorno.",
             "Impacto":"Alto",
-            "Pregunta":"Con frecuencia me detengo a observar cómo me estoy comportando y qué estoy transmitiendo a los demás.",
+            "Pregunta":"¿Con qué frecuencia te detienes a analizar cómo te comportas y qué impacto causas en quienes te rodean?",
             "R1":"Nunca me observo ni pienso en cómo actúo frente a otros.",
             "R2":"Casi nunca me cuestiono mi comportamiento.",
             "R3":"A veces lo hago, pero no es constante.",
@@ -688,7 +660,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Mide autoobservación y monitoreo interno del comportamiento social para regular acciones."
-            
         },{
             "Item":31,
             "Pregunta_I":" Reconozco patrones repetitivos en mí",
@@ -698,7 +669,7 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Me doy cuenta cuando repito las mismas actitudes o comportamientos en distintas situaciones sociales.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta detectar patrones en tu comportamiento que se repiten constantemente cuando te relacionas con los demás?",
             "R1":"Nunca noto que repito comportamientos, incluso si me afecta.",
             "R2":"Casi nunca identifico patrones en mi forma de actuar.",
             "R3":"A veces lo noto, pero no siempre lo entiendo.",
@@ -711,7 +682,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide la capacidad de autoobservación y detección de conductas repetitivas que influyen en la relación con otros."
-            
         },{
             "Item":32,
             "Pregunta_I":" Identifico mis valores personales",
@@ -721,7 +691,7 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Tengo claros mis valores y procuro mantenerlos cuando convivo con otras personas.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta identificar y mantener tus valores personales al momento de decidir cómo actuar frente a los demás?",
             "R1":"No tengo claros mis valores y actúo según la situación.",
             "R2":"A veces pienso en mis valores, pero no los aplico siempre.",
             "R3":"Depende del contexto, a veces sigo mis valores y a veces no.",
@@ -734,7 +704,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide claridad interna de valores y coherencia personal como base para regular la conducta social."
-            
         },{
             "Item":33,
             "Pregunta_I":" Comprendo mis motivaciones internas",
@@ -744,7 +713,7 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Reconozco qué es lo que realmente me motiva cuando tomo decisiones frente a los demás.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta identificar las motivaciones reales que impulsan tus acciones y decisiones cuando te relacionas con los demás?",
             "R1":"Casi nunca sé por qué hago lo que hago.",
             "R2":"Muchas veces actúo sin entender mis motivaciones.",
             "R3":"A veces entiendo mis motivaciones, pero no siempre.",
@@ -757,7 +726,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa comprensión interna de motivaciones, lo cual permite regular decisiones y comportamientos sociales."
-            
         },{
             "Item":34,
             "Pregunta_I":" Me resulta difícil entenderme",
@@ -767,10 +735,10 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Me cuesta entender por qué actúo o reacciono de cierta forma frente a los demás.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta sentirte confundido o incapaz de entender tus propias actitudes al relacionarte con los demás?",
             "R1":"Generalmente entiendo por qué actúo como actúo en distintas situaciones.",
             "R2":"A veces me cuesta, pero normalmente logro comprenderme.",
-            "R3":"Depende del momento: en ocasiones me entiendo y en otras no.",
+            "R3":"En ocasiones me entiendo y en otras no.",
             "R4":"Con frecuencia me cuesta entender mis reacciones o decisiones.",
             "R5":"Casi siempre me siento confundido sobre mis propias actitudes y emociones.",
             "Tipo de Respuesta":"Capacidad",
@@ -780,7 +748,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide dificultad de autocomprensión, lo cual limita la regulación de la conducta social y la toma de decisiones consciente."
-            
         },{
             "Item":35,
             "Pregunta_I":" Sé cómo reacciono ante presión",
@@ -790,7 +757,7 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Sé cómo suelo reaccionar cuando estoy bajo presión o en una situación difícil con otras personas.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta reconocer de antemano cómo vas a reaccionar cuando te encuentras bajo presión frente a los demás?",
             "R1":"Casi nunca sé cómo reacciono hasta que ya pasó.",
             "R2":"A veces me sorprendo con mi reacción y no la entiendo.",
             "R3":"Depende de la situación, a veces lo identifico y a veces no.",
@@ -803,7 +770,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa reconocimiento anticipado de respuestas personales bajo presión, clave para regular la conducta frente a otros."
-            
         },{
             "Item":36,
             "Pregunta_I":" Identifico mis límites personales",
@@ -813,7 +779,7 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Soy capaz de identificar mis límites personales y decir “no” cuando algo no me hace bien.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta identificar tus propios límites personales al momento de relacionarte o comprometerte con los demás?",
             "R1":"No reconozco mis límites y suelo aceptar todo.",
             "R2":"Me cuesta identificar mis límites y casi nunca digo que no.",
             "R3":"A veces reconozco mis límites, pero no siempre los respeto.",
@@ -826,7 +792,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide autoconciencia de límites personales como mecanismo de protección y regulación social."
-            
         },{
             "Item":37,
             "Pregunta_I":" Actúo sin conocer mis verdaderas intenciones",
@@ -836,10 +801,10 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Muchas veces actúo sin saber realmente por qué lo hago o qué busco con eso.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta actuar sin tener claras tus verdaderas intenciones al relacionarte con los demás?",
             "R1":"Generalmente actúo con claridad sobre lo que quiero lograr.",
-            "R2":"Casi siempre sé cuáles son mis intenciones al actuar.",
-            "R3":"Depende del momento: a veces actúo con claridad y otras no.",
+            "R2":"Sé cuáles son mis intenciones al actuar.",
+            "R3":"A veces actúo con claridad y otras no.",
             "R4":"Con frecuencia actúo sin comprender mis verdaderas intenciones.",
             "R5":"Casi siempre hago cosas sin saber realmente por qué, y luego me arrepiento o me confundo.",
             "Tipo de Respuesta":"Capacidad",
@@ -849,7 +814,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa desconexión entre intención interna y conducta social, lo cual dificulta el autocontrol y la coherencia."
-            
         },{
             "Item":38,
             "Pregunta_I":" Evalúo mi comportamiento después de actuar",
@@ -859,7 +823,7 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Después de una situación social, suelo analizar si actué bien o si pude haberlo hecho mejor.",
+            "Pregunta":"¿Con qué frecuencia dedicas tiempo a revisar y analizar tu comportamiento después de haber interactuado con otras personas?",
             "R1":"Nunca reviso cómo me comporté después de actuar.",
             "R2":"Casi nunca pienso en lo que hice o dije.",
             "R3":"A veces lo analizo, pero no es frecuente.",
@@ -872,7 +836,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Mide reflexión posterior y aprendizaje conductual, fundamental para regular la conducta en relación con otros."
-            
         },{
             "Item":39,
             "Pregunta_I":" Reconozco cuando estoy equivocado",
@@ -882,7 +845,7 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando me equivoco frente a otras personas, soy capaz de reconocerlo.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta reconocer y admitir ante los demás que estás equivocado cuando cometes un error en una situación social?",
             "R1":"Nunca acepto que estoy equivocado aunque me lo demuestren.",
             "R2":"Me cuesta admitirlo y generalmente lo niego.",
             "R3":"A veces lo reconozco, pero depende de quién sea la persona.",
@@ -895,7 +858,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide humildad y autoconciencia observable, clave para convivencia y ajuste social saludable."
-            
         },{
             "Item":40,
             "Pregunta_I":" Tengo claridad sobre quién soy",
@@ -905,10 +867,10 @@ const Matriz = {
             "Conciencia":"Autoconciencia",
             "CriterioC":"Permite regular la propia conducta en relación con otros.",
             "Impacto":"Alto",
-            "Pregunta":"Tengo claridad sobre quién soy y eso me ayuda a relacionarme con los demás sin cambiar por presión social.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta mantener una identidad clara y ser fiel a ti mismo sin dejarte llevar por las expectativas de los demás?",
             "R1":"No tengo claridad sobre quién soy y suelo actuar según el entorno.",
             "R2":"A veces me siento inseguro y cambio para encajar.",
-            "R3":"Depende de la situación: en ocasiones actúo con claridad y otras no.",
+            "R3":"En ocasiones actúo con claridad y otras no.",
             "R4":"Casi siempre tengo claro quién soy y mantengo mi forma de ser.",
             "R5":"Siempre tengo claridad sobre mi identidad y no dejo que la presión social defina mi comportamiento.",
             "Tipo de Respuesta":"Capacidad",
@@ -918,7 +880,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide identidad personal clara como base interna para regular conducta social y mantener coherencia en comunidad."
-            
         },{
             "Item":41,
             "Pregunta_I":" Comprendo cómo se sienten los demás",
@@ -928,7 +889,7 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"En mis relaciones sociales, suelo darme cuenta cuando alguien está incómodo, triste o preocupado aunque no lo diga.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta percibir y comprender los sentimientos de otras personas, incluso cuando no lo expresan con palabras?",
             "R1":"Casi nunca noto cómo se sienten los demás.",
             "R2":"Rara vez identifico emociones en otros si no me lo dicen directamente.",
             "R3":"A veces lo noto, pero no siempre estoy seguro.",
@@ -941,7 +902,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide la capacidad de interpretación emocional en interacción social, esencial para convivencia y participación ciudadana."
-            
         },{
             "Item":42,
             "Pregunta_I":" Puedo ponerme en el lugar del otro",
@@ -951,7 +911,7 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando alguien piensa diferente a mí, intento imaginar cómo ve la situación desde su experiencia.",
+            "Pregunta":"¿Qué tan de acuerdo estás con la práctica de intentar comprender la perspectiva y los sentimientos de los demás antes de actuar o emitir un juicio?",
             "R1":"Nunca intento entender el punto de vista del otro.",
             "R2":"Casi nunca me pongo en el lugar de los demás.",
             "R3":"A veces lo intento, pero no siempre me interesa.",
@@ -964,7 +924,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Evalúa disposición interna a comprender perspectivas ajenas, base de convivencia social y respeto ciudadano."
-            
         },{
             "Item":43,
             "Pregunta_I":" Percibo cambios emocionales en otros",
@@ -974,7 +933,7 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"Suelo notar cuando una persona cambia su estado de ánimo durante una conversación o situación social.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta notar un cambio en el estado emocional de las personas con las que interactúas y adaptar tu trato a esa nueva situación?",
             "R1":"Nunca percibo cambios emocionales en otros.",
             "R2":"Casi nunca me doy cuenta si alguien cambia su estado emocional.",
             "R3":"A veces lo noto, pero solo en casos muy evidentes.",
@@ -987,7 +946,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide sensibilidad perceptiva frente a señales emocionales, clave para interacción social sana."
-            
         },{
             "Item":44,
             "Pregunta_I":" Me cuesta entender emociones ajenas",
@@ -997,10 +955,10 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"En muchas situaciones sociales, me cuesta comprender por qué los demás se sienten como se sienten.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta sentirte confundido o incapaz de comprender lo que otra persona está sintiendo?",
             "R1":"Generalmente comprendo las emociones de otras personas.",
             "R2":"A veces me cuesta, pero logro entenderlas con esfuerzo.",
-            "R3":"Depende del caso: algunas emociones las entiendo y otras no.",
+            "R3":"Algunas emociones las entiendo y otras no.",
             "R4":"Con frecuencia no entiendo las emociones de los demás.",
             "R5":"Casi siempre me cuesta comprender emociones ajenas, incluso cuando intentan explicarlas.",
             "Tipo de Respuesta":"Capacidad",
@@ -1010,7 +968,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide dificultad para interpretar emociones ajenas; al ser invertida identifica limitaciones empáticas que afectan convivencia."
-            
         },{
             "Item":45,
             "Pregunta_I":" Respondo con sensibilidad ante el dolor ajeno",
@@ -1020,7 +977,7 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando alguien está pasando por un problema, suelo responder con respeto y sensibilidad.",
+            "Pregunta":"¿Con qué frecuencia demuestras sensibilidad y ofreces apoyo cuando percibes que alguien en tu entorno está pasando por un momento de dolor o dificultad?",
             "R1":"Nunca me importa lo que otros estén viviendo.",
             "R2":"Casi nunca reacciono con sensibilidad ante el dolor ajeno.",
             "R3":"A veces muestro sensibilidad, pero depende de la persona.",
@@ -1033,7 +990,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa conducta empática observable ante sufrimiento ajeno, esencial para convivencia y solidaridad social."
-            
         },{
             "Item":46,
             "Pregunta_I":" Escucho activamente a otros",
@@ -1043,12 +999,12 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando alguien me habla de un problema, escucho con atención sin interrumpir ni minimizar lo que siente.",
-            "R1":"Nunca escucho con atención, siempre interrumpo o cambio el tema.",
-            "R2":"Casi nunca escucho de verdad; suelo distraerme o responder rápido.",
+            "Pregunta":"¿Con qué frecuencia prestas una atención plena y respetuosa a lo que otros dicen, evitando interrupciones para asegurar que comprendes su mensaje?",
+            "R1":"Siempre interrumpo o cambio el tema.",
+            "R2":"Suelo distraerme o responder rápido.",
             "R3":"A veces escucho, pero no siempre presto suficiente atención.",
-            "R4":"Con frecuencia escucho activamente y dejo que la persona se exprese.",
-            "R5":"Siempre escucho con atención, respeto y busco comprender antes de responder.",
+            "R4":"Escucho activamente y dejo que la persona se exprese.",
+            "R5":"Escucho con atención, respeto y busco comprender antes de responder.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1056,7 +1012,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Mide escucha activa como comportamiento social observable, base de convivencia, apoyo mutuo y ciudadanía."
-            
         },{
             "Item":47,
             "Pregunta_I":" Evito involucrarme emocionalmente",
@@ -1066,12 +1021,12 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando alguien expresa emociones fuertes, prefiero mantenerme distante para no involucrarme.",
-            "R1":"Generalmente me involucro con respeto cuando alguien necesita apoyo emocional.",
-            "R2":"A veces prefiero distancia, pero puedo acompañar si es necesario.",
-            "R3":"Depende de la situación: algunas veces me involucro y otras evito hacerlo.",
-            "R4":"Con frecuencia evito involucrarme emocionalmente con los demás.",
-            "R5":"Casi siempre me aparto emocionalmente y prefiero no involucrarme aunque la persona lo necesite.",
+            "Pregunta":"¿Qué tan de acuerdo estás con la idea de mantener una distancia emocional y evitar involucrarte en los problemas de los demás para proteger tu propia tranquilidad?",
+            "R1":"Me involucro con respeto cuando alguien necesita apoyo emocional.",
+            "R2":"Prefiero distancia, pero puedo acompañar si es necesario.",
+            "R3":"Algunas veces me involucro y otras evito hacerlo.",
+            "R4":"Evito involucrarme emocionalmente con los demás.",
+            "R5":"Me aparto emocionalmente y prefiero no involucrarme aunque la persona lo necesite.",
             "Tipo de Respuesta":"Actitud",
             "T1":"Totalmente en desacuerdo",
             "T2":"En desacuerdo",
@@ -1079,7 +1034,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Evalúa tendencia a evitar conexión emocional; invertida porque distancia constante limita convivencia y apoyo comunitario."
-            
         },{
             "Item":48,
             "Pregunta_I":" Considero perspectivas diferentes a la mía",
@@ -1089,7 +1043,7 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando discuto con alguien, intento considerar sus razones aunque no esté de acuerdo.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta analizar y valorar puntos de vista distintos al tuyo antes de tomar una decisión o fijar una postura frente a los demás?",
             "R1":"Nunca considero perspectivas diferentes a la mía.",
             "R2":"Casi nunca escucho razones ajenas; me quedo con mi punto de vista.",
             "R3":"A veces considero otras perspectivas, pero me cuesta aceptarlas.",
@@ -1102,7 +1056,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide apertura cognitiva-social como fundamento empático, esencial para convivencia y respeto en comunidad."
-            
         },{
             "Item":49,
             "Pregunta_I":" Soy compasivo ante errores ajenos",
@@ -1112,12 +1065,12 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando alguien se equivoca, trato de corregirlo sin humillarlo ni juzgarlo.",
-            "R1":"Nunca soy compasivo, siempre critico o juzgo los errores ajenos.",
-            "R2":"Casi nunca soy comprensivo; suelo señalar errores con dureza.",
-            "R3":"A veces soy compasivo, depende de mi estado de ánimo.",
-            "R4":"Con frecuencia comprendo los errores ajenos y respondo con respeto.",
-            "R5":"Siempre soy compasivo y entiendo que todos pueden equivocarse.",
+            "Pregunta":"¿Con qué frecuencia respondes con comprensión y respeto cuando alguien de tu entorno comete un error, en lugar de criticarlo o juzgarlo con dureza?",
+            "R1":"Siempre critico o juzgo los errores ajenos.",
+            "R2":"Suelo señalar errores con dureza.",
+            "R3":"Depende de mi estado de ánimo.",
+            "R4":"Comprendo los errores ajenos y respondo con respeto.",
+            "R5":"Soy compasivo y entiendo que todos pueden equivocarse.",
             "Tipo de Respuesta":"Conducta",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1125,7 +1078,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa compasión como conducta social observable; impacta convivencia y reduce conflictos en comunidad."
-            
         },{
             "Item":50,
             "Pregunta_I":" Me afecta emocionalmente el sufrimiento de otros",
@@ -1135,12 +1087,12 @@ const Matriz = {
             "Conciencia":"Empatía",
             "CriterioC":"Base de la participación ciudadana y la convivencia.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando veo que alguien sufre, emocionalmente me impacta y eso influye en mi manera de actuar frente a esa persona.",
+            "Pregunta":"¿Con qué frecuencia sientes que el sufrimiento de otras personas te genera un impacto emocional que influye en tu manera de tratarlas?",
             "R1":"Nunca me afecta el sufrimiento de otros.",
             "R2":"Casi nunca me impacta lo que otros sienten.",
             "R3":"A veces me afecta, pero trato de ignorarlo.",
-            "R4":"Con frecuencia me afecta y me hace ser más cuidadoso con esa persona.",
-            "R5":"Siempre me afecta el sufrimiento ajeno y actúo con mayor empatía y apoyo.",
+            "R4":"Me afecta y me hace ser más cuidadoso con esa persona.",
+            "R5":"Siempre me afecta el sufrimiento ajeno y actúo con apoyo.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1148,7 +1100,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Mide resonancia emocional frente al dolor ajeno; importante para solidaridad y participación social consciente."
-            
         },{
             "Item":51,
             "Pregunta_I":" Confío en mi intuición al decidir",
@@ -1158,8 +1109,8 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"Antes de decidir algo importante, suelo considerar lo que “siento” además de lo que pienso.",
-            "R1":"Nunca tengo en cuenta lo que siento.",
+            "Pregunta":"¿Con qué frecuencia confías en tus corazonadas o en tu intuición personal como guía principal al momento de tomar decisiones en tu vida diaria?",
+            "R1":"No tengo en cuenta lo que siento.",
             "R2":"Casi nunca confío en lo que siento al decidir.",
             "R3":"A veces lo tengo en cuenta.",
             "R4":"Casi siempre lo considero antes de decidir.",
@@ -1171,7 +1122,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Se adapta la intuición a decisiones reales, midiendo conexión interna como base de conducta social."
-            
         },{
             "Item":52,
             "Pregunta_I":" Percibo situaciones antes de que ocurran",
@@ -1181,8 +1131,8 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"En conversaciones o situaciones sociales, a veces noto que algo “no está bien” antes de que pase algo.",
-            "R1":"Nunca noto señales previas.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta notar señales o sensaciones previas que te indican lo que está por suceder antes de que las cosas ocurran realmente?",
+            "R1":"No noto señales previas.",
             "R2":"Casi nunca percibo algo antes de que ocurra.",
             "R3":"A veces lo percibo, pero no estoy seguro.",
             "R4":"Casi siempre noto señales antes de que suceda algo.",
@@ -1194,7 +1144,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa percepción anticipada en contexto social sin sonar místico."
-            
         },{
             "Item":53,
             "Pregunta_I":" Detecto incongruencias sin explicación lógica inmediata",
@@ -1204,8 +1153,8 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando escucho a alguien hablar, noto rápidamente si algo no cuadra aunque no sepa explicar por qué.",
-            "R1":"Nunca noto incoherencias en los demás.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta notar rápidamente que algo no encaja en lo que alguien dice, incluso cuando no sabes explicar lógicamente el porqué?",
+            "R1":"No noto incoherencias en los demás.",
             "R2":"Casi nunca lo noto.",
             "R3":"A veces lo noto, pero lo dejo pasar.",
             "R4":"Casi siempre detecto cuando algo no cuadra.",
@@ -1217,7 +1166,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide intuición aplicada a comunicación social y detección de inconsistencias."
-            
         },{
             "Item":54,
             "Pregunta_I":" Ignoro mis corazonadas",
@@ -1227,7 +1175,7 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando tengo una corazonada sobre una situación, normalmente la ignoro y sigo como si nada.",
+            "Pregunta":"Cuando tienes una corazonada o sensación sobre una situación, ¿con qué frecuencia eliges ignorarla y seguir adelante como si nada?",
             "R1":"Siempre ignoro lo que siento.",
             "R2":"Casi siempre lo ignoro aunque dude.",
             "R3":"A veces lo ignoro.",
@@ -1240,7 +1188,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Identifica desconexión interna. Es invertida porque ignorar intuición refleja menor conciencia."
-            
         },{
             "Item":55,
             "Pregunta_I":" Mi intuición suele ser acertada",
@@ -1250,7 +1197,7 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"En mi vida diaria, mis corazonadas suelen ayudarme a tomar buenas decisiones.",
+            "Pregunta":"¿Qué tan de acuerdo estás con la idea de que tus corazonadas son una herramienta confiable y acertada para guiar tus decisiones diarias?",
             "R1":"Mis corazonadas casi siempre me hacen equivocarme.",
             "R2":"Casi nunca me ayudan.",
             "R3":"A veces me ayudan, a veces no.",
@@ -1263,7 +1210,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Evalúa percepción de efectividad de la intuición como herramienta práctica."
-            
         },{
             "Item":56,
             "Pregunta_I":" Integro intuición y análisis racional",
@@ -1273,8 +1219,8 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando debo decidir algo, trato de equilibrar lo que siento con lo que es lógico.",
-            "R1":"Nunca lo equilibro.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta equilibrar lo que te dicta tu lógica con lo que te dice tu intuición al momento de tomar una decisión importante?",
+            "R1":"No lo equilibro.",
             "R2":"Casi nunca lo logro.",
             "R3":"A veces lo intento.",
             "R4":"Casi siempre logro equilibrarlo.",
@@ -1286,7 +1232,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa integración intuición-lógica, clave para decisiones responsables."
-            
         },{
             "Item":57,
             "Pregunta_I":" Actúo sin escuchar señales internas",
@@ -1296,7 +1241,7 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando estoy con otras personas, actúo sin escuchar lo que mi intuición me advierte.",
+            "Pregunta":"¿Con qué frecuencia te das cuenta de que actuaste ignorando por completo lo que tu intuición o señales internas te advertían en una situación social?",
             "R1":"Siempre actúo sin escucharme.",
             "R2":"Casi siempre me ignoro y luego me arrepiento.",
             "R3":"A veces me pasa.",
@@ -1309,7 +1254,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa manifestación externa en lo social: actuar ignorando intuición. Es invertida."
-            
         },{
             "Item":58,
             "Pregunta_I":" Reconozco señales sutiles en el entorno",
@@ -1319,8 +1263,8 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"En mi entorno (familia, amigos o trabajo) detecto señales pequeñas que otros no notan.",
-            "R1":"Nunca noto esas señales.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta detectar y dar sentido a pequeñas señales o detalles en tu entorno que suelen pasar desapercibidos para los demás?",
+            "R1":"No noto esas señales.",
             "R2":"Casi nunca las noto.",
             "R3":"A veces las noto.",
             "R4":"Casi siempre me doy cuenta.",
@@ -1332,7 +1276,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide sensibilidad a señales sutiles del entorno social."
-            
         },{
             "Item":59,
             "Pregunta_I":" Confío en mi percepción interna",
@@ -1342,8 +1285,8 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando tengo dudas sobre una situación, suelo confiar en mi sensación interna para decidir cómo actuar.",
-            "R1":"Nunca confío en mi sensación interna.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta detectar y dar sentido a pequeñas señales o detalles en tu entorno que suelen pasar desapercibidos para los demás?",
+            "R1":"No confío en mi sensación interna.",
             "R2":"Casi nunca confío.",
             "R3":"A veces confío con inseguridad.",
             "R4":"Casi siempre confío y me guía.",
@@ -1355,7 +1298,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Nivel N2: regula y modula decisiones internas antes de actuar."
-            
         },{
             "Item":60,
             "Pregunta_I":" Me desconecto de mis sensaciones internas",
@@ -1365,9 +1307,9 @@ const Matriz = {
             "Conciencia":"Intuición",
             "CriterioC":"Guía decisiones, pero menos directamente social.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando algo me incomoda internamente, prefiero ignorarlo y seguir como si nada.",
+            "Pregunta":"¿Con qué frecuencia eliges ignorar una sensación de incomodidad interna para continuar con tus actividades como si no sintieras nada?",
             "R1":"Siempre ignoro lo que siento.",
-            "R2":"Casi siempre lo ignoro aunque me afecte.",
+            "R2":"Lo ignoro aunque me afecte.",
             "R3":"A veces lo ignoro.",
             "R4":"Casi nunca lo ignoro.",
             "R5":"Nunca lo ignoro, siempre lo reconozco y lo analizo.",
@@ -1378,7 +1320,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa desconexión de sensaciones internas. Es invertida porque ignorarlas reduce conciencia."
-            
         },{
             "Item":61,
             "Pregunta_I":" Mantengo atención en tareas importantes",
@@ -1388,9 +1329,9 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando tengo responsabilidades importantes (trabajo, estudio o familia), logro mantener mi atención sin perder el hilo.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta mantener tu concentración en una tarea o responsabilidad importante sin distraerte hasta haberla terminado?",
             "R1":"Me cuesta mucho mantener la atención, me desconcentro rápido.",
-            "R2":"Casi siempre pierdo la concentración.",
+            "R2":"Pierdo la concentración.",
             "R3":"A veces me concentro, pero me distraigo con facilidad.",
             "R4":"Casi siempre logro mantener mi atención.",
             "R5":"Siempre me mantengo concentrado hasta terminar lo que debo hacer.",
@@ -1401,7 +1342,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Se adapta el enfoque a responsabilidades reales y cotidianas. Evalúa capacidad de atención como base interna del desempeño social."
-            
         },{
             "Item":62,
             "Pregunta_I":" Me distraigo con facilidad",
@@ -1411,9 +1351,9 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"Mientras realizo una tarea importante, me distraigo fácilmente con cosas pequeñas (celular, ruido o pensamientos).",
+            "Pregunta":"¿Con qué frecuencia te ocurre que, mientras realizas una tarea importante, terminas distrayéndote con facilidad por estímulos externos o pensamientos ajenos?",
             "R1":"Siempre me distraigo, incluso con cosas mínimas.",
-            "R2":"Casi siempre me distraigo y pierdo el ritmo.",
+            "R2":"Me distraigo y pierdo el ritmo.",
             "R3":"A veces me distraigo, depende del ambiente.",
             "R4":"Casi nunca me distraigo.",
             "R5":"Nunca me distraigo, mantengo el foco con facilidad.",
@@ -1424,7 +1364,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque distraerse refleja menor enfoque. Permite medir control atencional en situaciones comunes."
-            
         },{
             "Item":63,
             "Pregunta_I":" Prioritizo actividades relevantes",
@@ -1434,8 +1373,8 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando tengo varias cosas por hacer, suelo identificar qué es lo más importante y empiezo por eso.",
-            "R1":"Nunca priorizo, hago lo primero que se me ocurra.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta decidir qué es lo más importante cuando tienes muchas cosas por hacer?",
+            "R1":"No priorizo, hago lo primero que se me ocurra.",
             "R2":"Casi nunca priorizo, me enredo con facilidad.",
             "R3":"A veces priorizo, pero no siempre.",
             "R4":"Casi siempre organizo mis prioridades antes de actuar.",
@@ -1447,7 +1386,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa capacidad de priorización como fundamento interno del enfoque, útil en contextos colectivos y personales."
-            
         },{
             "Item":64,
             "Pregunta_I":" Completo lo que inicio",
@@ -1457,8 +1395,8 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando empiezo una tarea o compromiso, normalmente lo termino aunque me tome tiempo.",
-            "R1":"Casi nunca termino lo que empiezo.",
+            "Pregunta":"¿Con qué frecuencia logras terminar las tareas o compromisos que inicias?",
+            "R1":"No termino lo que empiezo.",
             "R2":"Muchas veces dejo cosas a medias.",
             "R3":"A veces termino, a veces abandono.",
             "R4":"Casi siempre termino lo que inicio.",
@@ -1470,7 +1408,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Nivel N3 porque se refleja externamente: cumplir compromisos es observable por otros."
-            
         },{
             "Item":65,
             "Pregunta_I":" Mantengo disciplina personal",
@@ -1480,8 +1417,8 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"Mantengo disciplina personal para cumplir mis obligaciones aunque no tenga ganas.",
-            "R1":"Casi nunca tengo disciplina, dejo todo para después.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta mantener la constancia en tus actividades diarias para cumplir con tus compromisos?",
+            "R1":"No tengo disciplina, dejo todo para después.",
             "R2":"Me cuesta mucho ser disciplinado.",
             "R3":"Depende del día, a veces sí, a veces no.",
             "R4":"Casi siempre logro ser disciplinado.",
@@ -1493,7 +1430,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa disciplina como manifestación externa del enfoque y responsabilidad, relevante en vida social y laboral."
-            
         },{
             "Item":66,
             "Pregunta_I":" Me concentro incluso en entornos distractores",
@@ -1503,7 +1439,7 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"Incluso cuando hay ruido, distracciones o interrupciones, logro concentrarme en lo que debo hacer.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta mantener el foco en tus actividades cuando te encuentras en ambientes con ruido o distracciones?",
             "R1":"No puedo concentrarme si hay distracciones.",
             "R2":"Me cuesta demasiado concentrarme en esos ambientes.",
             "R3":"A veces puedo, depende del nivel de distracción.",
@@ -1516,7 +1452,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide capacidad interna de enfoque en entornos reales, aplicable a escenarios sociales (trabajo, estudio, hogar)."
-            
         },{
             "Item":67,
             "Pregunta_I":" Postergó tareas importantes",
@@ -1526,12 +1461,12 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando tengo tareas importantes, suelo postergarlas aunque sepa que debo hacerlas.",
+            "Pregunta":"¿Con qué frecuencia dejas para después las tareas importantes que sabes que deberías estar haciendo en el momento?",
             "R1":"Siempre dejo todo para después, incluso lo urgente.",
-            "R2":"Casi siempre postergó mis tareas importantes.",
+            "R2":"Postergó mis tareas importantes.",
             "R3":"A veces postergó, depende del ánimo.",
             "R4":"Casi nunca postergó, suelo cumplir.",
-            "R5":"Nunca postergó: hago lo importante a tiempo.",
+            "R5":"Hago lo importante a tiempo.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1539,7 +1474,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque la procrastinación afecta rendimiento y responsabilidad. Se observa externamente en la vida diaria."
-            
         },{
             "Item":68,
             "Pregunta_I":" Administro bien mi tiempo",
@@ -1549,8 +1483,8 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"En mi vida diaria, suelo organizar mi tiempo para cumplir lo que debo hacer.",
-            "R1":"Nunca organizo mi tiempo, improviso siempre.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta organizar tus horas del día para cumplir con todas tus actividades pendientes?",
+            "R1":"No organizo mi tiempo, improviso siempre.",
             "R2":"Casi nunca organizo mi tiempo y se me acumulan cosas.",
             "R3":"A veces organizo mi tiempo, pero me cuesta mantenerlo.",
             "R4":"Casi siempre administro bien mi tiempo.",
@@ -1562,7 +1496,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa administración del tiempo como conducta observable y clave para desempeño personal y social."
-            
         },{
             "Item":69,
             "Pregunta_I":" Mantengo claridad en mis objetivos",
@@ -1572,7 +1505,7 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"Tengo claridad sobre mis objetivos personales y sé qué acciones debo hacer para alcanzarlos.",
+            "Pregunta":"¿Qué tan de acuerdo estás con la idea de que tienes metas claras en tu vida y sabes qué camino seguir para lograrlas?",
             "R1":"No tengo objetivos claros, vivo sin rumbo definido.",
             "R2":"Tengo objetivos muy confusos o cambiantes.",
             "R3":"A veces tengo claridad, pero no siempre.",
@@ -1585,7 +1518,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Mide enfoque como claridad interna y orientación hacia metas, fundamental para sostener conducta coherente."
-            
         },{
             "Item":70,
             "Pregunta_I":" Abandono metas fácilmente",
@@ -1595,12 +1527,12 @@ const Matriz = {
             "Conciencia":"Enfoque",
             "CriterioC":"Más individual, aunque útil en proyectos colectivos.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando las cosas se complican, abandono mis metas con facilidad.",
+            "Pregunta":"¿Con qué frecuencia te ocurre que, al enfrentar obstáculos o dificultades, terminas abandonando las metas que te habías propuesto?",
             "R1":"Siempre abandono cuando algo se pone difícil.",
-            "R2":"Casi siempre abandono mis metas por frustración.",
+            "R2":"Abandono mis metas por frustración.",
             "R3":"A veces abandono, depende de la situación.",
             "R4":"Casi nunca abandono, suelo insistir.",
-            "R5":"Nunca abandono: siempre persevero hasta lograrlo.",
+            "R5":"Siempre persevero hasta lograrlo.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1608,7 +1540,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque abandonar metas refleja bajo enfoque y baja perseverancia, visible en el comportamiento social."
-            
         },{
             "Item":71,
             "Pregunta_I":" Controlo mis impulsos emocionales",
@@ -1618,9 +1549,9 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando algo me molesta en una situación social, logro controlar mis impulsos antes de reaccionar.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta frenar una reacción impulsiva cuando algo te molesta o te genera tensión en una situación social?",
             "R1":"Me cuesta mucho controlarme y reacciono de inmediato.",
-            "R2":"Casi siempre reacciono impulsivamente.",
+            "R2":"Reacciono impulsivamente.",
             "R3":"A veces me controlo, depende del momento.",
             "R4":"Casi siempre logro controlarme antes de reaccionar.",
             "R5":"Siempre controlo mis impulsos y actúo con calma.",
@@ -1631,7 +1562,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa regulación emocional visible en la convivencia: controlar impulsos reduce conflictos y favorece cooperación."
-            
         },{
             "Item":72,
             "Pregunta_I":" Reformulo pensamientos negativos",
@@ -1641,8 +1571,8 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando tengo pensamientos negativos, trato de cambiarlos por ideas más útiles antes de actuar con los demás.",
-            "R1":"Nunca cambio mis pensamientos negativos, me dejo llevar.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta cambiar un pensamiento negativo por uno más constructivo antes de actuar?",
+            "R1":"No cambio mis pensamientos negativos, me dejo llevar.",
             "R2":"Casi nunca lo hago, suelo quedarme en lo negativo.",
             "R3":"A veces lo intento, pero no siempre.",
             "R4":"Casi siempre logro reformular mis pensamientos.",
@@ -1654,7 +1584,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa el proceso interno de regulación cognitiva, clave para evitar reacciones dañinas en lo social."
-            
         },{
             "Item":73,
             "Pregunta_I":" Busco soluciones en lugar de reaccionar",
@@ -1664,9 +1593,9 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando surge un problema con otras personas, intento buscar soluciones en vez de reaccionar con enojo.",
+            "Pregunta":"¿Con qué frecuencia te enfocas en buscar una solución en lugar de reaccionar con enojo cuando surge un conflicto con otras personas?",
             "R1":"Siempre reacciono primero con enojo o discusión.",
-            "R2":"Casi siempre reacciono mal antes de pensar.",
+            "R2":"Reacciono mal antes de pensar.",
             "R3":"Depende del problema, a veces busco solución.",
             "R4":"Casi siempre pienso en soluciones antes de reaccionar.",
             "R5":"Siempre busco soluciones y mantengo la calma.",
@@ -1677,7 +1606,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Se enfoca en conducta social observable: buscar soluciones evita conflictos y fortalece cooperación."
-            
         },{
             "Item":74,
             "Pregunta_I":" Reacciono exageradamente ante problemas",
@@ -1687,12 +1615,12 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"En situaciones difíciles, suelo reaccionar de forma exagerada y eso afecta mi relación con los demás.",
+            "Pregunta":"¿Con qué frecuencia sientes que tus reacciones son desproporcionadas o exageradas ante los problemas que surgen con los demás?",
             "R1":"Siempre reacciono exageradamente y pierdo el control.",
-            "R2":"Casi siempre exagero mis reacciones.",
+            "R2":"Exagero mis reacciones.",
             "R3":"A veces exagero, depende del estrés.",
             "R4":"Casi nunca reacciono exageradamente.",
-            "R5":"Nunca exagero: mantengo control emocional en situaciones difíciles.",
+            "R5":"Mantengo control emocional en situaciones difíciles.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1700,7 +1628,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque exagerar reacciones genera conflictos sociales. Evalúa estabilidad emocional observable."
-            
         },{
             "Item":75,
             "Pregunta_I":" Tolero frustraciones",
@@ -1710,7 +1637,7 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando algo no sale como espero, logro tolerar la frustración sin descargarme con los demás.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta manejar la frustración cuando algo no sale como esperas, sin que eso afecte tu trato hacia los demás?",
             "R1":"No tolero frustraciones, me desquito o me altero.",
             "R2":"Me cuesta mucho tolerarlas.",
             "R3":"A veces lo manejo, depende del momento.",
@@ -1723,7 +1650,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Nivel N2 porque regula emociones internas antes de expresarlas. Ayuda a prevenir conflictos sociales."
-            
         },{
             "Item":76,
             "Pregunta_I":" Regulo mi enojo adecuadamente",
@@ -1733,7 +1659,7 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando siento enojo, logro expresarlo sin faltar el respeto ni herir a otros.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta gestionar tu enojo para expresarlo de manera respetuosa sin herir a los demás?",
             "R1":"Cuando me enojo, suelo explotar o decir cosas hirientes.",
             "R2":"Muchas veces pierdo el control del enojo.",
             "R3":"A veces lo controlo, a veces no.",
@@ -1746,7 +1672,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa regulación externa del enojo, muy importante para convivencia y cooperación."
-            
         },{
             "Item":77,
             "Pregunta_I":" Me cuesta manejar el estrés",
@@ -1756,12 +1681,12 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando estoy estresado, me cuesta mantener la calma y eso afecta mi forma de tratar a los demás.",
-            "R1":"Siempre me desbordo por estrés y reacciono mal.",
-            "R2":"Casi siempre el estrés me supera.",
+            "Pregunta":"¿Con qué frecuencia sientes que el estrés te gana y terminas tratando mal a las personas de tu entorno?",
+            "R1":"Manejo el estrés sin dañar mis relaciones.",
+            "R2":"Casi nunca dejo que el estrés me controle.",
             "R3":"A veces el estrés me afecta, depende de la situación.",
-            "R4":"Casi nunca dejo que el estrés me controle.",
-            "R5":"Nunca me afecta: manejo el estrés sin dañar mis relaciones.",
+            "R4":"Casi siempre el estrés me supera.",
+            "R5":"Siempre me desbordo por estrés y reacciono mal.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1769,7 +1694,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque dificultad para manejar estrés reduce regulación emocional y aumenta conflictos."
-            
         },{
             "Item":78,
             "Pregunta_I":" Actúo con calma bajo presión",
@@ -1779,7 +1703,7 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"Bajo presión (trabajo, estudio o problemas), logro actuar con calma y tomar decisiones sin estallar.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta mantener la calma y actuar razonadamente cuando te encuentras bajo mucha presión?",
             "R1":"Bajo presión pierdo el control y actúo impulsivamente.",
             "R2":"Me cuesta mucho mantener la calma.",
             "R3":"A veces logro controlarme.",
@@ -1792,7 +1716,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa conducta observable bajo presión: estabilidad emocional en escenarios sociales críticos."
-            
         },{
             "Item":79,
             "Pregunta_I":" Reflexiono antes de responder emocionalmente",
@@ -1802,8 +1725,8 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"Antes de responder con emoción en una discusión o conversación, suelo detenerme a pensar.",
-            "R1":"Nunca pienso antes de responder, reacciono de inmediato.",
+            "Pregunta":"¿Con qué frecuencia te detienes a pensar antes de dar una respuesta emocional en una conversación o discusión?",
+            "R1":"No pienso antes de responder, reacciono de inmediato.",
             "R2":"Casi nunca pienso antes de responder.",
             "R3":"A veces lo hago, depende del tema.",
             "R4":"Casi siempre reflexiono antes de responder.",
@@ -1815,7 +1738,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Nivel N1 porque es fundamento interno: pensar antes de reaccionar sostiene buena convivencia social."
-            
         },{
             "Item":80,
             "Pregunta_I":" Evito enfrentar emociones difíciles",
@@ -1825,12 +1747,12 @@ const Matriz = {
             "Conciencia":"Regulación Emocional",
             "CriterioC":"Evita conflictos y favorece la cooperación.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando siento emociones difíciles (tristeza, rabia o miedo), prefiero evitarlas en vez de enfrentarlas.",
-            "R1":"Siempre evito mis emociones difíciles y las reprimo.",
-            "R2":"Casi siempre las evito.",
+            "Pregunta":"¿Con qué frecuencia eliges ignorar o evitar tus emociones difíciles en lugar de intentar entenderlas?",
+            "R1":"Enfrento mis emociones y las manejo de forma sana.",
+            "R2":"Casi nunca las evito, trato de entenderlas.",
             "R3":"A veces las evito, depende del momento.",
-            "R4":"Casi nunca las evito, trato de entenderlas.",
-            "R5":"Nunca las evito: enfrento mis emociones y las manejo de forma sana.",
+            "R4":"Casi siempre las evito.",
+            "R5":"Siempre evito mis emociones difíciles y las reprimo.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1838,7 +1760,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque evitar emociones reduce regulación interna. Se enfoca en procesamiento emocional que influye en relaciones."
-            
         },{
             "Item":81,
             "Pregunta_I":" Tengo metas claras en mi vida",
@@ -1848,7 +1769,7 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Tengo metas claras que guían mis decisiones y la forma en que participo en mi entorno social.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta mantener una dirección clara sobre lo que quieres lograr en tu vida?",
             "R1":"No tengo metas claras y suelo vivir sin dirección.",
             "R2":"Tengo metas, pero no las tengo bien definidas.",
             "R3":"Algunas metas están claras, otras no.",
@@ -1861,7 +1782,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa el fundamento interno del propósito: metas claras orientan acciones personales y colectivas."
-            
         },{
             "Item":82,
             "Pregunta_I":" Mi vida tiene sentido para mí",
@@ -1871,7 +1791,7 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Siento que mi vida tiene un sentido que influye en cómo actúo con los demás y con mi comunidad.",
+            "Pregunta":"¿Qué tan de acuerdo estás con la idea de que tus actividades diarias tienen un significado o sentido profundo para ti?",
             "R1":"No siento que mi vida tenga sentido.",
             "R2":"Casi nunca siento sentido en lo que hago.",
             "R3":"A veces siento sentido, depende del momento.",
@@ -1884,7 +1804,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Evalúa procesamiento interno de significado personal que regula motivación y conducta social."
-            
         },{
             "Item":83,
             "Pregunta_I":" Actúo alineado con mis objetivos",
@@ -1894,7 +1813,7 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Mis acciones diarias reflejan mis objetivos y lo que quiero construir en mi vida.",
+            "Pregunta":"¿Con qué frecuencia tus acciones diarias son coherentes con las metas y objetivos que te has propuesto alcanzar?",
             "R1":"Mis acciones no tienen relación con mis objetivos.",
             "R2":"Muchas veces actúo sin pensar en mis metas.",
             "R3":"A veces actúo alineado, otras no.",
@@ -1907,7 +1826,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa manifestación externa del propósito: coherencia entre objetivos y comportamiento observable."
-            
         },{
             "Item":84,
             "Pregunta_I":" Me siento perdido respecto a mi futuro",
@@ -1917,12 +1835,12 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Me siento perdido respecto a mi futuro y eso influye en cómo tomo decisiones en mi vida.",
-            "R1":"Siempre me siento perdido y sin rumbo.",
-            "R2":"Casi siempre siento que no sé qué hacer con mi futuro.",
-            "R3":"A veces me siento perdido, depende de la situación.",
-            "R4":"Casi nunca me siento perdido, tengo cierta claridad.",
-            "R5":"Nunca me siento perdido, tengo claridad sobre mi futuro.",
+            "Pregunta":"¿Con qué frecuencia experimentas la sensación de estar perdido o sin un rumbo definido respecto a tu futuro?",
+            "R1":"Tengo claridad sobre mi futuro.",
+            "R2":"Tengo cierta claridad.",
+            "R3":"Depende de la situación.",
+            "R4":"Siento que no sé qué hacer con mi futuro.",
+            "R5":"Me siento perdido y sin rumbo.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1930,7 +1848,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque sentirse perdido reduce propósito y dirección personal, afectando decisiones sociales."
-            
         },{
             "Item":85,
             "Pregunta_I":" Trabajo por algo que considero significativo",
@@ -1940,12 +1857,12 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Trabajo y me esfuerzo por cosas que considero importantes y valiosas para mí y para los demás.",
-            "R1":"No me esfuerzo por algo significativo, hago las cosas por obligación.",
-            "R2":"Me esfuerzo poco por algo importante.",
-            "R3":"A veces me esfuerzo, depende de mi motivación.",
-            "R4":"Casi siempre trabajo por algo significativo.",
-            "R5":"Siempre trabajo con dedicación por algo que considero valioso.",
+            "Pregunta":"¿Con qué frecuencia te involucras en actividades por el valor que tienen para ti, más allá de solo cumplir con tus deberes?",
+            "R1":"Me limito a mantener mis obligaciones al día sin buscar un sentido extra.",
+            "R2":"Actúo por compromiso, rara vez por algo que me apasione.",
+            "R3":"A veces busco lo significativo, pero otras solo cumplo lo que me toca.",
+            "R4":"Con frecuencia elijo tareas que tienen un valor especial para mí.",
+            "R5":"Siempre trabajo con dedicación en cosas que considero realmente valiosas.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1953,7 +1870,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa acción observable: propósito se refleja en compromiso hacia metas significativas."
-            
         },{
             "Item":86,
             "Pregunta_I":" Identifico mi vocación",
@@ -1963,7 +1879,7 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Tengo claridad sobre lo que me gusta y en qué siento que puedo aportar a los demás.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta reconocer cuáles son tus talentos y cómo podrías usarlos para ayudar a otros?",
             "R1":"No sé qué me gusta ni en qué soy bueno.",
             "R2":"Tengo dudas frecuentes sobre lo que quiero hacer.",
             "R3":"A veces lo tengo claro, pero no siempre.",
@@ -1976,7 +1892,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa base interna del propósito: conocer vocación orienta participación social y sentido de contribución."
-            
         },{
             "Item":87,
             "Pregunta_I":" Mis acciones reflejan mis aspiraciones",
@@ -1986,12 +1901,12 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Lo que hago en mi vida refleja lo que quiero lograr y el tipo de persona que quiero ser.",
+            "Pregunta":"¿Con qué frecuencia sientes que tus actividades diarias coinciden con el tipo de persona que aspiras a ser?",
             "R1":"Lo que hago no refleja mis aspiraciones.",
-            "R2":"Muchas veces actúo sin pensar en lo que quiero ser.",
+            "R2":"Actúo sin pensar en lo que quiero ser.",
             "R3":"A veces actúo acorde a mis aspiraciones.",
-            "R4":"Casi siempre mis acciones reflejan mis aspiraciones.",
-            "R5":"Siempre mis acciones reflejan claramente mis aspiraciones.",
+            "R4":"Mis acciones reflejan mis aspiraciones.",
+            "R5":"Mis acciones reflejan claramente mis aspiraciones.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -1999,7 +1914,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa coherencia externa entre aspiraciones y conducta social observable."
-            
         },{
             "Item":88,
             "Pregunta_I":" Me falta dirección personal",
@@ -2009,12 +1923,12 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Siento que me falta dirección personal y eso me hace tomar decisiones sin un rumbo claro.",
-            "R1":"Siempre siento que no tengo dirección en mi vida.",
-            "R2":"Casi siempre me siento sin rumbo.",
+            "Pregunta":"¿Con qué frecuencia sientes que te falta una dirección clara y que tus decisiones no apuntan hacia un rumbo definido?",
+            "R1":"Tengo la dirección clara.",
+            "R2":"Casi nunca me siento sin rumbo.",
             "R3":"A veces me siento sin dirección.",
-            "R4":"Casi nunca me siento sin rumbo.",
-            "R5":"Nunca me siento sin rumbo: tengo dirección clara.",
+            "R4":"Casi siempre me siento sin rumbo.",
+            "R5":"Siempre siento que no tengo dirección en mi vida.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2022,7 +1936,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque falta de dirección reduce propósito, afectando planificación y acciones en el entorno."
-            
         },{
             "Item":89,
             "Pregunta_I":" Mantengo motivación interna",
@@ -2032,7 +1945,7 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Aunque haya dificultades, mantengo una motivación interna que me impulsa a seguir avanzando.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta mantener el impulso y las ganas de avanzar en tus metas, incluso cuando no recibes premios o reconocimiento externo?",
             "R1":"No tengo motivación interna, me rindo fácil.",
             "R2":"Me cuesta mantener motivación por mucho tiempo.",
             "R3":"A veces tengo motivación, depende del momento.",
@@ -2045,7 +1958,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa procesamiento emocional y mental que regula perseverancia hacia metas, útil para proyectos colectivos."
-            
         },{
             "Item":90,
             "Pregunta_I":" Planifico mi crecimiento personal",
@@ -2055,7 +1967,7 @@ const Matriz = {
             "Conciencia":"Propósito",
             "CriterioC":"Orienta acciones hacia metas colectivas.",
             "Impacto":"Medio",
-            "Pregunta":"Planifico mi crecimiento personal y busco mejorar para aportar mejor a mi vida y a los demás.",
+            "Pregunta":"¿Con qué frecuencia dedicas tiempo a planear cómo mejorar y crecer personalmente para alcanzar tus metas?",
             "R1":"No planifico mi crecimiento ni pienso en mejorar.",
             "R2":"Casi nunca planifico, actúo sin rumbo.",
             "R3":"A veces planifico, pero no lo mantengo.",
@@ -2068,7 +1980,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa fundamento interno de propósito: planificación orienta desarrollo personal y contribución social."
-            
         },{
             "Item":91,
             "Pregunta_I":" Siento conexión con algo más grande que yo",
@@ -2078,8 +1989,8 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"En mi vida siento que hago parte de algo más grande que solo mis problemas o intereses personales.",
-            "R1":"Nunca siento conexión con algo más grande.",
+            "Pregunta":"¿Qué tan de acuerdo estás con la idea de que tu vida forma parte de algo más grande que tus propios intereses personales?",
+            "R1":"No siento conexión con algo más grande.",
             "R2":"Casi nunca siento esa conexión.",
             "R3":"A veces siento conexión, depende del momento.",
             "R4":"Casi siempre siento conexión con algo más grande.",
@@ -2091,7 +2002,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Evalúa un procesamiento interno que regula sentido de pertenencia cultural/espiritual y perspectiva social."
-            
         },{
             "Item":92,
             "Pregunta_I":" Reflexiono sobre el sentido profundo de la vida",
@@ -2101,8 +2011,8 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"Reflexiono sobre el sentido de la vida y lo que significa vivir en sociedad.",
-            "R1":"Nunca reflexiono sobre eso.",
+            "Pregunta":"¿Con qué frecuencia te detienes a pensar en el sentido profundo de la vida y en el significado de tu existencia?",
+            "R1":"No reflexiono sobre eso.",
             "R2":"Casi nunca lo pienso.",
             "R3":"A veces lo reflexiono.",
             "R4":"Casi siempre reflexiono sobre el sentido de la vida.",
@@ -2114,7 +2024,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa el fundamento interno del pensamiento trascendente, relacionado con reflexión cultural y social."
-            
         },{
             "Item":93,
             "Pregunta_I":" Busco significado en experiencias difíciles",
@@ -2124,8 +2033,8 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando paso por momentos difíciles, trato de encontrarles un aprendizaje o un significado.",
-            "R1":"Nunca busco significado en momentos difíciles.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta encontrar un aprendizaje o un sentido profundo a las experiencias difíciles que te toca vivir?",
+            "R1":"No busco significado en momentos difíciles.",
             "R2":"Casi nunca encuentro aprendizaje.",
             "R3":"A veces lo intento, depende del caso.",
             "R4":"Casi siempre trato de encontrar significado.",
@@ -2137,7 +2046,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa la capacidad interna de resignificar experiencias difíciles como base de crecimiento y adaptación social."
-            
         },{
             "Item":94,
             "Pregunta_I":" Me siento desconectado de lo trascendente",
@@ -2147,12 +2055,12 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"Siento que no tengo conexión con nada trascendente o significativo en mi vida.",
-            "R1":"Siempre me siento desconectado de lo trascendente.",
-            "R2":"Casi siempre me siento desconectado.",
+            "Pregunta":"¿Con qué frecuencia sientes que has dejado de buscar un propósito que te exija ir más allá de tus límites actuales?",
+            "R1":"No me siento desconectado, siempre encuentro sentido.",
+            "R2":"Casi nunca me siento desconectado.",
             "R3":"A veces me siento desconectado.",
-            "R4":"Casi nunca me siento desconectado.",
-            "R5":"Nunca me siento desconectado, siempre encuentro sentido.",
+            "R4":"Casi siempre me siento desconectado.",
+            "R5":"Siempre me siento desconectado de lo trascendente.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2160,7 +2068,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque desconexión simbólica reduce sentido y estabilidad emocional interna."
-            
         },{
             "Item":95,
             "Pregunta_I":" Experimento paz interior",
@@ -2170,8 +2077,8 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"En general, experimento tranquilidad o paz interior incluso cuando hay dificultades.",
-            "R1":"Nunca siento paz interior.",
+            "Pregunta":"¿Con qué frecuencia experimentas una sensación de paz o tranquilidad interna que te ayuda a mantener el equilibrio?",
+            "R1":"No siento paz interior.",
             "R2":"Casi nunca siento tranquilidad.",
             "R3":"A veces siento paz, depende de la situación.",
             "R4":"Casi siempre siento paz interior.",
@@ -2183,7 +2090,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa procesamiento emocional interno que regula equilibrio psicológico y estabilidad social."
-            
         },{
             "Item":96,
             "Pregunta_I":" Integro valores espirituales en mi vida",
@@ -2193,7 +2099,7 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"Mis valores espirituales o culturales se reflejan en la forma en que trato a los demás.",
+            "Pregunta":"¿Con qué frecuencia logras que tus valores personales o culturales se reflejen en la forma en que tratas a las personas de tu entorno?",
             "R1":"Mis valores no se reflejan en mi conducta.",
             "R2":"A veces actúo en contra de mis valores.",
             "R3":"Depende de la situación.",
@@ -2206,7 +2112,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa manifestación externa observable: coherencia cultural/espiritual en interacción social."
-            
         },{
             "Item":97,
             "Pregunta_I":" Encuentro propósito en el sufrimiento",
@@ -2216,8 +2121,8 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"Incluso en situaciones dolorosas, busco entender qué puedo aprender o construir a partir de eso.",
-            "R1":"Nunca encuentro sentido en el sufrimiento.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta encontrar un sentido o una enseñanza cuando atraviesas situaciones de mucho sufrimiento?",
+            "R1":"No encuentro sentido en el sufrimiento.",
             "R2":"Casi nunca puedo aprender de lo difícil.",
             "R3":"A veces lo logro.",
             "R4":"Casi siempre busco un sentido o enseñanza.",
@@ -2229,7 +2134,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa reflexión interna profunda y capacidad de resiliencia simbólica."
-            
         },{
             "Item":98,
             "Pregunta_I":" Vivo sin cuestionar el sentido de la existencia",
@@ -2239,12 +2143,12 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"Vivo sin cuestionar el sentido de mi vida o lo que hago en el mundo.",
-            "R1":"Siempre vivo sin cuestionarme nada.",
-            "R2":"Casi siempre vivo sin reflexionar.",
+            "Pregunta":"¿Con qué frecuencia te ocurre que vives tu día a día sin detenerte a cuestionar el sentido de tu vida o lo que haces en el mundo?",
+            "R1":"Cuestiono y reflexiono sobre el sentido de mi vida.",
+            "R2":"Reflexiono sobre mi vida.",
             "R3":"A veces me cuestiono, a veces no.",
-            "R4":"Casi siempre reflexiono sobre mi vida.",
-            "R5":"Siempre cuestiono y reflexiono sobre el sentido de mi vida.",
+            "R4":"Siempre vivo sin reflexionar.",
+            "R5":"Siempre vivo sin cuestionarme nada.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2252,7 +2156,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque ausencia de reflexión reduce conciencia trascendente y sentido cultural."
-            
         },{
             "Item":99,
             "Pregunta_I":" Siento unidad con mi entorno",
@@ -2262,8 +2165,8 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"Siento conexión con mi entorno (personas, naturaleza o comunidad) y eso influye en cómo actúo.",
-            "R1":"Nunca siento conexión con mi entorno.",
+            "Pregunta":"¿Qué tan de acuerdo estás con la idea de que existe un vínculo profundo o unidad entre tú y el entorno (personas, naturaleza o comunidad) que te rodea?",
+            "R1":"No siento conexión con mi entorno.",
             "R2":"Casi nunca siento conexión.",
             "R3":"A veces siento conexión.",
             "R4":"Casi siempre siento conexión.",
@@ -2275,7 +2178,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Evalúa integración emocional-social: sentido de unidad promueve respeto y cooperación."
-            
         },{
             "Item":100,
             "Pregunta_I":" Practico momentos de introspección profunda",
@@ -2285,8 +2187,8 @@ const Matriz = {
             "Conciencia":"Trascendencia Simbólica",
             "CriterioC":"Aporta sentido cultural, pero menos práctico en conducta ciudadana.",
             "Impacto":"Bajo",
-            "Pregunta":"Busco espacios de reflexión profunda (silencio, lectura, oración o pensamiento) para comprenderme mejor.",
-            "R1":"Nunca practico introspección.",
+            "Pregunta":"¿Con qué frecuencia buscas espacios de silencio o reflexión profunda para conectar contigo mismo y comprender tu lugar en el mundo?",
+            "R1":"No practico introspección.",
             "R2":"Casi nunca lo hago.",
             "R3":"A veces lo practico.",
             "R4":"Casi siempre busco momentos de introspección.",
@@ -2298,7 +2200,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa conducta observable relacionada con reflexión simbólica y crecimiento personal-cultural."
-            
         },{
             "Item":101,
             "Pregunta_I":" Genero ideas originales con facilidad",
@@ -2308,8 +2209,8 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando participo en conversaciones o actividades sociales, suelo proponer ideas diferentes o nuevas.",
-            "R1":"Nunca propongo ideas nuevas.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta proponer ideas nuevas o soluciones diferentes cuando participas en actividades con otras personas?",
+            "R1":"No propongo ideas nuevas.",
             "R2":"Casi nunca se me ocurren ideas diferentes.",
             "R3":"A veces propongo ideas nuevas.",
             "R4":"Casi siempre propongo ideas diferentes.",
@@ -2321,7 +2222,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa el fundamento interno creativo aplicado a entornos sociales, útil para innovación comunitaria."
-            
         },{
             "Item":102,
             "Pregunta_I":" Busco soluciones innovadoras",
@@ -2331,8 +2231,8 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando surge un problema en grupo, busco alternativas distintas en lugar de quedarme con lo habitual.",
-            "R1":"Nunca busco alternativas nuevas.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta proponer alternativas fuera de lo común cuando el grupo necesita solucionar un problema?",
+            "R1":"No busco alternativas nuevas.",
             "R2":"Casi nunca pienso en soluciones diferentes.",
             "R3":"A veces busco alternativas.",
             "R4":"Casi siempre intento soluciones innovadoras.",
@@ -2344,7 +2244,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide la creatividad como base interna para resolver problemas colectivos de manera flexible."
-            
         },{
             "Item":103,
             "Pregunta_I":" Me adapto creativamente a problemas",
@@ -2354,7 +2253,7 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"En situaciones difíciles, suelo adaptarme buscando nuevas formas de actuar o resolver lo que ocurre.",
+            "Pregunta":"¿Con qué frecuencia logras adaptar tu forma de actuar buscando soluciones nuevas cuando te enfrentas a un cambio o dificultad inesperada?",
             "R1":"No me adapto, me quedo bloqueado.",
             "R2":"Me cuesta adaptarme y casi no busco alternativas.",
             "R3":"Depende de la situación.",
@@ -2367,7 +2266,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa manifestación externa: la creatividad se observa en adaptación real ante problemas."
-            
         },{
             "Item":104,
             "Pregunta_I":" Me cuesta pensar fuera de lo común",
@@ -2377,12 +2275,12 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"Me cuesta pensar en ideas diferentes cuando algo requiere soluciones nuevas.",
-            "R1":"Siempre me cuesta pensar fuera de lo común.",
-            "R2":"Casi siempre me cuesta generar ideas nuevas.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta sentir que te bloqueas al intentar proponer algo diferente?",
+            "R1":"No me cuesta, siempre pienso de forma creativa.",
+            "R2":"Casi nunca me cuesta, normalmente encuentro ideas nuevas.",
             "R3":"A veces me cuesta, depende del momento.",
-            "R4":"Casi nunca me cuesta, normalmente encuentro ideas nuevas.",
-            "R5":"Nunca me cuesta, siempre pienso de forma creativa.",
+            "R4":"Casi siempre me cuesta generar ideas nuevas.",
+            "R5":"Siempre me cuesta pensar fuera de lo común.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -2390,7 +2288,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Es invertida porque dificultad creativa reduce innovación y flexibilidad social."
-            
         },{
             "Item":105,
             "Pregunta_I":" Disfruto imaginar posibilidades nuevas",
@@ -2400,7 +2297,7 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"Disfruto imaginar nuevas posibilidades sobre cómo mejorar mi vida o mi entorno social.",
+            "Pregunta":"¿Qué tan de acuerdo estás con que disfrutas dedicar tiempo a imaginar nuevas formas de mejorar las cosas a tu alrededor?",
             "R1":"No disfruto imaginar posibilidades nuevas.",
             "R2":"Casi nunca pienso en posibilidades nuevas.",
             "R3":"A veces me gusta imaginar ideas nuevas.",
@@ -2413,7 +2310,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Evalúa procesamiento interno emocional y mental que impulsa creatividad como motivación cultural."
-            
         },{
             "Item":106,
             "Pregunta_I":" Transformo errores en oportunidades",
@@ -2423,7 +2319,7 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"Cuando cometo un error, intento convertirlo en una oportunidad para aprender o hacerlo mejor.",
+            "Pregunta":"¿Con qué frecuencia logras convertir un error cometido en una nueva oportunidad para mejorar o aprender?",
             "R1":"No aprendo del error y me desmotivo.",
             "R2":"Me cuesta ver algo positivo en el error.",
             "R3":"Depende del error y la situación.",
@@ -2436,7 +2332,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa conducta observable: resiliencia creativa ante fallos, útil para proyectos sociales."
-            
         },{
             "Item":107,
             "Pregunta_I":" Exploro perspectivas poco convencionales",
@@ -2446,12 +2341,12 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"Me interesa escuchar o explorar ideas poco comunes, aunque sean diferentes a las mías.",
-            "R1":"No me interesa escuchar ideas diferentes.",
-            "R2":"Casi nunca exploro ideas poco comunes.",
-            "R3":"A veces me interesa, depende del tema.",
-            "R4":"Casi siempre exploro ideas nuevas.",
-            "R5":"Siempre busco perspectivas poco convencionales.",
+            "Pregunta":"¿Te interesa escuchar y analizar ideas poco comunes, incluso si son muy diferentes a las tuyas?",
+            "R1":"Sigo mis propias ideas.",
+            "R2":"Casi nunca exploro ideas diferentes.",
+            "R3":"Depende del tema.",
+            "R4":"Exploro ideas nuevas.",
+            "R5":"Busco perspectivas poco convencionales.",
             "Tipo de Respuesta":"Actitud",
             "T1":"Totalmente en desacuerdo",
             "T2":"En desacuerdo",
@@ -2459,7 +2354,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Evalúa apertura creativa como base interna para innovación y pensamiento flexible en sociedad."
-            
         },{
             "Item":108,
             "Pregunta_I":" Evito asumir riesgos creativos",
@@ -2469,12 +2363,12 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"Evito proponer ideas nuevas por miedo a equivocarme o ser juzgado por los demás.",
-            "R1":"Siempre evito proponer ideas por miedo.",
-            "R2":"Casi siempre me limito por miedo al juicio.",
+            "Pregunta":"¿Con qué frecuencia dejas de proponer ideas nuevas por miedo a lo que los demás puedan pensar o a equivocarte?",
+            "R1":"Siempre propongo ideas, aunque me juzguen.",
+            "R2":"A menudo propongo ideas aunque tenga miedo.",
             "R3":"A veces me da miedo, a veces no.",
-            "R4":"Casi nunca dejo de proponer ideas por miedo.",
-            "R5":"Nunca evito proponer ideas, aunque me juzguen.",
+            "R4":"Me limito por miedo al juicio.",
+            "R5":"Evito proponer ideas por que los demás no me van a entender.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2482,7 +2376,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque evitar riesgos creativos reduce participación e innovación social observable."
-            
         },{
             "Item":109,
             "Pregunta_I":" Conecto ideas diferentes entre sí",
@@ -2492,8 +2385,8 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"Suelo conectar ideas de diferentes áreas para encontrar nuevas soluciones o puntos de vista.",
-            "R1":"Nunca conecto ideas diferentes.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta relacionar conceptos o ideas de temas distintos para encontrar soluciones nuevas?",
+            "R1":"No conecto ideas diferentes.",
             "R2":"Casi nunca lo hago.",
             "R3":"A veces conecto ideas.",
             "R4":"Casi siempre relaciono ideas distintas.",
@@ -2505,7 +2398,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa capacidad cognitiva creativa como fundamento interno de innovación social."
-            
         },{
             "Item":110,
             "Pregunta_I":" Expreso mi creatividad activamente",
@@ -2515,8 +2407,8 @@ const Matriz = {
             "Conciencia":"Creatividad",
             "CriterioC":"Impulsa innovación social, aunque no siempre regula conducta.",
             "Impacto":"Bajo",
-            "Pregunta":"Expreso mi creatividad en actividades reales (trabajo, estudio, arte o proyectos con otros).",
-            "R1":"Nunca expreso mi creatividad.",
+            "Pregunta":"¿Con qué frecuencia pones en práctica tu creatividad a través de actividades, proyectos o tareas compartidas con otros?",
+            "R1":"No expreso mi creatividad.",
             "R2":"Casi nunca lo hago.",
             "R3":"A veces lo hago.",
             "R4":"Casi siempre expreso mi creatividad activamente.",
@@ -2528,7 +2420,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa manifestación externa: creatividad observable en acciones concretas."
-            
         },{
             "Item":111,
             "Pregunta_I":" Vivo el momento actual conscientemente",
@@ -2538,8 +2429,8 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"En conversaciones o actividades sociales, suelo estar realmente atento a lo que está ocurriendo en el momento.",
-            "R1":"Casi nunca estoy atento; mi mente suele estar en otra parte.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta mantener toda tu atención puesta en lo que está ocurriendo mientras interactúas con otras personas?",
+            "R1":"Mi mente suele estar en otra parte.",
             "R2":"Muchas veces me distraigo aunque esté presente físicamente.",
             "R3":"Depende de la situación, a veces estoy atento y otras no.",
             "R4":"Generalmente me mantengo atento en el momento.",
@@ -2551,7 +2442,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Se adapta a interacción social y mide regulación intermedia de atención y conciencia del momento."
-            
         },{
             "Item":112,
             "Pregunta_I":" Mi mente se dispersa constantemente",
@@ -2561,12 +2451,12 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"Mientras estoy con otras personas, mi mente se dispersa fácilmente y pierdo el hilo de lo que ocurre.",
-            "R1":"Siempre me desconcentro y me pierdo en mis pensamientos.",
-            "R2":"Casi siempre me distraigo incluso en conversaciones importantes.",
+            "Pregunta":"¿Con qué frecuencia sientes que tu mente se dispersa en pensamientos propios mientras otras personas te están hablando o algo está ocurriendo?",
+            "R1":"Me concentro plenamente en lo que ocurre.",
+            "R2":"Suelo mantenerme atento.",
             "R3":"A veces me pasa, depende del tema o el ambiente.",
-            "R4":"Casi nunca me distraigo, suelo mantenerme atento.",
-            "R5":"Nunca me disperso; me concentro plenamente en lo que ocurre.",
+            "R4":"Me distraigo incluso en conversaciones importantes.",
+            "R5":"Me desconcentro y me pierdo en mis pensamientos.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2574,7 +2464,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Pregunta invertida porque la dispersión mental reduce presencia social y atención en la interacción."
-            
         },{
             "Item":113,
             "Pregunta_I":" Soy consciente de mis sensaciones corporales",
@@ -2584,12 +2473,12 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando estoy en situaciones sociales, noto con claridad mis reacciones físicas (tensión, respiración, nervios).",
-            "R1":"Casi nunca noto lo que pasa en mi cuerpo.",
-            "R2":"Muchas veces no me doy cuenta hasta que ya estoy alterado.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta notar tus reacciones físicas (como tensión o cambios en la respiración) mientras interactúas con otros?",
+            "R1":"No noto lo que pasa en mi cuerpo en esos momentos.",
+            "R2":"No me doy cuenta hasta que ya estoy alterado.",
             "R3":"A veces lo noto, pero no siempre.",
-            "R4":"Generalmente noto mis sensaciones corporales.",
-            "R5":"Siempre soy consciente de mis sensaciones corporales y cómo influyen en mí.",
+            "R4":"Noto mis sensaciones corporales.",
+            "R5":"Soy consciente de mis sensaciones corporales y cómo influyen en mí.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -2597,7 +2486,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"La conciencia corporal regula reacciones sociales y permite control emocional en la interacción."
-            
         },{
             "Item":114,
             "Pregunta_I":" Escucho con atención plena",
@@ -2607,12 +2495,12 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando alguien me habla, suelo escuchar con atención sin interrumpir ni distraerme.",
-            "R1":"Casi nunca escucho con atención, me distraigo rápido.",
-            "R2":"Muchas veces escucho a medias mientras pienso en otra cosa.",
+            "Pregunta":"¿Con qué frecuencia prestas atención total a lo que alguien te dice sin distraerte con tus propios pensamientos?",
+            "R1":"Me distraigo rápido.",
+            "R2":"Escucho mientras pienso en otra cosa.",
             "R3":"A veces escucho con atención, depende de la persona.",
             "R4":"Generalmente escucho activamente y sigo la conversación.",
-            "R5":"Siempre escucho con atención plena y respondo con claridad.",
+            "R5":"Escucho con atención plena y respondo con claridad.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2620,7 +2508,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Mide conducta observable: escuchar activamente es presencia visible en convivencia social."
-            
         },{
             "Item":115,
             "Pregunta_I":" Disfruto experiencias sin distraerme",
@@ -2630,12 +2517,12 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando participo en actividades sociales (reuniones, familia, amigos), disfruto sin estar pensando en otras cosas.",
-            "R1":"Casi nunca disfruto, mi mente siempre está en preocupaciones.",
+            "Pregunta":"¿Logras disfrutar plenamente de las actividades sociales sin que tus preocupaciones o pensamientos te distraigan del momento?",
+            "R1":"Mi mente siempre está en preocupaciones.",
             "R2":"Muchas veces estoy presente pero pensando en otros asuntos.",
             "R3":"A veces logro disfrutar, depende del momento.",
             "R4":"Generalmente disfruto y me concentro en la experiencia.",
-            "R5":"Siempre disfruto plenamente sin distraerme del momento.",
+            "R5":"Disfruto plenamente sin distraerme del momento.",
             "Tipo de Respuesta":"Frecuencia emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2643,7 +2530,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa presencia emocional y mental en situaciones sociales, importante para relaciones sanas."
-            
         },{
             "Item":116,
             "Pregunta_I":" Me anticipo constantemente al futuro",
@@ -2653,12 +2539,12 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"En situaciones sociales, suelo preocuparme demasiado por lo que pasará después en vez de enfocarme en el presente.",
-            "R1":"Siempre estoy anticipando el futuro y no disfruto el momento.",
-            "R2":"Casi siempre me preocupo por lo que viene.",
-            "R3":"A veces me anticipo demasiado.",
-            "R4":"Casi nunca me preocupo por el futuro en esos momentos.",
-            "R5":"Nunca me anticipo; vivo el momento con tranquilidad.",
+            "Pregunta":"¿Con qué frecuencia te ocurre que, al estar con otras personas, tu mente se adelanta a preocuparse por lo que pasará después?",
+            "R1":"Estoy atento y anticipo lo que pueda pasar.",
+            "R2":"Me preocupo por lo que viene.",
+            "R3":"A veces me anticipo, aveces no.",
+            "R4":"Nunca me preocupo por el futuro en esos momentos.",
+            "R5":"Vivo el momento con tranquilidad.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2666,7 +2552,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Pregunta invertida: anticipación excesiva reduce la atención social y la conexión presente."
-            
         },{
             "Item":117,
             "Pregunta_I":" Observo mis pensamientos sin juzgarlos",
@@ -2676,8 +2561,8 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando me siento incómodo en una situación social, puedo observar mis pensamientos sin reaccionar inmediatamente.",
-            "R1":"No noto mis pensamientos, solo reacciono impulsivamente.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta simplemente notar tus pensamientos y dejarlos pasar sin juzgarlos ni dejarte arrastrar por ellos?",
+            "R1":"No noto mis pensamientos, solo reacciono.",
             "R2":"Casi nunca logro observarlos antes de actuar.",
             "R3":"A veces lo logro, depende del momento.",
             "R4":"Generalmente puedo observar lo que pienso antes de reaccionar.",
@@ -2689,7 +2574,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Fundamento interno: capacidad de observación mental como base de regulación social."
-            
         },{
             "Item":118,
             "Pregunta_I":" Mantengo atención plena en conversaciones",
@@ -2699,12 +2583,12 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"En conversaciones importantes, mantengo mi atención sin perderme ni distraerme con el celular u otras cosas.",
-            "R1":"Casi nunca mantengo atención; me desconecto rápido.",
+            "Pregunta":"¿Con qué frecuencia mantienes el hilo de una conversación sin distraerte con el celular o tus pensamientos?",
+            "R1":"Me desconcentro rápido.",
             "R2":"Muchas veces me distraigo aunque la conversación sea importante.",
             "R3":"A veces me concentro, a veces no.",
-            "R4":"Generalmente me mantengo atento y participo.",
-            "R5":"Siempre mantengo atención plena y demuestro interés.",
+            "R4":"Me mantengo atento y participo.",
+            "R5":"Mantengo atención plena y demuestro interés.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2712,7 +2596,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Conducta observable social: atención sostenida demuestra respeto y convivencia."
-            
         },{
             "Item":119,
             "Pregunta_I":" Me desconecto fácilmente del presente",
@@ -2722,12 +2605,12 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"Aunque esté con otras personas, me desconecto mentalmente y actúo como si estuviera en “piloto automático”.",
-            "R1":"Siempre me desconecto y no noto lo que pasa.",
-            "R2":"Casi siempre estoy ausente mentalmente.",
-            "R3":"A veces me pasa, sobre todo en situaciones largas.",
-            "R4":"Casi nunca me desconecto; suelo estar presente.",
-            "R5":"Nunca me desconecto; me mantengo consciente del momento.",
+            "Pregunta":"¿Con qué frecuencia te ocurre que, estando con otras personas, te desconectas mentalmente y actúas en 'piloto automático'?",
+            "R1":"Me mantengo consciente del momento.",
+            "R2":"Suelo estar presente.",
+            "R3":"Solo en situaciones largas.",
+            "R4":"Suelo estar pendiente de otras cosas.",
+            "R5":"Siempre me desconecto y no noto lo que pasa.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2735,7 +2618,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Invertida porque desconexión disminuye la presencia social y afecta comunicación."
-            
         },{
             "Item":120,
             "Pregunta_I":" Practico la atención consciente",
@@ -2745,12 +2627,12 @@ const Matriz = {
             "Conciencia":"Presencia",
             "CriterioC":"Capacidad de estar atento en la interacción social.",
             "Impacto":"Medio",
-            "Pregunta":"Realizo acciones concretas para mantenerme atento y presente en mi vida diaria (respirar, pausar, enfocarme).",
-            "R1":"No hago nada para estar presente.",
+            "Pregunta":"¿Con qué frecuencia realizas acciones deliberadas para mantenerte atento y presente durante tus actividades diarias?",
+            "R1":"No practico atención consciente.",
             "R2":"Casi nunca practico atención consciente.",
             "R3":"A veces lo intento, pero no es constante.",
             "R4":"Generalmente practico hábitos para mantenerme presente.",
-            "R5":"Siempre practico atención consciente y la aplico en mi convivencia social.",
+            "R5":"Siempre practico atención consciente y la aplico en mi entorno.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2758,7 +2640,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa práctica observable de presencia como hábito aplicado en vida cotidiana e interacción."
-            
         },{
             "Item":121,
             "Pregunta_I":" Actúo conforme a mis valores",
@@ -2768,12 +2649,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"En mi comportamiento con otras personas, suelo actuar de acuerdo con mis valores, incluso cuando nadie me está observando.",
-            "R1":"Casi nunca actúo según mis valores si no hay consecuencias.",
-            "R2":"Muchas veces actúo según lo que me conviene en el momento.",
-            "R3":"A veces sigo mis valores, depende de la situación.",
-            "R4":"Generalmente actúo conforme a mis valores.",
-            "R5":"Siempre actúo según mis valores, aunque nadie lo note.",
+            "Pregunta":"¿Con qué frecuencia actúas bajo tus propios principios, incluso cuando no hay nadie para observarte?",
+            "R1":"Actúo según me convenga en el momento",
+            "R2":"Priorizo las reglas externas sobre mis valores.",
+            "R3":"Depende de qué tanta presión sienta de otros.",
+            "R4":"Suelo ser coherente con lo que creo.",
+            "R5":"Actúo con integridad en cualquier situación.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2781,7 +2662,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa conducta social observable (N3) relacionada con coherencia ética en interacción y convivencia."
-            
         },{
             "Item":122,
             "Pregunta_I":" Reflexiono sobre lo correcto antes de decidir",
@@ -2791,12 +2671,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Antes de tomar una decisión que pueda afectar a otros, suelo pensar si es lo correcto.",
-            "R1":"Casi nunca pienso si es correcto, decido rápido.",
-            "R2":"Muchas veces decido sin analizar lo moral.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta detenerte a pensar si una acción es correcta antes de tomar una decisión que afecte a los demás?",
+            "R1":"No pienso si es correcto, decido rápido.",
+            "R2":"Decido sin analizar lo moral.",
             "R3":"A veces reflexiono, depende del problema.",
-            "R4":"Generalmente pienso en lo correcto antes de actuar.",
-            "R5":"Siempre reflexiono sobre lo correcto antes de decidir.",
+            "R4":"Pienso en lo correcto antes de actuar.",
+            "R5":"Reflexiono sobre lo correcto antes de decidir.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -2804,7 +2684,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide fundamento interno (N1): capacidad reflexiva previa a decisiones con impacto social."
-            
         },{
             "Item":123,
             "Pregunta_I":" Mantengo coherencia entre lo que digo y hago",
@@ -2814,12 +2693,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"En mi vida diaria, procuro que lo que digo a los demás sea coherente con lo que realmente hago.",
-            "R1":"Casi nunca soy coherente; digo una cosa y hago otra.",
+            "Pregunta":"¿Con qué frecuencia logras que tus acciones diarias coincidan con las promesas o afirmaciones que haces a los demás?",
+            "R1":"Digo una cosa y hago otra.",
             "R2":"Muchas veces actúo distinto a lo que afirmo.",
             "R3":"A veces soy coherente, pero no siempre.",
-            "R4":"Generalmente mantengo coherencia entre lo que digo y hago.",
-            "R5":"Siempre mantengo coherencia y cumplo lo que afirmo.",
+            "R4":"Mantengo coherencia entre lo que digo y hago.",
+            "R5":"Mantengo coherencia y cumplo lo que afirmo.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2827,7 +2706,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Conducta visible en sociedad: la coherencia fortalece confianza y relaciones sociales."
-            
         },{
             "Item":124,
             "Pregunta_I":" Justifico conductas incorrectas",
@@ -2837,12 +2715,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando cometo un error o hago algo incorrecto, suelo justificarlo para no sentirme responsable.",
-            "R1":"Siempre justifico mis acciones aunque sepa que estuvieron mal.",
-            "R2":"Casi siempre busco excusas para sentirme tranquilo.",
-            "R3":"A veces me justifico, depende del caso.",
-            "R4":"Casi nunca justifico lo incorrecto; reconozco mis fallas.",
-            "R5":"Nunca justifico conductas incorrectas; acepto cuando algo estuvo mal.",
+            "Pregunta":"¿Es aceptable buscar justificaciones o excusas?",
+            "R1":"No es aceptable bajo ninguna circunstancia.",
+            "R2":"Es preferible evitar las excusas y limitarse a los hechos.",
+            "R3":"Es aceptable o no dependiendo de la importancia de la falta.",
+            "R4":"Es aceptable si ayuda a manejar las consecuencias de la situación.",
+            "R5":"Es una reacción natural y aceptable en cualquier circunstancia.",
             "Tipo de Respuesta":"Actitud",
             "T1":"Totalmente en desacuerdo",
             "T2":"En desacuerdo",
@@ -2850,7 +2728,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Invertida: la justificación evita responsabilidad ética y afecta la convivencia."
-            
         },{
             "Item":125,
             "Pregunta_I":" Me responsabilizo de mis actos",
@@ -2860,12 +2737,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando mis acciones afectan negativamente a alguien, asumo mi responsabilidad y trato de repararlo.",
-            "R1":"Casi nunca asumo responsabilidad; dejo que pase.",
-            "R2":"Muchas veces me cuesta aceptar que fue mi culpa.",
+            "Pregunta":"¿Con qué frecuencia te haces cargo de las consecuencias de tus actos cuando estos afectan negativamente a los demás?",
+            "R1":"La responsabilidad es de quien tiene la culpa.",
+            "R2":"Me cuesta aceptar que fue mi culpa.",
             "R3":"A veces lo reconozco, depende de la persona.",
-            "R4":"Generalmente asumo mi responsabilidad y busco corregir.",
-            "R5":"Siempre asumo mis actos y busco reparar el daño.",
+            "R4":"Asumo mi responsabilidad y busco corregir.",
+            "R5":"Asumo mis actos y busco reparar el daño.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2873,7 +2750,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Conducta observable social (N3): responsabilidad fortalece confianza y reduce conflictos."
-            
         },{
             "Item":126,
             "Pregunta_I":" Evalúo consecuencias morales",
@@ -2883,12 +2759,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Antes de actuar, suelo pensar en las consecuencias morales de lo que hago hacia otras personas.",
-            "R1":"Casi nunca pienso en consecuencias morales.",
-            "R2":"Muchas veces actúo sin considerar el impacto ético.",
+            "Pregunta":"¿Qué tan fácil o difícil te resulta prever el impacto moral que tendrán tus decisiones sobre los demás antes de actuar?",
+            "R1":"No pienso en consecuencias morales.",
+            "R2":"Actúo sin considerar el impacto ético.",
             "R3":"A veces lo pienso, depende de la situación.",
-            "R4":"Generalmente evalúo las consecuencias antes de actuar.",
-            "R5":"Siempre evalúo las consecuencias morales de mis decisiones.",
+            "R4":"Evalúo las consecuencias antes de actuar.",
+            "R5":"Evalúo las consecuencias morales de mis decisiones.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -2896,7 +2772,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Fundamento interno (N1): pensamiento moral previo guía conductas sociales responsables."
-            
         },{
             "Item":127,
             "Pregunta_I":" Defiendo principios aunque sea difícil",
@@ -2906,12 +2781,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando veo una injusticia en mi entorno, defiendo mis principios aunque eso me genere incomodidad o problemas.",
-            "R1":"Casi nunca defiendo principios; prefiero evitar problemas.",
-            "R2":"Muchas veces callo aunque sepa que algo está mal.",
-            "R3":"A veces defiendo mis principios, depende del contexto.",
-            "R4":"Generalmente defiendo mis principios aunque sea difícil.",
-            "R5":"Siempre defiendo lo correcto incluso si me afecta personalmente.",
+            "Pregunta":"¿Mantienes tus principios éticos incluso en situaciones donde hacerlo te pueda generar problemas o incomodidad?",
+            "R1":"Prefiero evitar problemas.",
+            "R2":"Callo aunque sepa que algo está mal.",
+            "R3":"Depende del contexto.",
+            "R4":"Defiendo mis principios aunque sea difícil.",
+            "R5":"Defiendo lo correcto incluso si me afecta personalmente.",
             "Tipo de Respuesta":"Actitud",
             "T1":"Totalmente en desacuerdo",
             "T2":"En desacuerdo",
@@ -2919,7 +2794,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Conducta externa observable (N3): mide firmeza ética en situaciones reales de convivencia."
-            
         },{
             "Item":128,
             "Pregunta_I":" Cambio valores según conveniencia",
@@ -2929,12 +2803,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"En algunas situaciones sociales, cambio mis valores o principios según lo que me beneficie.",
-            "R1":"Siempre cambio mis principios si me conviene.",
-            "R2":"Casi siempre adapto mis valores para obtener ventajas.",
-            "R3":"A veces lo hago, depende del beneficio.",
-            "R4":"Casi nunca cambio mis valores por conveniencia.",
-            "R5":"Nunca cambio mis valores; mantengo mis principios firmes.",
+            "Pregunta":"¿Ajustas tus valores personales si eso te ayuda a obtener algún beneficio?",
+            "R1":"Mantengo mis principios firmes.",
+            "R2":"No cambio mis valores por conveniencia.",
+            "R3":"Depende del beneficio.",
+            "R4":"Adapto mis valores para obtener ventajas.",
+            "R5":"Cambio mis principios si me conviene.",
             "Tipo de Respuesta":"Actitud",
             "T1":"Totalmente en desacuerdo",
             "T2":"En desacuerdo",
@@ -2942,7 +2816,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Invertida: mide flexibilidad ética negativa que afecta confianza y estabilidad social."
-            
         },{
             "Item":129,
             "Pregunta_I":" Busco justicia en mis decisiones",
@@ -2952,12 +2825,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando debo decidir entre varias opciones, intento elegir la más justa para todos, no solo para mí.",
-            "R1":"Casi nunca pienso en justicia, elijo lo que me favorece.",
-            "R2":"Muchas veces me cuesta ser justo si pierdo algo.",
-            "R3":"A veces intento ser justo, depende de la situación.",
-            "R4":"Generalmente busco actuar de manera justa.",
-            "R5":"Siempre priorizo la justicia y el equilibrio en mis decisiones.",
+            "Pregunta":"¿Logras elegir la opción más justa para todos por encima de tu interés personal?",
+            "R1":"No pienso en justicia, elijo lo que me favorece.",
+            "R2":"Me cuesta ser justo si pierdo algo.",
+            "R3":"Depende de la situación.",
+            "R4":"Busco actuar de manera justa.",
+            "R5":"Priorizo la justicia y el equilibrio en mis decisiones.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -2965,7 +2838,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Procesamiento intermedio (N2): regula conducta ética en decisiones sociales complejas."
-            
         },{
             "Item":130,
             "Pregunta_I":" Actúo con integridad",
@@ -2975,12 +2847,12 @@ const Matriz = {
             "Conciencia":"Ética Interna",
             "CriterioC":"Regula comportamientos y conductas sociales.",
             "Impacto":"Alto",
-            "Pregunta":"En mi vida cotidiana, actúo con integridad aunque nadie me exija hacerlo.",
-            "R1":"Casi nunca actúo con integridad si nadie lo nota.",
-            "R2":"Muchas veces hago lo correcto solo si hay presión social.",
-            "R3":"A veces soy íntegro, depende del contexto.",
-            "R4":"Generalmente actúo con integridad.",
-            "R5":"Siempre actúo con integridad, incluso en lo pequeño.",
+            "Pregunta":"¿Actúas de forma correcta por convicción propia, sin importar si los demás te están observando?",
+            "R1":"Priorizo mi beneficio personal si sé que no habrá consecuencias.",
+            "R2":"Suelo cumplir solo si hay reglas claras.",
+            "R3":"Depende; si el beneficio es grande, me cuesta ser coherente.",
+            "R4":"Trato de ser íntegro, como corregir un error propio sin que me lo pidan",
+            "R5":"Mantengo mis principios siempre, como respetar una fila aunque esté solo.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -2988,7 +2860,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Conducta observable (N3): mide consistencia ética en acciones concretas dentro de la sociedad."
-            
         },{
             "Item":131,
             "Pregunta_I":" Mantengo equilibrio entre pensamiento y emoción",
@@ -2998,12 +2869,12 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando tengo un conflicto con alguien, trato de equilibrar lo que pienso con lo que siento antes de responder.",
-            "R1":"Casi nunca lo hago; reacciono sin equilibrar nada.",
-            "R2":"Muchas veces dejo que la emoción domine mi respuesta.",
-            "R3":"A veces logro equilibrarlo, depende de la situación.",
-            "R4":"Generalmente pienso y siento con equilibrio antes de actuar.",
-            "R5":"Siempre logro equilibrar pensamiento y emoción antes de responder a otros.",
+            "Pregunta":"¿Te resulta facil armonizar lo que piensas con lo que sientes antes de dar una respuesta a los demás?",
+            "R1":"No lo hago; reacciono sin equilibrar nada.",
+            "R2":"Dejo que la emoción domine mi respuesta.",
+            "R3":"En ocaciones logro equilibrarlo, depende de la situación.",
+            "R4":"Pienso y siento con equilibrio antes de actuar.",
+            "R5":"Logro equilibrar pensamiento y emoción antes de responder a otros.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -3011,7 +2882,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa fundamento interno (N1): integración básica entre razón y emoción aplicada a convivencia social."
-            
         },{
             "Item":132,
             "Pregunta_I":" Mis acciones reflejan mis creencias",
@@ -3021,7 +2891,7 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"En mi comportamiento con otras personas, mis acciones suelen reflejar lo que realmente creo y defiendo.",
+            "Pregunta":"¿Logras que tu comportamiento con los demás sea un reflejo fiel de tus creencias personales?",
             "R1":"Casi nunca mis acciones reflejan mis creencias.",
             "R2":"Muchas veces actúo distinto a lo que creo por presión social.",
             "R3":"A veces lo hago, depende del contexto.",
@@ -3034,7 +2904,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Conducta observable (N3): coherencia social entre creencias internas y comportamiento público."
-            
         },{
             "Item":133,
             "Pregunta_I":" Siento coherencia interna",
@@ -3044,12 +2913,12 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"En mi vida diaria, siento que lo que pienso, siento y hago suele estar en armonía.",
-            "R1":"Casi nunca siento armonía interna.",
-            "R2":"Muchas veces siento que estoy dividido entre lo que pienso y hago.",
-            "R3":"A veces siento coherencia, pero no siempre.",
-            "R4":"Generalmente siento coherencia interna.",
-            "R5":"Siempre siento claridad y coherencia entre lo que pienso, siento y hago.",
+            "Pregunta":"¿Experimentas una sensación de armonía o acuerdo entre tus pensamientos, tus sentimientos y tus acciones?",
+            "R1":"No siento armonía interna.",
+            "R2":"Siento que estoy dividido entre lo que pienso y hago.",
+            "R3":"Siento coherencia, pero no siempre.",
+            "R4":"Siento coherencia interna.",
+            "R5":"Siento claridad y coherencia entre lo que pienso, siento y hago.",
             "Tipo de Respuesta":"Percepción emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -3057,7 +2926,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Procesamiento intermedio (N2): regula estabilidad interna y se refleja en relaciones sociales más armoniosas."
-            
         },{
             "Item":134,
             "Pregunta_I":" Vivo en conflicto interno frecuente",
@@ -3067,12 +2935,12 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"Con frecuencia siento un conflicto interno entre lo que quiero, lo que pienso y lo que hago en mi vida social.",
-            "R1":"Siempre siento conflicto interno y me cuesta decidir.",
-            "R2":"Casi siempre me siento dividido y confundido.",
+            "Pregunta":"¿Con qué frecuencia sientes que tus deseos, pensamientos y acciones chocan entre sí, generándote una sensación de conflicto interno?",
+            "R1":"Mantengo coherencia interna en mis pensamientos.",
+            "R2":"Suelo tener claridad con mis pensamientos.",
             "R3":"A veces siento conflicto interno, depende de la situación.",
-            "R4":"Casi nunca siento conflicto interno; suelo tener claridad.",
-            "R5":"Nunca siento conflicto interno fuerte; mantengo coherencia personal.",
+            "R4":"Me siento dividido y confundido.",
+            "R5":"Siempre siento conflicto interno y me cuesta decidir.",
             "Tipo de Respuesta":"Percepción emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -3080,7 +2948,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Invertida: mide desequilibrio interno que afecta la estabilidad emocional y social."
-            
         },{
             "Item":135,
             "Pregunta_I":" Integro aprendizajes en mi vida diaria",
@@ -3090,12 +2957,12 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"Después de cometer errores o vivir experiencias importantes, aplico lo aprendido en mi forma de actuar con los demás.",
-            "R1":"Casi nunca aplico lo aprendido.",
+            "Pregunta":"¿Con qué frecuencia aplicas lo que aprendes de tus experiencias para mejorar tu forma de actuar con los demás?",
+            "R1":"No aplico lo aprendido.",
             "R2":"Muchas veces repito lo mismo aunque sepa que está mal.",
             "R3":"A veces aplico lo aprendido, depende del caso.",
-            "R4":"Generalmente aprendo y ajusto mi forma de actuar.",
-            "R5":"Siempre integro lo aprendido y mejoro mi conducta con los demás.",
+            "R4":"Aprendo y ajusto mi forma de actuar.",
+            "R5":"Integro lo aprendido y mejoro mi conducta con los demás.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -3103,7 +2970,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Conducta externa (N3): evalúa si el aprendizaje se traduce en mejora social y convivencia."
-            
         },{
             "Item":136,
             "Pregunta_I":" Me adapto sin perder mi identidad",
@@ -3113,12 +2979,12 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"En grupos o ambientes diferentes, puedo adaptarme sin dejar de ser fiel a mi manera de pensar y actuar.",
-            "R1":"Casi nunca; cambio totalmente según el grupo.",
-            "R2":"Muchas veces me adapto perdiendo mi identidad.",
+            "Pregunta":"¿Encajas en diferentes grupos sin tener que cambiar tu manera de ser o de pensar?",
+            "R1":"Cambio según el grupo.",
+            "R2":"Me adapto según el grupo.",
             "R3":"A veces lo logro, depende del ambiente.",
-            "R4":"Generalmente me adapto sin perder mi identidad.",
-            "R5":"Siempre me adapto manteniendo mi esencia y valores personales.",
+            "R4":"Me adapto sin perder mi identidad.",
+            "R5":"Me adapto manteniendo mi esencia y valores personales.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -3126,7 +2992,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Fundamento interno (N1): mide base de identidad estable frente a presión social."
-            
         },{
             "Item":137,
             "Pregunta_I":" Me siento fragmentado internamente",
@@ -3136,12 +3001,12 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"En mi vida diaria siento que soy una persona distinta según el lugar o las personas con las que esté.",
-            "R1":"Siempre siento que soy varias personas según el entorno.",
-            "R2":"Casi siempre cambio tanto que pierdo claridad de quién soy.",
+            "Pregunta":"¿Con qué frecuencia experimentas la sensación de estar fragmentado o de ser una persona distinta según con quién estés?",
+            "R1":"Mantengo coherencia en distintos espacios.",
+            "R2":"Suelo mantener estabilidad.",
             "R3":"A veces me pasa, depende del contexto.",
-            "R4":"Casi nunca me siento así; suelo mantener estabilidad.",
-            "R5":"Nunca me siento fragmentado; mantengo coherencia en distintos espacios.",
+            "R4":"Cambio tanto que pierdo claridad de quién soy.",
+            "R5":"Siento que soy varias personas según el entorno.",
             "Tipo de Respuesta":"Percepción emocional",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -3149,7 +3014,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Invertida: evalúa fragmentación interna que afecta autenticidad y estabilidad social."
-            
         },{
             "Item":138,
             "Pregunta_I":" Mantengo estabilidad en distintas áreas de mi vida",
@@ -3159,12 +3023,12 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"En diferentes áreas de mi vida (familia, trabajo, amigos), mantengo estabilidad emocional y coherencia en mi forma de actuar.",
-            "R1":"Casi nunca mantengo estabilidad; dependo del ambiente.",
+            "Pregunta":"¿Con qué frecuencia mantienes una forma de actuar estable y coherente en los diferentes grupos o ambientes en los que participas?",
+            "R1":"No mantengo estabilidad; dependo del ambiente.",
             "R2":"Muchas veces mi comportamiento cambia demasiado según el lugar.",
             "R3":"A veces soy estable, pero no siempre.",
-            "R4":"Generalmente mantengo estabilidad en mis distintas áreas.",
-            "R5":"Siempre mantengo estabilidad y coherencia sin importar el contexto social.",
+            "R4":"Mantengo estabilidad en mis distintas áreas.",
+            "R5":"Mantengo estabilidad y coherencia sin importar el contexto social.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -3172,7 +3036,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Conducta observable (N3): estabilidad en roles sociales, favorece confianza y armonía grupal."
-            
         },{
             "Item":139,
             "Pregunta_I":" Actúo alineado con mi propósito",
@@ -3182,12 +3045,12 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"En mi vida cotidiana, mis decisiones y acciones suelen estar alineadas con lo que considero mi propósito personal.",
-            "R1":"Casi nunca actúo con propósito; solo improviso.",
-            "R2":"Muchas veces actúo sin dirección clara.",
+            "Pregunta":"¿Qué tan de acuerdo estás con que tus acciones diarias son un reflejo real de lo que consideras tu propósito de vida?",
+            "R1":"Improviso.",
+            "R2":"Actúo sin dirección clara.",
             "R3":"A veces actúo con propósito, depende de la situación.",
-            "R4":"Generalmente mis acciones reflejan mi propósito.",
-            "R5":"Siempre actúo alineado con mi propósito y metas personales.",
+            "R4":"Mis acciones reflejan mi propósito.",
+            "R5":"Actúo alineado con mi propósito y metas personales.",
             "Tipo de Respuesta":"Actitud",
             "T1":"Totalmente en desacuerdo",
             "T2":"En desacuerdo",
@@ -3195,7 +3058,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Manifestación externa (N3): propósito aplicado en acciones visibles y consistentes ante la sociedad."
-            
         },{
             "Item":140,
             "Pregunta_I":" Reconozco desequilibrios internos",
@@ -3205,12 +3067,12 @@ const Matriz = {
             "Conciencia":"Integración Personal",
             "CriterioC":"Favorece la armonía en grupos.",
             "Impacto":"Medio",
-            "Pregunta":"Cuando noto que algo en mí está desequilibrado (emociones, hábitos o decisiones), trato de reconocerlo antes de que afecte a otros.",
-            "R1":"Casi nunca reconozco mis desequilibrios.",
-            "R2":"Muchas veces lo noto tarde, cuando ya afecté a alguien.",
-            "R3":"A veces lo reconozco, depende del problema.",
-            "R4":"Generalmente reconozco mis desequilibrios y ajusto.",
-            "R5":"Siempre identifico mis desequilibrios y busco corregir antes de afectar a otros.",
+            "Pregunta":"¿Te resulta fácil identificar cuándo tus emociones o hábitos están fuera de equilibrio antes de que impacten a los demás?",
+            "R1":"No reconozco mis desequilibrios.",
+            "R2":"Lo noto tarde, cuando ya afecté a alguien.",
+            "R3":"Lo reconozco dependiendo del problema.",
+            "R4":"Reconozco mis desequilibrios y ajusto.",
+            "R5":"Identifico mis desequilibrios y busco corregir antes de afectar a otros.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -3218,7 +3080,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Fundamento interno (N1): autopercepción básica de desequilibrios que previene conflictos sociales."
-            
         },{
             "Item":141,
             "Pregunta_I":" Pienso,siento y actúo de manera congruente",
@@ -3228,12 +3089,12 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"En mi vida diaria, las personas notan que lo que digo, siento y hago suele estar alineado.",
-            "R1":"Casi nunca actúo de acuerdo con lo que digo o siento.",
-            "R2":"Muchas veces digo una cosa y hago otra.",
+            "Pregunta":"¿Con qué frecuencia logras que lo que piensas, sientes y haces coincidan entre sí al interactuar con los demás?",
+            "R1":"No actúo de acuerdo con lo que digo o siento.",
+            "R2":"En ocasiones digo una cosa y hago otra.",
             "R3":"Depende de la situación.",
-            "R4":"Generalmente soy coherente con lo que digo y hago.",
-            "R5":"Siempre mantengo coherencia entre lo que pienso, siento y hago.",
+            "R4":"Soy coherente con lo que digo y hago.",
+            "R5":"Mantengo coherencia entre lo que pienso, siento y hago.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -3241,7 +3102,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa la coherencia como manifestación externa observable en el entorno social."
-            
         },{
             "Item":142,
             "Pregunta_I":" Identifico contradicciones en mí",
@@ -3251,12 +3111,12 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Soy capaz de notar cuando mis acciones no coinciden con lo que realmente pienso o creo.",
-            "R1":"Nunca noto contradicciones en mí.",
+            "Pregunta":"¿Te resulta fácil darte cuenta de que estás actuando en contra de lo que realmente piensas o crees?",
+            "R1":"No noto contradicciones en mí.",
             "R2":"Casi nunca me doy cuenta cuando soy incoherente.",
             "R3":"A veces lo noto, pero no siempre.",
-            "R4":"Generalmente detecto mis contradicciones.",
-            "R5":"Siempre identifico con claridad mis contradicciones internas.",
+            "R4":"Detecto mis contradicciones.",
+            "R5":"Identifico con claridad mis contradicciones internas.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -3264,7 +3124,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide el fundamento interno: capacidad de autoobservación para regular conducta social."
-            
         },{
             "Item":143,
             "Pregunta_I":" Ajusto mis acciones cuando no son coherentes",
@@ -3274,12 +3133,12 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando noto que actué en contra de mis principios, intento corregirlo con acciones concretas.",
+            "Pregunta":"¿Tomas medidas para corregir tu comportamiento cuando notas que no fuiste coherente con lo que crees?",
             "R1":"No corrijo mis acciones aunque sepa que fueron incoherentes.",
             "R2":"Rara vez intento corregirlo.",
             "R3":"A veces lo corrijo, depende del caso.",
-            "R4":"Casi siempre busco corregirlo.",
-            "R5":"Siempre corrijo mis acciones cuando noto incoherencias.",
+            "R4":"Busco corregirlo.",
+            "R5":"Corrijo mis acciones cuando noto incoherencias.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -3287,7 +3146,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa coherencia como conducta visible: ajuste real de acciones frente a otros."
-            
         },{
             "Item":144,
             "Pregunta_I":" Me comporto distinto según conveniencia",
@@ -3297,12 +3155,12 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"En diferentes entornos sociales, cambio mi comportamiento según lo que me convenga en el momento.",
-            "R1":"Siempre actúo según me convenga, aunque no sea coherente.",
-            "R2":"Casi siempre adapto mi comportamiento por conveniencia.",
-            "R3":"A veces lo hago, depende del contexto.",
-            "R4":"Casi nunca actúo por conveniencia.",
-            "R5":"Nunca cambio mi comportamiento por conveniencia, mantengo mis principios.",
+            "Pregunta":"¿Adaptas tu comportamiento según lo que más te conviene en el momento, aunque no sea coherente con lo que crees?",
+            "R1":"Mantengo mis principios sin excepciones.",
+            "R2":"Prefiero ser fiel a mis valores.",
+            "R3":"Depende de qué tanto me convenga.",
+            "R4":"Me adapto para obtener ventajas.",
+            "R5":"Priorizo mi beneficio sobre mis principios",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -3310,7 +3168,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Es invertida porque actuar por conveniencia reduce coherencia e integridad social."
-            
         },{
             "Item":145,
             "Pregunta_I":" Mantengo consistencia en mis decisiones",
@@ -3320,11 +3177,11 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Antes de decidir algo importante, pienso si esa decisión está alineada con mis valores.",
-            "R1":"Nunca tomo en cuenta mis valores al decidir.",
-            "R2":"Casi nunca reflexiono sobre mis valores.",
+            "Pregunta":"¿Te resulta fácil tomar decisiones que sean totalmente coherentes con tus valores personales?",
+            "R1":"No tomo en cuenta mis valores al decidir.",
+            "R2":"No reflexiono sobre mis valores.",
             "R3":"A veces lo considero.",
-            "R4":"Casi siempre tomo decisiones coherentes con mis valores.",
+            "R4":"Tomo decisiones coherentes con mis valores.",
             "R5":"Siempre tomo decisiones alineadas con mis valores personales.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
@@ -3333,7 +3190,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Mide el fundamento interno: consistencia en decisiones como base de conducta social estable."
-            
         },{
             "Item":146,
             "Pregunta_I":" Reconozco cuando traiciono mis valores",
@@ -3343,11 +3199,11 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Me doy cuenta cuando hago algo que va en contra de mis valores personales.",
-            "R1":"Nunca noto cuando traiciono mis valores.",
+            "Pregunta":"¿Te resulta fácil tomar decisiones que sean totalmente coherentes con tus valores personales?",
+            "R1":"No noto cuando traiciono mis valores.",
             "R2":"Casi nunca lo reconozco.",
             "R3":"A veces lo noto, pero lo justifico.",
-            "R4":"Generalmente lo reconozco y lo acepto.",
+            "R4":"Reconozco y lo acepto.",
             "R5":"Siempre reconozco cuando traiciono mis valores, aunque sea incómodo.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
@@ -3356,7 +3212,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Evalúa conciencia moral interna: reconocer incoherencia es clave para responsabilidad social."
-            
         },{
             "Item":147,
             "Pregunta_I":" Corrijo incoherencias personales",
@@ -3366,12 +3221,12 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Cuando identifico que estoy actuando incoherentemente, busco cambiarlo para no afectar a otros.",
-            "R1":"No cambio aunque sepa que estoy siendo incoherente.",
-            "R2":"Casi nunca corrijo mis incoherencias.",
+            "Pregunta":"¿Tomas medidas para cambiar tu comportamiento cuando notas que no estás siendo coherente con lo que defiendes?",
+            "R1":"No cambio.",
+            "R2":"No corrijo mis comportamientos.",
             "R3":"A veces intento cambiarlo.",
-            "R4":"Casi siempre ajusto mis acciones.",
-            "R5":"Siempre corrijo mis incoherencias para actuar con integridad.",
+            "R4":"Ajusto mis comportamientos.",
+            "R5":"Corrijo mis comportamientos para actuar con integridad.",
             "Tipo de Respuesta":"Hábito",
             "T1":"Nunca",
             "T2":"Casi nunca",
@@ -3379,7 +3234,6 @@ const Matriz = {
             "T4":"Casi siempre",
             "T5":"Siempre",
             "Explicación":"Evalúa corrección visible de incoherencias como conducta social observable."
-            
         },{
             "Item":148,
             "Pregunta_I":" Cambio postura sin fundamento claro",
@@ -3389,12 +3243,12 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Cambio de opinión o postura con facilidad, incluso sin una razón clara.",
-            "R1":"Siempre cambio de postura sin razones claras.",
-            "R2":"Casi siempre cambio de opinión por presión o confusión.",
+            "Pregunta":"¿Te resulta fácil sentir que cambias de opinión o postura solo por presión o confusión?",
+            "R1":"No cambio mi postura sin razones claras.",
+            "R2":"No cambio sin fundamento.",
             "R3":"A veces me pasa.",
-            "R4":"Casi nunca cambio sin fundamento.",
-            "R5":"Nunca cambio mi postura sin razones claras.",
+            "R4":"Casi siempre cambio de opinión por presión.",
+            "R5":"Cambio de postura sin razones claras.",
             "Tipo de Respuesta":"Capacidad",
             "T1":"Muy difícil",
             "T2":"Dificil",
@@ -3402,7 +3256,6 @@ const Matriz = {
             "T4":"Facil",
             "T5":"Muy fácil",
             "Explicación":"Es invertida porque refleja falta de consistencia interna y fragilidad en decisiones sociales."
-            
         },{
             "Item":149,
             "Pregunta_I":" Busco alineación interna constante",
@@ -3412,12 +3265,12 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"Me esfuerzo por mantener equilibrio entre lo que pienso, siento y hago, incluso cuando nadie me observa.",
-            "R1":"No me importa si soy coherente.",
-            "R2":"Casi nunca busco coherencia interna.",
-            "R3":"A veces lo intento.",
-            "R4":"Casi siempre busco alineación interna.",
-            "R5":"Siempre busco actuar en coherencia conmigo mismo.",
+            "Pregunta":"¿Es fundamental para ti que tus acciones diarias coincidan con lo que piensas y sientes?",
+            "R1":"Prefiero ser flexible y actuar según lo que la situación requiera.",
+            "R2":"No suelo dar prioridad a la coherencia interna al tomar decisiones.",
+            "R3":"A veces busco esa alineación, pero depende de la circunstancia.",
+            "R4":"Intento que mis actos reflejen mis convicciones.",
+            "R5":"Es esencial actuar siempre en armonía con mis principios.",
             "Tipo de Respuesta":"Actitud",
             "T1":"Totalmente en desacuerdo",
             "T2":"En desacuerdo",
@@ -3425,7 +3278,6 @@ const Matriz = {
             "T4":"De acuerdo",
             "T5":"Totalmente de acuerdo",
             "Explicación":"Mide procesamiento intermedio: autorregulación interna constante, clave para estabilidad social."
-            
         },{
             "Item":150,
             "Pregunta_I":" Me percibo como una persona íntegra",
@@ -3435,11 +3287,11 @@ const Matriz = {
             "Conciencia":"Coherencia Interna",
             "CriterioC":"Asegura consistencia entre valores y acciones sociales.",
             "Impacto":"Alto",
-            "Pregunta":"En general, considero que soy una persona íntegra en mi trato con los demás.",
+            "Pregunta":"¿Qué tan de acuerdo estás con que la integridad es la característica que mejor define tu forma de actuar con los demás?",
             "R1":"No me considero una persona íntegra.",
             "R2":"Casi nunca actúo con integridad.",
             "R3":"Depende del contexto.",
-            "R4":"Generalmente actúo con integridad.",
+            "R4":"Actúo con integridad.",
             "R5":"Siempre actúo con integridad, incluso cuando me cuesta.",
             "Tipo de Respuesta":"Actitud",
             "T1":"Totalmente en desacuerdo",
