@@ -168,7 +168,7 @@ function VariablesSIMCHS(datosRegistro) {
         const sumaNorm = filas.reduce((acc, curr) => acc + (curr.Normalizacion || 0), 0);
         const sumaPerfil = filas.reduce((acc, curr) => acc + (curr.Puntaje_Perfil || 0), 0);
         
-        const PorcentajeC = cantContestado > 0 ? ((sumaNorm / 10) - sumaPerfil) * 100: 0;
+        const PorcentajeC = cantContestado > 0 ? ((sumaNorm / 4) - sumaPerfil) * 100: 0;
         const PorcentajeI = cantContestado > 0 ? sumaPerfil * 100: 0;
 
         const recomendacionesDimension = Matriz_Recomendaciones.filter(r => r.Dimension === nombre);
