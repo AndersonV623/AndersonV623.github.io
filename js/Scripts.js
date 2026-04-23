@@ -571,6 +571,7 @@ async function enviarASupabase(datos) {
 
         if (respuesta.ok) {
             alert("¡Encuesta enviada con éxito!");
+            document.getElementById("btnMostrarResultado").click();
         } else {
             throw new Error(resultado.error);
         }
